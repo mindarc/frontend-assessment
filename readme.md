@@ -11,6 +11,10 @@ Build a responsive page based on the designs.
 ##### Working file
 exercise1.html
 
+##### Requirements
+1. Match the designs exactly.
+2. Needs to be responsive.
+
 ##### Designs
 * exercise1-desktop.png
 * exercise1-mobile.png
