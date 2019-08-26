@@ -32,7 +32,8 @@ Read the `data.json` file and display the data as an accordion on desktop and ta
 
 ###### Bonus points
 * Improve the user experience with meaningful animations/transitions.
-* Make it prettier.
+* Design and styling.
+* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
 
 Submission
 ---
