@@ -1,15 +1,10 @@
 Introduction
 ---
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on code quality (reusability, readability, maintainability, etc.) and your eye for detail. Feel free to add libraries and edit the HTML files as required. Bonus points if SASS/LESS is used. 
-
-*Estimated Time: 45m - 1h* 
+Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries. Bonus points if SASS/LESS is used. 
 
 Exercise 1
 ---
 Build a responsive page based on the designs.
-
-##### Working file
-exercise1.html
 
 ##### Requirements
 1. Match the designs exactly.
@@ -26,16 +21,19 @@ exercise1.html
 
 Exercise 2
 ---
-Convert the HTML to an accordion.
-
-##### Working file
-exercise2.html
+Read the `data.json` file and display the data as an accordion on desktop and tabs on mobile.
 
 ##### Requirements
-1. Only 1 accordion should be open at a time.
-2. Open the first accordion on load.
-3. If the open accordion is clicked, close it.
+1. Display data in an accordion on desktop.
+2. Display data in tabs in mobile.
+3. Only 1 accordion/tab should be open at a time.
+4. Open the first accordion/tab on load.
+5. If the open accordion is selected, close it.
 
 ###### Bonus points
 * Improve the user experience with meaningful animations/transitions.
 * Make it prettier.
+
+Submission
+---
+We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
