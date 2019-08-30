@@ -1,3 +1,33 @@
+section.banner {
+  padding: 10% 0;
+  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  @media (max-width: 575.98px) {
+    background: url("http://via.placeholder.com/600x600") no-repeat center;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    background: url("http://via.placeholder.com/600x600") no-repeat center;
+  }
+
+  @media (min-width: 768px) and (max-width: 1200px) {
+    background: url("http://via.placeholder.com/1920x650") no-repeat center;
+  }
+  @media (min-width: 1200px) {
+    background: url("http://via.placeholder.com/1920x650") no-repeat center;
+  }
+
+  h1 {
+    color: white;
+  }
+  h4 {
+    color: white;
+  }
+}
+
 section.main-content {
   .card {
     margin: 2rem 0;
@@ -21,11 +51,23 @@ section.main-content {
         text-align: justify;
       }
       .card-action {
-        @include transition(all, 0.2s, $easing: ease-in-out);
+        text-align: center;
       }
-      .card-action:hover {
+      .card-action a:hover {
         @include transition(all, 0.2s, $easing: ease-in-out);
-        padding: 10px 0;
+        background: $indigo-darken-4;
+        width: 38%;
+        color: white;
+      }
+      .card-action a {
+        display: block;
+        @include transition(all, 0.2s, $easing: ease-in-out);
+        border: 3px solid $indigo-darken-2;
+        width: 42%;
+        margin: 0 auto;
+        color: $indigo-darken-3;
+        @include border-radius(20px);
+        padding: 6px 0;
       }
     }
   }
@@ -35,6 +77,7 @@ section.main-content {
     @include box-shadow(0px, 7px, 5px, rgba(0, 0, 0, 0.15));
     @include transition(all, 0.4s, $easing: ease-in-out);
     border: 1px solid $indigo-lighten-3;
+    background: $indigo-lighten-5;
   }
   img {
     width: 100%;
