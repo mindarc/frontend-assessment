@@ -1,0 +1,43 @@
+section.main-content {
+  .card {
+    margin: 2rem 0;
+    background: $indigo-lighten-4;
+    border: 1px solid $indigo-lighten-5;
+    @include border-radius(10px);
+    @include box-shadow(0px, 7px, 5px, rgba(0, 0, 0, 0.05));
+    .card-content {
+      padding: 5%;
+
+      .card-title {
+        text-transform: uppercase;
+        h3 {
+          color: $indigo-darken-2;
+        }
+        h3:hover {
+          color: $indigo-lighten-2;
+        }
+      }
+      p {
+        text-align: justify;
+      }
+      .card-action {
+        @include transition(all, 0.2s, $easing: ease-in-out);
+      }
+      .card-action:hover {
+        @include transition(all, 0.2s, $easing: ease-in-out);
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .card:hover {
+    cursor: pointer;
+    @include box-shadow(0px, 7px, 5px, rgba(0, 0, 0, 0.15));
+    @include transition(all, 0.4s, $easing: ease-in-out);
+    border: 1px solid $indigo-lighten-3;
+  }
+  img {
+    width: 100%;
+    @include border-radii(10px, 10px, 0, 0);
+  }
+}
