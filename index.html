@@ -88,5 +88,103 @@
         </div>
       </div>
     </section>
+
+    <section class="section accr d-none d-sm-block
+    ">
+      <div class="container">
+       <div class="accordionWrapper">
+            <div class="accordionItem open">
+                  <h2 class="accordionItemHeading">About accordions</h2>
+                  <div class="accordionItemContent">
+                    <p>JavaScript accordions let you squeeze a lot of content into a small space in a Web page.</p>
+                    <p>This simple accordion degrades gracefully in browsers that don't support JavaScript or CSS.</p>
+                  </div>
+                </div>
+            
+                <div class="accordionItem close">
+                  <h2 class="accordionItemHeading">Accordion items</h2>
+                  <div class="accordionItemContent">
+                    <p>A JavaScript accordion is made up of a number of expandable/collapsible items. Only one item is ever shown at a time.</p>
+                   
+                  </div>
+                </div>
+            
+                <div class="accordionItem close">
+                  <h2 class="accordionItemHeading">How to use a JavaScript accordion</h2>
+                  <div class="accordionItemContent">
+                  </div>
+                </div>
+
+                <div class="accordionItem close">
+                    <h2 class="accordionItemHeading">How to use a JavaScript accordion</h2>
+                    <div class="accordionItemContent">
+                      <p>Click an accordion item's heading to expand it. To collapse the item, click it again, or click another item heading.</p>
+                    </div>
+                  </div>
+            </div>
+            
+            </div>
+
+    </section>
+
+    <section class="section tabs d-block d-sm-none">
+      <div class="container">
+    
+
+<div id="tabs1" class="tab-contents no-js">
+			<div class="tab-nav">
+				<a href="#" class="tab-link is-active">Calgary</a>
+				<a href="#" class="tab-link">Fools</a>
+        <a href="#" class="tab-link">Bubblehead</a>
+        <a href="#" class="tab-link">Unicorn</a>
+
+			</div>
+			<div class="tab-content is-active">
+				<p>Our Father, who art in Calgary, Bobsled be thy name. Thy kingdom come, gold medals won, on Earth as it is in Turn Seven. With Liberty and Justice for Jamaica and Haile Selassie. Amen.</p>
+			</div>
+			<div class="tab-content">
+				<p>Say whatever it is that you want 'cause you're just like every other fool on the island. You're going nowhere, Sanka, and you're thrilled to death about it. But you see me? You see me? I'm different, 'cause I know exactly where I'm going and after I, Yul Brenner, win the Olympics and become famous I'm going to leave the island and live right down there.</p>
+			</div>
+			<div class="tab-content">
+				<p>What I am saying to you, is that you are the kind of club-toting, raw-meat-eating, Me-Tarzan-You-Jane-ing, big, bald bubblehead that can only count to ten if he's barefoot or wearing sandals.</p>
+      </div>
+      <div class="tab-content">
+          <p>What I am saying to you, is that you are the kind of club-toting, raw-meat-eating, Me-Tarzan-You-Jane-ing, big, bald bubblehead that can only count to ten if he's barefoot or wearing sandals.</p>
+        </div>
+		</div>
+      </div>
+    </section>
+
+
+    <section class="section banana">
+      <div class="container">
+        <div class=" banana-container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="banana-qa">
+            <h4>Explain why the result of<br/>
+              <code>`('b' + 'a' + + 'a' + 'a').toLowerCase()`</code>
+              <br/>is <code>`banana`</code>.
+              </h4>
+
+              <p>
+                  <span>+'a'</span> resolves to <span>NaN ("Not a Number")</span> because it coerces a string to be a number, while the character <span>a</span> cannot be parsed as a number. And when converted
+                  to lowercase it becomes <span>banana</span>. Adding NaN to "ba" turns NaN into the string "NaN" due to type conversion, gives baNaN. And then there is an a behind, giving <span>baNaNa</span>.
+              </p>
+              <p>From Javascript: <br/><code>document.getElementById("banana-js").innerHTML = (("b"+"a"+ +"a"+"a").toLowerCase());</code></script>
+              </p>
+              <p id="banana-js"></p>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img src="img/banana.png" class="img img-responsive"/>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <script type="text/JavaScript" src="js/main.js"></script>
+    <script>
+    document.getElementById("banana-js").innerHTML = (("b"+"a"+ +"a"+"a").toLowerCase());</script>
   </body>
 </html>
