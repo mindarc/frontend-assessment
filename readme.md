@@ -24,8 +24,8 @@ Exercise 2
 Read the `data.json` file and display the data as an accordion on desktop and tabs on mobile.
 
 ##### Requirements
-1. Display data in an accordion on desktop.
-2. Display data in tabs in mobile.
+1. Display data in tabs on desktop.
+2. Display data in an accordion on mobile.
 3. Only 1 accordion/tab should be open at a time.
 4. Open the first accordion/tab on load.
 5. If the open accordion is selected, close it.
