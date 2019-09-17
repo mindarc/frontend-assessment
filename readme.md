@@ -21,7 +21,7 @@ Build a responsive page based on the designs.
 
 Exercise 2
 ---
-Read the `data.json` file and display the data as an tsbs on desktop and accordion on mobile.
+Read the `data.json` file and display the data as an tabs on desktop and accordion on mobile.
 
 ##### Requirements
 1. Display data in tabs on desktop.
