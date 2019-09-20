@@ -1,40 +1,17 @@
-Introduction
+Kuong Iy Seng's Submission
 ---
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries. Bonus points if SASS/LESS is used and jQuery is not used.
+This is my submission for these tasks. 
 
 Exercise 1
 ---
-Build a responsive page based on the designs.
-
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
-
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
-
-##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
+I build a responsive page according to the designs provided. I had to quickly learn SaSS for my CSS because I wanted to show my ability to learn new things and implementing it. 
 
 Exercise 2
 ---
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+I fetch the data from the json file and used string literal to create all the tags and attributes needed to create a responsive Tab and Accordions.
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
+Thank you for you time.
 
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
-
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+Name: Kuong Iy Seng,
+Phone: 0470 555 746
+Email: Kseng2906@gmail.com
