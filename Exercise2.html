@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 2</title>
+    <link rel="stylesheet" href="styles/ex2.css">
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+    <p>Explain why the result of ('b' + 'a' + + 'a' + 'a').toLowerCase() is banana.</p>
+    <ul>
+        <li>'b'+'a' is equal to ba</li>
+        <li>+ +'a' is trying to convert 'a' into a number variable</li>
+        <li>Hence, the value NaN is returned as a result</li>
+        <li>and to put it all together the result is equal to baNaNa</li>
+        <li>the method .toLowerCase() at the end convert the string to banana</li>
+    </ul>
+    
+
+</body>
+
+<script>
+
+fetch('https://raw.githubusercontent.com/mindarc/frontend-assessment/master/data.json')
+    .then(result => {
+        console.log(result);
+        return result.json();
+    })
+    .then(data => {
+        document.getElementById("app").innerHTML = `
+        <div class="tabs">
+        ${data.map(function(item, i){
+            return `
+            
+               <input type="radio" name="tabs" id="tab${i+1}">
+                <label for="tab${i+1}">${item.title}</label>
+                <div class="tab">
+                <p>${item.content}</p>
+                </div>             
+            ` 
+        }).join('')}
+    </div>`
+        document.getElementsByTagName("input")[0].setAttribute("checked", "checked");
+    })
+
+</script>
+</html>

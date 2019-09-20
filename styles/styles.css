@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+.main-header {
+  background-image: url("http://via.placeholder.com/1920x650");
+  background-position: center;
+  color: #ffffff;
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 650px;
+}
+
+.main-content h1 {
+  font-size: 5em;
+}
+
+.main-content p {
+  font-size: 2.8em;
+}
+
+.boxes {
+  margin: 20px 0;
+}
+
+.boxes .boxes-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.boxes .thumbnail {
+  padding: 10px;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.boxes .thumbnail img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.boxes .thumbnail p {
+  padding: 8px;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.boxes .thumbnail a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #505050;
+  border: 3px solid #505050;
+  border-radius: 30px;
+  padding: 5px 20px;
+  font-weight: bold;
+}
+
+.boxes figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .main-header {
+    background-image: url("http://via.placeholder.com/600x600");
+  }
+  .main-content {
+    height: 600px;
+    text-align: center;
+  }
+  .main-content h1 {
+    font-size: 3em;
+  }
+  .main-content p {
+    font-size: 1.4em;
+  }
+  .boxes .thumbnail {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
