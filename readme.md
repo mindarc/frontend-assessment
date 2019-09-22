@@ -19,6 +19,13 @@ Build a responsive page based on the designs.
 * Mobile banner - http://via.placeholder.com/600x600
 * Content images - http://via.placeholder.com/400x300
 
+##### Exercise outcome
+* Created a responsive page matched with the design
+* The page is responsive
+  - The header image will be changed once the screen size is 701px or less (tablet/mobile screen)
+  - The 3 columns align vertically on mobile screen
+* SASS is used for styling
+
 Exercise 2
 ---
 Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
@@ -35,6 +42,10 @@ Read the `data.json` file and display the data as tabs on desktop and an accordi
 * Design and styling.
 * Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+##### Exercise outcome
+* Created a demo page to display data read from the given json file (kindly note, the json has to be on server, for security reason the 'fetch' method won't work if the json file is in local folder)
+* The page is responsive - it displays in tabs on desktop and in an accordion on Mobile
+* Vanilla javascript was used to create html elements on load.
+* CSS was used to style the demo Tab/Accordion and to control the hide/show of the panel.
+* Re: 'Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.'
+  - The "+ + 'a'" will result an error as NAN, so after the add operation, the string would become "baNANa". Then the '.toLowerCase()' transferred the string into lower case, so it becomes 'banana' at the end.
