@@ -1,60 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Exercise 2</title>
-        <script type="text/javascript" src="scripts.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    </head>
-    <body>
-        <script>
-            var text = '[' +
-              '{' +
-                '"title": "Section 1",' +
-                '"content": "<p>Maecenas nec semper ante, pellentesque posuere lorem. Nullam ipsum massa, consequat eget urna ut, pulvinar dignissim lorem. Nulla facilisi. Nam mattis eleifend metus. Fusce at commodo lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus pellentesque elit sem, vel blandit posuere.</p>"' +
-              '},' +
-              '{' +
-                '"title": "Section 2",' +
-                '"content": "<p>Mauris a orci sodales, scelerisque velit vitae, gravida nisl. Ut non laoreet eros, vel laoreet nisi. Praesent sed dolor dui. Proin non fringilla quam. Aliquam erat volutpat. Vestibulum vel arcu semper, lobortis turpis ac, ultricies nisi. Praesent id.</p>"' +
-              '},' +
-              '{' +
-                '"title": "Section 3",' +
-                '"content": "<p>Sed elementum sapien ut sapien imperdiet, eu venenatis enim rhoncus. Praesent euismod tincidunt rhoncus. Duis cras amet:</p><ul><li>List item one</li><li>List item two</li><li>List item three</li></ul>"' +
-              '},' +
-              '{' +
-                '"title": "Section 4",' +
-                '"content": "<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est.</p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>"' +
-              '}' +
-            ']';
-            var data = JSON.parse(text);
-            console.log(data[0].title);
-            // document.getElementById("test").HTML(data[0].title);
-        </script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Exercise 2</title>
+</head>
+<body>
+    <h1>Demo for display data read from json file as Tab/Accordion</h1>
+    <div id="myData" class="tabs"></div>
+    <script>
+        fetch('data.json') //fetch data from json file located in server
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
 
 
-    <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
-      <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-    </div>
 
-    <div id="London" class="tabcontent">
-      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-      <h3>London</h3>
-      <p>London is the capital city of England.</p>
-    </div>
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                //create radio button for each tab/Accordion
+                var input = document.createElement("input");
+                input.type = "radio";
+                input.name = "tabs";
+                var id = "tab"+(i+1).toString();
+                input.setAttribute('id',id);
+                mainContainer.appendChild(input);
+                //create label for each radio button
+                var label = document.createElement("label");
+                label.setAttribute("for",id);
+                label.innerHTML = data[i].title;
+                mainContainer.appendChild(label);
+                //create div with data read from json
+                var div = document.createElement("div");
+                div.setAttribute('class', 'tab');
+                div.innerHTML =  '<h2>'+data[i].title + '</h2> ' + data[i].content;
+                mainContainer.appendChild(div);
+            }
+            document.getElementById("tab1").checked = true;
+        }
 
-    <div id="Paris" class="tabcontent">
-      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-      <h3>Paris</h3>
-      <p>Paris is the capital of France.</p>
-    </div>
-
-    <div id="Tokyo" class="tabcontent">
-      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
-      <h3>Tokyo</h3>
-      <p>Tokyo is the capital of Japan.</p>
-    </div>
-    </body>
+    </script>
+</body>
 </html>
