@@ -1,0 +1,13 @@
+/** Flexbox rendering */
+
+@mixin flexboxRendering($alignItems, $justifyContent) {
+  display: flex;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+
+@mixin fontRendering($fs, $lh, $fw) {
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+}

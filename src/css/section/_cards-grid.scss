@@ -1,0 +1,45 @@
+.card-grid {
+  padding: 30px 0;
+  &__items {
+    display: flex;
+    @include flexboxRendering(initial, center);
+  }
+  &__item {
+    border-radius: 3px;
+    margin: 0 15px;
+    width: calc(100% / 3 - 30px);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    padding: 15px 15px 60px;
+    position: relative;
+    &-thumbnail {
+      border-radius: 3px;
+      min-height: 170px;
+      background: url('http://via.placeholder.com/400x300') no-repeat center / cover;
+      margin-bottom: 15px;
+    }
+    &-content {
+      font-family: $secondary-font-family;
+      @include fontRendering(14px, 20px, 400);
+    }
+    &-cta {
+      border: 2px solid #000;
+      padding: 6px 15px;
+      text-transform: uppercase;
+      font-family: $secondary-font-family;
+      @include fontRendering(12px, 1, 900);
+      border-radius: 50px;
+      letter-spacing: 2px;
+      color: #000;
+      display: inline-block;
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      &:hover {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+}

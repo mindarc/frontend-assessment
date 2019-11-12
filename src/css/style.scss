@@ -2,8 +2,9 @@
 # Variables (Colors, Fonts, sizes)
 --------------------------------------------------------------*/
 @import "fonts";
-@import "global";
 @import "variables";
+@import "mixins";
+@import "global";
 
 /*--------------------------------------------------------------
 # Normalize & Print
@@ -16,7 +17,8 @@
 --------------------------------------------------------------*/
 /**Optionally add Bootstrap to your project**/
 /* @import "~bootstrap/scss/bootstrap"; */
-@import "app";
+@import "./section/hero";
+@import "./section/cards-grid";
 
 /*--------------------------------------------------------------
 # Responsive Bug Fixes
