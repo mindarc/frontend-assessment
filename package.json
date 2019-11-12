@@ -1,0 +1,45 @@
+{
+    "name": "frontend-assessment",
+    "version": "1.0.0",
+    "private": true,
+    "description": "",
+    "main": "./src/index.html",
+    "scripts": {
+        "watch": "cross-env NODE_ENV=development webpack-dev-server --open --inline",
+        "build": "del -rf build && cross-env NODE_ENV=production webpack --progress --hide-modules"
+    },
+    "keywords": [],
+    "author": "Daniel Klose",
+    "contributors": {
+        "name": "Dugnist Alexey"
+    },
+    "license": "ISC OR GPL-3.0",
+    "devDependencies": {
+        "autoprefixer": "^8.2.0",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.4",
+        "babel-preset-es2015": "^6.24.1",
+        "copy-webpack-plugin": "^4.0.1",
+        "cross-env": "^3.2.4",
+        "css-loader": "^0.26.1",
+        "extract-text-webpack-plugin": "^2.1.2",
+        "file-loader": "^0.10.0",
+        "html-replace-webpack-plugin": "^2.2.6",
+        "html-webpack-plugin": "^2.30.1",
+        "imagemin-webpack-plugin": "^1.5.0-beta.0",
+        "node-sass": "^4.13.0",
+        "optimize-css-assets-webpack-plugin": "^3.0.0",
+        "postcss-loader": "^2.1.3",
+        "sass-loader": "^6.0.7",
+        "style-loader": "^0.13.1",
+        "uglifyjs-webpack-plugin": "^1.2.4",
+        "webpack": "^2.2.1",
+        "webpack-dev-server": "^2.3.0"
+    },
+    "dependencies": {},
+    "optionalDependencies": {
+        "bootstrap": "^4.1.1",
+        "jquery": "^3.3.1",
+        "popper.js": "^1.14.3"
+    }
+}
