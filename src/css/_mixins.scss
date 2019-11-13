@@ -1,13 +1,28 @@
 /** Flexbox rendering */
-
 @mixin flexboxRendering($alignItems, $justifyContent) {
   display: flex;
   align-items: $alignItems;
   justify-content: $justifyContent;
 }
 
+/** Font Rendering */
 @mixin fontRendering($fs, $lh, $fw) {
   font-size: $fs;
   line-height: $lh;
   font-weight: $fw;
+}
+
+/** Predefined viewports */
+$tablet-landscape: 1024px;
+$medium: 991px;
+$tablet: 768px;
+$medium-mobile: 767px;
+$small: 568px;
+
+/** mixin for media query */
+@mixin breakpoint($viewport) {
+  @media only screen and (max-width: #{$viewport}) {
+    // Content
+    @content
+  }
 }

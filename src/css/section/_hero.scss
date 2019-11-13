@@ -3,6 +3,9 @@
   padding: 40px 0;
   min-height: 440px;
   position: relative;
+  @include breakpoint($medium-mobile) {
+    min-height: 280px;
+  }
   &:before {
     content: '';
     position: absolute;
@@ -22,11 +25,17 @@
       letter-spacing: 2px;
       @include fontRendering(60px, 72px, 700);
       margin: 0 0 10px;
+      @include breakpoint($medium-mobile) {
+        @include fontRendering(36px, 48px, 700);
+      }
     }
     .subtitle {
       font-family: $secondary-font-family;
       @include fontRendering(24px, 32px, 400);
       color: $color-blank;
+      @include breakpoint($medium-mobile) {
+        @include fontRendering(16px, 24px, 400);
+      }
     }
   }
 }
