@@ -9,10 +9,6 @@
         "build": "del -rf build && cross-env NODE_ENV=production webpack --progress --hide-modules"
     },
     "keywords": [],
-    "author": "Daniel Klose",
-    "contributors": {
-        "name": "Dugnist Alexey"
-    },
     "license": "ISC OR GPL-3.0",
     "devDependencies": {
         "autoprefixer": "^8.2.0",
@@ -39,7 +35,7 @@
     "dependencies": {},
     "optionalDependencies": {
         "bootstrap": "^4.1.1",
-        "jquery": "^3.3.1",
+        "jquery": "^3.4.1",
         "popper.js": "^1.14.3"
     }
 }

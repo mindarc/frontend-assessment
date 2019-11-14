@@ -18,8 +18,17 @@ const CONFIG = {
     plugins: [
       new webpack.optimize.UglifyJsPlugin(),
       new HtmlWebpackPlugin({
-        template: './src/index.html',
-        filename: './index.html',
+        template: './src/exercise1.html',
+        filename: './exercise1.html',
+        minify: {
+          "collapseWhitespace": true,
+          "minifyCSS": true,
+          "removeComments": true
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/exercise2.html',
+        filename: './exercise2.html',
         minify: {
           "collapseWhitespace": true,
           "minifyCSS": true,

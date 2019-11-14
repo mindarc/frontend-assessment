@@ -1,0 +1,70 @@
+.tabs-accordion-section {
+  margin: 80px 0;
+  .tab-header {
+    display: flex;
+    border: 1px solid #dadada;
+    @include breakpoint($medium-mobile) {
+      display: none;
+    }
+    li {
+      width: 100%;
+      border-right: 1px solid #dadada;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    a {
+      display: block;
+      padding: 15px 10px;
+      font-family: $primary-font-family;
+      color: #000;
+      text-decoration: none;
+      background: #fff;
+      transition: background .3s;
+      @include fontRendering(18px, 1, 400);
+      &:hover {
+        background: #f2f2f2;
+      }
+      &.active-item {
+        background: #f2f2f2;
+        // pointer-events: none;
+      }
+    }
+  }
+  .tab-body {
+    border: 1px solid #dadada;
+    border-top: 0;
+    .tab-item {
+      &:first-child {
+        .tab-content {
+          display: block;
+        }
+      }
+      .tab-item-heading {
+        display: none;
+        @include fontRendering(18px, 1, 400);
+        padding: 15px 10px;
+        font-family: $primary-font-family;
+        border-top: 1px solid #dadada;
+        border-bottom: 1px solid #dadada;
+        cursor: pointer;
+        @include breakpoint($medium-mobile) {
+          display: block;
+        }
+        &.active-item {
+          background: #f2f2f2;
+        }
+      }
+      .tab-content {
+        display: none;
+        padding: 20px;
+        text-align: left;
+        font-family: $secondary-font-family;
+        @include fontRendering(16px, 24px, 400);
+        @include breakpoint($medium-mobile) {
+          display: none;
+        }
+      }
+    }
+  }
+}
