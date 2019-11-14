@@ -5,6 +5,7 @@
 
 import '../css/style.scss';
 import $ from '../../node_modules/jquery';
+import { gsap, TimelineMax, SteppedEase, TweenMax, Expo } from "../../node_modules/gsap/all";
 
 /********** Paste your code here! ************/
 
@@ -20,8 +21,12 @@ const main = {
     vm.renderTabContents()
     vm.toggleActiveItem()
     vm.toggleActiveAccordionItem()
+    vm.onResize()
   },
-  onResize: (e)=> {},
+  onResize: (e)=> {
+    var vm = main;
+    vm.showHeroTitleAnim()
+  },
   renderTabContents: ()=> {
     const tabHeader = $('.tab-header'),
           tabBody = $('.tab-body');
@@ -80,9 +85,34 @@ const main = {
 
         _this.addClass('active-item')
 
-      accordionContent.slideUp()
-      _this.next().slideDown()
+      accordionHeading.not(this).next().slideUp()
+      _this.next().slideToggle()
     })
+  },
+
+  /** Animation */
+  showHeroTitleAnim: ()=> {
+    if(win.innerWidth() >= 768) {
+      var tl = new TimelineMax({
+        paused:true
+      });
+      // letter animation
+      tl.fromTo(".anim-typewriter", 2, {
+        width: "0",
+      }, {
+        width: "550px", 
+        ease:  SteppedEase.config(13)
+      }, 0);
+      // text cursor animation
+      tl.fromTo(".anim-typewriter", 0.8, {
+        "border-right-color": "rgba(255,255,255,0.75)"
+      }, {
+        "border-right-color": "rgba(255,255,255,0)",
+        repeat: -1,
+        ease:  SteppedEase.config(37)
+      }, 0);
+      tl.play();
+    }
   }
 };
 

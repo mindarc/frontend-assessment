@@ -32,7 +32,9 @@
         "webpack": "^2.2.1",
         "webpack-dev-server": "^2.3.0"
     },
-    "dependencies": {},
+    "dependencies": {
+        "gsap": "^3.0.1"
+    },
     "optionalDependencies": {
         "bootstrap": "^4.1.1",
         "jquery": "^3.4.1",
