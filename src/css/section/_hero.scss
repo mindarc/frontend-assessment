@@ -1,0 +1,62 @@
+.hero-block {
+  background: url('http://via.placeholder.com/1920x650') no-repeat center / cover;
+  padding: 40px 0;
+  min-height: 440px;
+  position: relative;
+  @include breakpoint($medium-mobile) {
+    min-height: 280px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+  &__content {
+    z-index: 1;
+    position: relative;
+    h1 {
+      font-family: $primary-font-family;
+      color: $color-blank;
+      // letter-spacing: 2px;
+      @include fontRendering(60px, 72px, 700);
+      margin: 0 0 10px;
+      width: 0;
+
+      &.anim-typewriter {
+        position: relative;
+        top: 50%;  
+        // width: auto;
+        margin: 0 auto;
+        border-right: 2px solid rgba(255,255,255,.75);
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        transform: translateY(-50%);
+        box-sizing:content-box;
+        @include breakpoint($medium-mobile) {
+          top: auto;
+          transform: translateY(0);
+          width: 100% !important;
+          border-right: 0;
+        }
+      }
+
+      @include breakpoint($medium-mobile) {
+        @include fontRendering(36px, 48px, 700);
+      }
+    }
+    .subtitle {
+      font-family: $secondary-font-family;
+      @include fontRendering(24px, 32px, 400);
+      color: $color-blank;
+      @include breakpoint($medium-mobile) {
+        @include fontRendering(16px, 24px, 400);
+      }
+    }
+  }
+}

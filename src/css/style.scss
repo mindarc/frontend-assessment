@@ -1,0 +1,27 @@
+/*--------------------------------------------------------------
+# Variables (Colors, Fonts, sizes)
+--------------------------------------------------------------*/
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "global";
+
+/*--------------------------------------------------------------
+# Normalize & Print
+--------------------------------------------------------------*/
+@import "normalize";
+@import "print";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+/**Optionally add Bootstrap to your project**/
+/* @import "~bootstrap/scss/bootstrap"; */
+@import "./section/hero";
+@import "./section/cards-grid";
+@import "./section/tabs";
+
+/*--------------------------------------------------------------
+# Responsive Bug Fixes
+--------------------------------------------------------------*/
+@import "media";
