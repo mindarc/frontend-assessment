@@ -1,0 +1,22 @@
+{
+  "name": "mindarc-frontend",
+  "version": "1.0.0",
+  "description": "Responsive website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesN96/MindArc-frontend.git"
+  },
+  "author": "James Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesN96/MindArc-frontend/issues"
+  },
+  "homepage": "https://github.com/JamesN96/MindArc-frontend#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
