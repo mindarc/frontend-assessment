@@ -1,29 +1,33 @@
-Introduction
----
+## Introduction
+
 Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries. Bonus points if SASS/LESS is used and jQuery is not used.
 
-Exercise 1
----
+## Exercise 1
+
 Build a responsive page based on the designs.
 
 ##### Requirements
+
 1. Match the designs exactly.
 2. Needs to be responsive.
 
 ##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+
+- exercise1-desktop.png
+- exercise1-mobile.png
 
 ##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
 
-Exercise 2
----
+- Desktop banner - http://via.placeholder.com/1920x650
+- Mobile banner - http://via.placeholder.com/600x600
+- Content images - http://via.placeholder.com/400x300
+
+## Exercise 2
+
 Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
 
 ##### Requirements
+
 1. Display data in tabs on desktop.
 2. Display data in an accordion on mobile.
 3. Only 1 accordion/tab should be open at a time.
@@ -31,10 +35,17 @@ Read the `data.json` file and display the data as tabs on desktop and an accordi
 5. If the open accordion is selected, close it.
 
 ###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
 
-Submission
----
+- Improve the user experience with meaningful animations/transitions.
+- Design and styling.
+- Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+
+  ***
+
+  The reason it spells banana is because the + + 'a' becomes (+'a'). This unary plus operator tries to convert the a into an integer, but since it is not, it evaluates to Not a number or NaN. Therefore, the statement becomes ('b' + 'a' + NaN + 'a'). The toLowerCase function also converts the string into lowercase letters. The end result is evaluated to banana after concatenation.
+
+  ***
+
+## Submission
+
 We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
