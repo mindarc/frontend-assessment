@@ -1,0 +1,40 @@
+$primary-color: #fff;
+$secondary-color: rgb(79, 78, 78);
+
+// Media queries mixins
+
+@mixin mediaXs {
+  @media screen and (min-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (min-width: 650px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1440px) and (max-width: 1919px) {
+    @content;
+  }
+}
+
+@mixin mediaWide {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}

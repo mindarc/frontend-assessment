@@ -1,0 +1,288 @@
+// Widescreen
+
+@include mediaWide {
+  header {
+    div.container {
+      h1.md.lg.xl.wide {
+        font-size: 4.65rem;
+      }
+
+      p.md.lg.xl.wide {
+        font-size: 2.54rem;
+        top: 54.5%;
+      }
+    }
+  }
+
+  // grid
+
+  #grid {
+    .container.wide {
+      width: 65%;
+
+      .grid-div {
+        p.md.lg.xl.wide {
+          font-size: 1.2rem;
+          width: 85%;
+          padding: 0;
+          margin: 18px auto 15px;
+          line-height: 1.8rem;
+        }
+
+        .grid-btn.lg.wide {
+          width: 45%;
+        }
+      }
+    }
+  }
+}
+
+// Media Xl
+
+@include mediaXl {
+  // Header
+
+  header {
+    div.container {
+      h1.md.lg.xl {
+        font-size: 3.45rem;
+        top: 37.5%;
+      }
+
+      p.md.lg.xl {
+        font-size: 1.82rem;
+        top: 53%;
+      }
+    }
+  }
+
+  // Grid
+  #grid {
+    .container.xl {
+      width: 65%;
+
+      .grid-div {
+        p.md.lg.xl {
+          padding: 0 0.9rem;
+          font-size: 0.9rem;
+          margin: 12px auto 12px;
+          line-height: 1.4rem;
+        }
+
+        .grid-btn.lg.xl {
+          width: 46%;
+        }
+      }
+    }
+  }
+}
+
+// Media Lg
+
+@include mediaLg {
+  .container {
+    width: 90%;
+  }
+
+  // Header
+
+  header {
+    .container {
+      h1.md.lg {
+        font-size: 2.7rem;
+        top: 38%;
+      }
+
+      p.md.lg {
+        font-size: 1.44rem;
+        top: 52%;
+      }
+    }
+  }
+
+  // Grid
+
+  #grid {
+    .grid {
+      .grid-div {
+        p.md.lg {
+          padding: 0 1rem;
+          font-size: 0.9rem;
+          line-height: 1.5rem;
+          margin-bottom: 15px;
+        }
+
+        .grid-btn.lg {
+          width: 45%;
+          font-size: 0.8rem;
+          padding: 0.6rem 0;
+        }
+      }
+    }
+  }
+}
+
+// Medium devices
+
+@include mediaMd {
+  header {
+    .container {
+      position: relative;
+
+      img {
+        &.mobile {
+          display: none;
+        }
+
+        &.desktop {
+          display: block;
+        }
+      }
+
+      h1.md {
+        font-size: 1.75rem;
+        top: 37.5%;
+      }
+
+      p.md {
+        font-size: 0.85rem;
+        top: 48%;
+      }
+    }
+  }
+
+  // Grid
+
+  #grid {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 90%;
+      margin: 0 auto;
+
+      .grid-div {
+        position: relative;
+
+        img {
+          height: auto;
+          padding-bottom: 0;
+        }
+
+        p.md {
+          font-size: 0.6rem;
+          padding: 0 0.3rem;
+          line-height: 1rem;
+          width: 90%;
+          margin: 10px auto 0.55rem;
+        }
+
+        .grid-btn {
+          width: 47%;
+          font-size: 0.55rem;
+          padding: 0.5rem 0;
+          letter-spacing: 1.5px;
+          margin-bottom: 15px;
+        }
+
+        &:nth-child(2) .grid-btn,
+        &:nth-child(3) .grid-btn {
+          position: absolute;
+          margin-left: auto;
+          margin-right: auto;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Small devices
+
+@include mediaSm {
+  header {
+    .container {
+      h1 {
+        font-size: 4.7rem;
+        padding: 0 4rem;
+        top: 17.5%;
+      }
+
+      p {
+        font-size: 2.7rem;
+        line-height: 3.5rem;
+        top: 46%;
+      }
+    }
+  }
+
+  // Grid
+  #grid {
+    .container {
+      width: 80%;
+      margin: 0 auto;
+
+      .grid-div {
+        p {
+          font-size: 1.4rem;
+          padding: 0;
+          width: 81%;
+          margin: 18px auto 15px;
+        }
+      }
+    }
+  }
+}
+
+// Xs devices
+
+@include mediaXs {
+  // Header
+  header {
+    .container {
+      color: $primary-color;
+      width: 100%;
+    }
+
+    h1 {
+      margin: 0 auto;
+      font-size: 3.7rem;
+      top: 12.8%;
+    }
+
+    p {
+      font-size: 1.9rem;
+      line-height: 2.8rem;
+      top: 34%;
+    }
+  }
+
+  // Grid
+
+  #grid {
+    .grid-div {
+      margin: 45px auto;
+
+      .grid-img {
+        height: 280px;
+        margin-top: 25px;
+      }
+
+      p {
+        padding: 0 2.4rem;
+        font-size: 1.3rem;
+        line-height: 1.95rem;
+        margin: 18px 0px;
+      }
+
+      .grid-btn {
+        width: 43%;
+        padding: 0.9rem;
+        font-size: 1.2rem;
+        border-radius: 35px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
