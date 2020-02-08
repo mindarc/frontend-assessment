@@ -7,7 +7,7 @@ Exercise 1
 Build a responsive page based on the designs.
 
 ##### Requirements
-1. Match the designs exactly.
+1. Match the designs exactly.asdasd
 2. Needs to be responsive.
 
 ##### Designs
