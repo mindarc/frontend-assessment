@@ -1,0 +1,32 @@
+header {
+    width: 100vw;
+    height: 650px;
+    color: #fff;
+    overflow: hidden;
+    background: #8f8f8f;
+    background: $desktopBanner no-repeat center;
+    background: $desktopBanner no-repeat center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
+}
+
+.header-text {
+  color: $primaryColor;
+
+  h1 {
+    font-family: $commonFont;
+    font-size: 50px;
+    font-weight: bolder;
+    line-height: 1.5;
+    letter-spacing: 2px;
+  }
+
+  p {
+    font-size: 28px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+  }
+}

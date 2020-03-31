@@ -1,40 +1,48 @@
-Introduction
+###### Install Sass
+There are several ways to install Sass in your local machine. Here are some ways
 ---
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries. Bonus points if SASS/LESS is used and jQuery is not used.
+Via App
+
+1. CodeKit (Paid) Mac
+2. Compass.app (Paid, Open Source) Mac Windows Linux
+3. Ghostlab (Paid) Mac Windows
+4. Hammer (Paid) Mac
+5. Koala (Open Source) Mac Windows Linux
+6. LiveReload (Paid, Open Source) Mac Windows
+7. Prepros (Paid) Mac Windows Linux
+8. Scout-App (Free, Open Source) Windows Linux Mac
+
+Via Standalone
+
+Download the package [here](https://github.com/sass/dart-sass/releases/tag/1.26.3)
+and add it to your PATH
+
+Via npm
+`npm install -g sass`
+
+Via brew
+`brew install sass/sass/sass`
+
+###### Check Sass Version
+```
+	sass --version
+```
+
+You can also use `sass --help` for more info about CLI.
+
+###### Compile Sass
+```
+	sass --watch input-file:output-file
+```
+For guide, [see this link](https://sass-lang.com/guide)
+
+
+###### Web Pages
 
 Exercise 1
 ---
-Build a responsive page based on the designs.
-
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
-
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
-
-##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
+Responsive page that shows full-width header and has 3 columns. Sass is used for the design. It has different views for desktop and mobile.
 
 Exercise 2
 ---
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
-
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
-
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
-
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+Responsive page that retrieves data from `data.json` and displays it in tab if desktop and in accordion if mobile. Design is derived from Excercise 1 and it also includes explanation why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.

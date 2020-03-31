@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+            <title>Exercise 2</title>
+            <link rel="stylesheet" href="styles/css/main.css">
+        </head>
+    </html>
+    <body>
+    	<header>
+		    <section class="container header-text">
+		        <h1>Hello Developer!</h1>
+	        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+		    </section>
+		</header>
+		
+		<section class="content container">
+			<div class="row">
+				<div class="column full-width">
+					<div id="tabs" class="content__tabs">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="column full-width">
+					<div class="content__bonus">
+						<p class="title"> Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`. </p>
+						<p>
+							The '+' is used to concatenate strings when it is inserted between 2 strings. <br>
+							<b> Result: 'b' + 'a' = ba </b> <br> <br>
+							If it is placed next to a string, it converts the string to an integer. If the string is not a valid number, it returns NaN (Not A Number) <br>
+							<b> Result: 'b' + 'a' + (+'a') = baNaN </b> <br> <br>
+							When concatenated all together. <br>
+							<b> Result: 'b' + 'a' + (+ 'a') + 'a' = baNaNa </b> <br> <br>
+							The method toLowerCase() converts the string to be displayed in small letters. <br>
+							<b> Result: ('b' + 'a' + + 'a' + 'a').toLowerCase() = banana </b>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+    </body>
+</html>
+
+<script type="text/javascript">
+	fetch('https://raw.githubusercontent.com/mindarc/frontend-assessment/master/data.json')
+		.then(response => response.json())
+		.then(data => {
+        document.getElementById("tabs").innerHTML = `
+        	<div class="tabs">
+
+			    ${data.map((item, i) => {
+			    	return `
+			    		<input type="radio" name="tabs" id="tab-${i+1}" aria-controls="${i}">
+		    			<label for="tab-${i+1}">${item.title}</label>
+			    	`
+			    }).join('')}
+
+			    <div class="tab-panels">
+			    	${data.map((item, i) => {
+			    		return `
+			    		<div id="${i+1}" class="tab-panel">
+				            ${item.content}
+				        </div>
+			    		`
+			    	}).join('')}
+			    </div>
+
+			</div>
+        `
+        document.getElementById("tab-1").setAttribute("checked", "checked")
+    })
+</script>
+
+
+
+
+
+

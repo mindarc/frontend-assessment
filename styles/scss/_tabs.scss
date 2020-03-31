@@ -1,0 +1,45 @@
+
+.tabs input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabs input {
+  &:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+  &:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+  &:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+  &:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+  &:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+  &:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+    display: block;
+  }
+}
+
+.tabs {
+  label {
+    font-weight: 700;
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    padding: 15px 15px 25px;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    cursor: pointer;
+  }
+
+  label:hover, input:focus + label {
+    color: #848f9a;
+  }
+
+  .tab-panel {
+    display: none;
+    padding: 30px;
+    border-top: 1px solid #ccc;
+  }
+
+  input:checked + label {
+    border-color: #ccc;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+  }
+}
