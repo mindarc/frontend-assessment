@@ -1,0 +1,55 @@
+@import "variables";
+@import "https://fonts.googleapis.com/css?family=Abel|Raleway:400,700";
+
+* {
+  box-sizing: border-box;
+	font-family: $primaryFont, $secondaryFont, $commonFont;
+	padding: 0;
+	margin: 0;
+}
+
+@import "header";
+@import "columns";
+
+/* SECTION */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.content {
+  width: 80%;
+  margin: auto;
+
+  &__tabs {
+    height: 250px;
+    color: #333;
+  }
+
+  &__bonus {
+    padding: 20px;
+    text-align: justify;
+
+    .title {
+      font-size: 20px;
+    }
+  }
+}
+
+.row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+@import "tabs";
+@import "media";

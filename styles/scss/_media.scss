@@ -1,0 +1,59 @@
+@media screen and (max-width: 800px) {
+  // HEADER
+  header {
+    height: 600px;
+    background: $mobileBanner no-repeat center;
+    background: $mobileBanner no-repeat center;
+  }
+
+  .header-text p {
+    font-size: 22px;
+  }
+
+  // SECTION
+  .content {
+    width: 100%;
+
+    &__tabs {
+      height: auto;
+    }
+  }
+
+  .row {
+    flex-wrap: wrap;
+  }
+
+  // COLUMN
+  .column {
+    width: 100%;
+
+    p {
+      font-size: 14px;
+    }
+
+    a {
+      font-size: 12px;
+    }
+  }
+
+  // TABS
+  .tabs {
+    label {
+      width: 100%;
+    }
+
+    input:checked + label {
+      background: #ccc;
+      color: #fff;
+      margin: 0;
+    }
+
+    .tab-panels {
+      border-top: 1px solid #ccc;
+
+      .tab-panel {
+        border: none;
+      }
+    }
+  }
+}
