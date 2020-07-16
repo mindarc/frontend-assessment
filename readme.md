@@ -1,40 +1,41 @@
 Introduction
 ---
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries. Bonus points if SASS/LESS is used and jQuery is not used.
+Directory includes all exercises, assets used, and libraries. Some libraries that can be found on pages are CDNs since the downloaded versions caused conflicts with some stylings.
 
-Exercise 1
+Technology
 ---
-Build a responsive page based on the designs.
+CSS
+HTML
+JavaScript
+Bootstrap
+jQuery (For Bootstrap only. Wasn't used in the codes)
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+Adjustments
+---
+Took me awhile to figure out why the Accordions and Tabs don't work. Seems it was because of the imported libraries.
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+Exercises are responsive in Browser's resizing behaviour, but isn't when you change the device through Developer Tools. I used Media Queries for this.
 
-##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
+I use mostly jQuery in our office, so I don't really have much experience with Vanilla Javascript. Also learned it while doing the exercises.
+
+Additional Files
+---
+app.event.js - For changing the device on Chrome Developer Tools as it's responsive when you resize the window but is having conflict with positioning when you change device.
+
+app.template - To use templating for data.json
+
+style.css - For global and custom classes.
 
 Exercise 2
 ---
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+For Exercise 2, I encountered CORS error. I used to have a plugin for this but since Chrome updates, they don't work anymore. I tried to tweak Chrom flags but to no avail. I was able to finish this using Edge. If you encounter any trouble viewing it in Chrome, please use other browser instead.
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
+I tried different extensions for this. My initial plan was to change the file type to js but opted to read it in its original file type.
 
 ###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
 * Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+The reason for this is because you're adding a string to an empty block. Without quotations, the arithmetic operators expect a number to add. Since there's nothing to add to the string, it returns NaN which means Not A Number.
 
-Submission
+Last Say
 ---
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+I always do my best in everything that I do. I will never stop learning and I hope you can give me a chance to improve myself and skills in your company. My goal is to be a part of a company's success as often as possible.
