@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="banner">
+        <img src="http://via.placeholder.com/1920x650" alt="hero-banner" class="desktop">
+        <img src="http://via.placeholder.com/600x600" alt="mobile banner" class="hidden mobile">
+        <div class="hero_title">
+            <div class="panel">
+                <h1>Hello Developer !</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
+        </div>
+    </div>
+    <div class="card_container">
+        <div class="panel">
+            <div class="d-flex">
+                <div class="card_list">
+                    <div class="card_photo">
+                        <img src="http://via.placeholder.com/400x300" alt="thumbnail">
+                    </div>
+                    <div class="card_detail">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a href="#" class="read_more">Read more</a>
+                    </div>
+                </div>
+                <div class="card_list">
+                    <div class="card_photo">
+                        <img src="http://via.placeholder.com/400x300" alt="thumbnail">
+                    </div>
+                    <div class="card_detail">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a href="#" class="read_more">Read more</a>
+                    </div>
+                </div>
+                <div class="card_list">
+                    <div class="card_photo">
+                        <img src="http://via.placeholder.com/400x300" alt="thumbnail">
+                    </div>
+                    <div class="card_detail">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <a href="#" class="read_more">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="homeData"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="https://unpkg.com/html-react-parser@latest/dist/html-react-parser.min.js"></script>
+    <script type="text/babel">
+        function Tab ({id, title, content, isActive, handleClick}){
+            return (
+                <React.Fragment>
+                    <div className={`tab ${(isActive ? `active` : '' )}`} >
+                        <h2 id={id} onClick={handleClick}  >{title}</h2>
+                        <div className="content"> {window.HTMLReactParser(content)} </div>
+                    </div>        
+                </React.Fragment>
+            );
+        }
+
+        function Home() {
+            const  [data, setData] = React.useState([]);
+            const  [activeTab, setActiveTab] = React.useState(0);
+
+            React.useEffect(() => {
+                function getData(){
+                    fetch('./data.json')
+                        .then(response => response.json())
+                        .then(result => {
+                            setData(data => data.concat(result));
+                        });
+                }
+
+                getData();
+
+            }, []);
+
+            function handleClick({currentTarget}){
+                let idx = parseInt(currentTarget.getAttribute('id'));
+                if(idx === activeTab) {
+                    setActiveTab(null);
+                    return;
+                }
+                setActiveTab(idx);
+            }
+
+            return (
+                <div className="panel">
+                { 
+                    data.map(({title, content}, i) => {
+                        return <Tab 
+                            key={i}
+                            id={i}
+                            title={title} 
+                            content={content} 
+                            activeTab={activeTab} 
+                            handleClick={handleClick} 
+                            isActive={i === activeTab ? true : false}
+                            />
+                    })
+                }
+                </div>
+            );
+        };
+
+        ReactDOM.render(<Home />, document.getElementById('homeData'))
+    </script>
+</body>
+</html>
