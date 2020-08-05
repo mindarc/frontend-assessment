@@ -1,0 +1,65 @@
+@media (min-width: 1200px) {
+  .banner-lg {
+    min-height: 45vh !important;
+    color: white;
+    background-image: url(../../assets/img/1920x650.png) !important;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 10rem !important;
+    box-shadow: inset 2000px 0 0 0 rgba(137,135,135,0.02);
+  }
+}
+
+@media (min-width: 300px) {
+  .banner-lg {
+    min-height: 10vh;
+    color: white;
+    background-image: url(../../assets/img/600x600.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 0rem;
+    box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (min-width: 1200px) {
+  .subheader {
+    font-size: 2.3rem !important;
+  }
+}
+
+@media (min-width: 300px) {
+  .subheader {
+    font-size: 1.5rem;
+  }
+}
+
+.btn-readmore {
+  border-radius: 30px !important;
+  border-color: black !important;
+  border-width: 2px !important;
+}
+
+@media (min-width: 300px) {
+  .card-text {
+    min-height: 39vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-text {
+    min-height: 8vw !important;
+  }
+}
+
+.card.border-white.border.rounded.shadow-none {
+  border-color: gray;
+}
+
+.card-image {
+  min-width: 13vw;
+  min-height: 20vh;
+}
+
