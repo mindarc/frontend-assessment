@@ -37,3 +37,10 @@ Read the `data.json` file and display the data as tabs on desktop and an accordi
 3. Only 1 accordion/tab should be open at a time.
 4. Open the first accordion/tab on load.
 5. If the open accordion is selected, close it.
+
+###### Bonus points
+* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+
+###### Answer
+- `('b' + 'a' + + 'a' + 'a')` = `baNaNa`
+- `.toLowerCase()` converts `baNaNa` string to `banana`
