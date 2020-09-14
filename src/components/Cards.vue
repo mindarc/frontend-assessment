@@ -1,15 +1,30 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="card card-layout justify-content-around col-lg-4 xs-12" v-for="(card, index) in cardsArray" :key="index">
-        <img class="card-img card-img-top" :src="card.imageUrl" alt="Card image">
+  <b-container>
+    <b-row>
+      <b-col
+        lg="4"
+        xs="12"
+        class="card card-layout justify-content-around"
+        v-for="(card, index) in cardsArray"
+        :key="index"
+      >
+        <img
+          class="card-img card-img-top"
+          :src="card.imageUrl"
+          alt="Card image"
+        />
         <div class="card-body d-flex flex-column align-items-center">
           <p class="card-text">{{ card.text }}</p>
-          <button type="button" class="btn btn-small btn-read-more btn-outline-dark mt-auto">{{ card.button }}</button>
+          <button
+            type="button"
+            class="btn btn-small btn-read-more btn-outline-dark mt-auto"
+          >
+            {{ card.button }}
+          </button>
         </div>
-      </div>
-    </div>
-  </div>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
