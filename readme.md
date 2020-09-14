@@ -31,10 +31,11 @@ Read the `data.json` file and display the data as tabs on desktop and an accordi
 5. If the open accordion is selected, close it.
 
 ###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
 * Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+###### Answer
+- `('b' + 'a' + + 'a' + 'a')` = `baNaNa`
+- `.toLowerCase()` converts `baNaNa` string to `banana`
+
+
+
