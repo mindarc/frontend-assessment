@@ -1,0 +1,37 @@
+.card {
+   background: white;
+   padding: 15px;
+   position: relative;
+   border: 1px solid rgba(0, 0, 0, 0.125);
+   border-radius: 0.25rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 100%;
+   transition: 1s;
+   animation: fade-rotate 1s;
+   &__image img {
+     max-width: 100%;
+   }
+   &__body {
+     font-size: 1.2rem;
+     line-height: 1.2;
+     text-align: center;
+   }
+   button {
+     margin-top: auto;
+   }
+ }
+
+ @keyframes fade-rotate {
+   0% {
+     opacity: 0;
+     transform: rotateY(90deg) translateY(20px);
+   }
+   50% {
+     opacity: 1;
+   }
+   100% {
+     transform: rotateY(0deg) translateY(0x);
+   }
+ }

@@ -1,0 +1,28 @@
+{
+  "name": "frontend-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "gulp sass",
+    "server": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bhavino/frontend-assessment.git"
+  },
+  "author": "Bhavin M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bhavino/frontend-assessment/issues"
+  },
+  "homepage": "https://github.com/Bhavino/frontend-assessment#readme",
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-load-plugins": "^2.0.4",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0"
+  }
+}
