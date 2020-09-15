@@ -1,0 +1,59 @@
+.tabs {
+   border: 1px solid #cccccc;
+   display: flex;
+   border-radius: 0.25rem;
+
+   &__content {
+      padding: 20px 15px;
+      font-size: 1.4rem;
+      display: none;
+      opacity: 1;
+      animation: fadeIn 0.5s;
+
+      &--active {
+         display: block;
+      }
+
+      &__header {
+         margin: 0;
+      }
+   }
+   &__sidebar {
+      flex-shrink: 0;
+      background: #cccccc;
+   }
+
+   &__button {
+      display: block;
+      padding: 20px 10px;
+      font-size: 1.5rem;
+      background: #eeeeee;
+      border: none;
+      width: 100%;
+      outline: none;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+         background: #dddddd;
+      }
+
+      &--active,
+      &:active {
+         font-weight: bold;
+         border-right: 4px solid #009897;
+         background: #dddddd;
+      }
+   }
+}
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+      transform: translateY(10px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}

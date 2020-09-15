@@ -1,0 +1,57 @@
+.accordion {
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   overflow: hidden;
+   background: #009578;
+
+   &__label,
+   &__content {
+      padding: 14px 20px;
+   }
+
+   &__label {
+      display: block;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 1.5rem;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.1s;
+   }
+
+   &__label:hover {
+      background: rgba(0, 0, 0, 0.1);
+   }
+
+   &__label::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      width: 12px;
+      height: 6px;
+      background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+      background-size: contain;
+      transition: transform 0.4s;
+   }
+
+   &__content {
+      background: #ffffff;
+      line-height: 1.6;
+      font-size: 1.2rem;
+      display: none;
+   }
+
+   &__input {
+      display: none;
+   }
+
+   &__input:checked ~ &__content {
+      display: block;
+   }
+
+   &__input:checked ~ &__label::after {
+      transform: translateY(-50%) rotate(0.5turn);
+   }
+}
