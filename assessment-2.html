@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style type="text/css">
+      .jumbotron {
+        background-image: url('http://via.placeholder.com/600x600');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 650px;
+      }
+      .bannerContent {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn-outline-secondary {
+        border-radius: 25px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-width: 3px;
+      }
+      .lead {
+        font-size: 2rem;
+        font-weight: 300;
+      }
+      @media (min-width: 768px) {
+        .jumbotron {
+          background-image: url('http://via.placeholder.com/1920x650');
+          height: 600px;
+          text-align: center;
+        }
+      }
+    </style>
+
+    <title>Frontend Assessment 2</title>
+  </head>
+  <body>
+
+  <div class="container">
+      <h1 class="py-3">Assessment 2</h1>
+
+      <!-- Accoridan -->
+      <div class="d-sm-block d-md-none">
+        <div class="accordion" id="accordionExample">
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="d-none d-sm-none d-md-block">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        </ul>
+        <div class="tab-content" id="myTabContent">
+        </div>
+      </div>
+
+  </div>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Read File -->
+    <script type="text/javascript">
+      async function readData() {
+        let response = await fetch('http://localhost:3000/data.json')
+        let data = await response.json()
+        for (var i = data.length - 1; i >= 0; i--) {
+          let collapse = false,
+              show = '',
+              active = '';
+          if(i===0){
+            collapse = true;
+            show = 'show';
+            active = 'active';
+          }
+          // Accordian
+          let card = '<div class="card">'+
+            '<div class="card-header" id="heading'+i+'">'+
+              '<h2 class="mb-0">'+
+                '<button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse'+i+'" aria-expanded="'+collapse+'" aria-controls="collapse'+i+'">'+
+                  data[i].title +
+                '</button>'+
+              '</h2>'+
+            '</div>'+
+            '<div id="collapse'+i+'" class="collapse '+show+'" aria-labelledby="heading'+i+'" data-parent="#accordionExample">'+
+              '<div class="card-body">'+
+                data[i].content +
+              '</div>'+
+            '</div>'+
+          '</div>';
+          $('#accordionExample').prepend(card);
+          // Tabs
+          let tab = '<li class="nav-item" role="presentation">'+
+                      '<a class="nav-link '+collapse+' '+active+'" id="'+i+'" data-toggle="tab" href="#'+data[i].title.replace(" ",'-')+'" role="tab" aria-controls="'+i+'" aria-selected="'+collapse+'">'+data[i].title+'</a>'+
+                    '</li>';
+          $('#myTab').prepend(tab);
+          let content = '<div class="tab-pane fade '+show+' '+active+'" id="'+data[i].title.replace(" ",'-')+'" role="tabpanel" aria-labelledby="'+data[i].title.replace(" ",'-')+'-tab">'+data[i].content+'</div>';
+          $("#myTabContent").prepend(content);
+        }
+      }
+      readData()
+    </script>
+  </body>
+</html>
