@@ -1,8 +1,16 @@
-Instructions
----
-1. Serve the directory. e.g. python -m SimpleHTTPServer 3000
-2. Vist http://localhost:3000/assessment-1.html
-3. Vist http://localhost:3000/assessment-2.html
+# mindarc-assessment
+
+## Build Setup
+
+```bash
+# Goto mindarc-assesment folder
+$ cd mindarc-assesment
+
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
 
 ###### Bonus points
 * Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
