@@ -1,40 +1,22 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, Vue.js preferred. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+# mindarc-assessment
 
-Exercise 1
----
-Build a responsive page based on the designs.
+## Build Setup
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+```bash
+# Goto mindarc-assesment folder
+$ cd mindarc-assesment
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+# install dependencies
+$ npm install
 
-##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
-
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
-
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
+# serve with hot reload at localhost:3000
+$ npm run dev
 
 ###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
 * Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
 
-Submission
+Explantion
 ---
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
++ + 'a' tries to covert the string to a number and since 'a' is a string the result is NaN (Not a number). 
+
+Here's another cool one you've probably seen too: Array(16).join('wat' - 1)+" Batman!"
