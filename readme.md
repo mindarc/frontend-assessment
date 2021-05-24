@@ -18,18 +18,18 @@ Solution for this excercise is in excercise2 folder.
 - Here the assets folder consists our data.json file for data.
 - components folder includes two more components tab and accordian
 
-# Tab
+## Tab
 
 - tab component consist of Tab and Tabs vue file.
 - <slot> is used to render the data
 
-# Excercise2 Installation
+## Excercise2 Installation
 
 - git clone the project
 - cd to cloned directory and run 'npm install'
 - Run npm run serve to deply the project
 
-# Bonus
+## Bonus
 
 - Basic HTML & CSS is used to design the page
 - CSS Animation are implmeneted in Accordian
