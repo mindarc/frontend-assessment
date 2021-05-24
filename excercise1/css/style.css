@@ -1,0 +1,153 @@
+/* base style starts */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* base style ends  */
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.container img {
+  filter: brightness(60%);
+}
+
+/* banner starts */
+
+.mobile-banner {
+  display: none;
+}
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered-text h2 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 58px;
+}
+
+.centered-text p {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+
+/* banner ends */
+
+/* feature list starts */
+
+.flex-column {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 100px 60px 140px;
+}
+
+.feature-list {
+  width: 20%;
+  flex-grow: 1;
+}
+
+.feature-content {
+  padding: 20px;
+  height: auto;
+  border: 1px solid rgb(230, 227, 227);
+  margin: 30px 40px 0 0;
+  text-align: center;
+  box-shadow: 0 1px 2px 0 rgba(155, 155, 155, 0.2),
+    0 1px 2px 0 rgba(75, 74, 74, 0.19);
+}
+
+.button {
+  border: 3px solid rgb(54, 54, 54);
+  background: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 25px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  width: 140px;
+}
+
+/* feature list ends */
+
+/* mobile query for screen size for less than 600px start*/
+@media screen and (max-width: 600px) {
+  .centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  .flex-column {
+    margin: 15px 10px 15px 15px;
+  }
+
+  .feature-content {
+    padding: 20px;
+    height: auto;
+    border: 1px solid rgb(230, 227, 227);
+    margin: 30px 40px 15px 30px;
+    text-align: center;
+    box-shadow: 0 1px 2px 0 rgba(155, 155, 155, 0.2),
+      0 1px 2px 0 rgba(75, 74, 74, 0.19);
+  }
+  .feature-list {
+    width: 100%;
+  }
+
+  .desktop-banner {
+    display: none;
+  }
+
+  .centered-text p {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+  .mobile-banner {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+}
+
+/* mobile query ends */
