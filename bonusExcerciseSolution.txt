@@ -1,0 +1,21 @@
+Introduction
+---
+Thank you for having me for here.
+
+Explain why the result of ('b' + 'a' + + 'a' + 'a').toLowerCase() is banana ?
+
+Answer:
+
+When we try to read the above condition. 
+
+First  JavaScript tries to convert the '+a' to numerical and since its a numberical value
+it returns 'NaN'.
+('b' + 'a' + NaN + 'a')
+
+Second, The JavaScript concatenates  the single '+' sign.
+
+-> so  in simple term we have 'baNaNa'
+-> Thirdly toLowerCase() bring everything to lower case.
+
+-> Finally we have 'banana'
+
