@@ -26,8 +26,9 @@ Solution for this excercise is in excercise2 folder.
 ## Excercise2 Installation
 
 - git clone the project
-- cd to cloned directory and run 'npm install'
-- Run npm run serve to deply the project
+- cd to cloned directory
+- cd to excercise2 folder and run 'npm install'
+- Run npm run serve to deploy the project
 
 ## Bonus
 
