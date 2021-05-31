@@ -1,0 +1,26 @@
+<!--Header-->
+<header class="header">
+  <!--Intro Section-->
+  <div class="view banner">
+    <div class="container flex-center">
+      <h1 class="h1-responsive">
+        Hello Developer!
+      </h1>
+      <h6 class="wow fadeInLeft">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      </h6>
+    </div>
+  </div>
+</header>
+<!--Header-->
+<!-- tabs on desktop and an accordion on mobile -->
+<div class="mainContainer">
+  <div *ngFor="let data of dataDisplay; let i=index">
+    <input id="{{ 'tab'+ i }}" type="radio" name="tabs" checked />
+    <label for="{{ 'tab'+ i }}">{{ data.title }}</label>
+    <section id="{{ 'content' + i }}">
+      <p>{{ data.content }}</p>
+    </section>
+  </div>
+</div>
+<!-- tabs on desktop and an accordion on mobile -->

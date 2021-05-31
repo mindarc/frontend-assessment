@@ -1,0 +1,166 @@
+header {
+  height: unset !important;
+}
+.banner {
+  background: url('http://via.placeholder.com/1920x650') no-repeat center center;
+  background-size: cover;
+}
+.view {
+  height: 40vh !important;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 100px;
+  color: #fff;
+}
+
+h6 {
+  line-height: 1.7;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+.mainContainer {
+  padding: 50px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.tabArea {
+  border-bottom: 1px solid #ccc;
+}
+section {
+  display: none;
+  padding: 20px 5px;
+  position: absolute;
+}
+input {
+  display: none;
+}
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid #ddd;
+  border-bottom: 1px solid #fff;
+}
+#tab0:checked ~ #content0,
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+  display: block;
+}
+
+p {
+  padding: 10px;
+}
+
+img {
+  border-radius: 10px;
+  width: 360px;
+}
+
+.button {
+  border-radius: 40px;
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid #000000;
+  width: 140px;
+  background-color: #fff;
+  margin: auto auto 10px auto;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.button a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul.tabs {
+  margin: 20px;
+  padding: 0;
+  float: left;
+  list-style: none;
+  height: 32px;
+  border: 0px solid #333;
+  width: 100%;
+}
+
+ul.tabs li {
+  border: 1px solid #ddd;
+  border-top: 2px solid #ddd;
+  border-bottom: 1px solid #fff;
+  float: left;
+  margin: 0;
+  cursor: pointer;
+  padding: 0px 21px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tab_last {
+  border-right: 1px solid #333;
+}
+
+ul.tabs li:hover {
+  background-color: #ccc;
+  color: #333;
+}
+
+ul.tabs li.active {
+  background-color: #fff;
+  color: #333;
+  border-bottom: 1px solid #fff;
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  label {
+    text-align: left;
+    display: block;
+    border: 1px solid #ddd;
+  }
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+  section {
+    position: relative;
+    border: 1px solid #ddd;
+    border-top: 0px;
+  }
+  .tabArea {
+    border: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mainContainer {
+    display: inline-flex;
+  }
+}
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+    display: block;
+  }
+}

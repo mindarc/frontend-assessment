@@ -1,40 +1,17 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+Project is based on Angular and completed both exercises as per the requirements.
+The following two Folders contains the code. In the folder there is a file called package.json which has all the
+info about dependencies to run the project.
 
-Exercise 1
----
-Build a responsive page based on the designs.
+  1. mindarc-exercise-1-jyoti
+  2. mindarc-exercise-2-jyoti
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+Explain why the result of ('b' + 'a' + + 'a' + 'a').toLowerCase() is banana
 
-##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
+The first 'b' and 'a' get added up as 'ba'. With the second 'a' has a double plus sign,
+the first one is for addition, the second one is in order to convert a string to a number using the unary plus
+operator. Because 'a' is not a number, the result is NaN (Not a Number).
 
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+First, we get the value of the bracket expression and then apply it on the result toLowerCase() function.
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
-
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
-
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+baNaNa which is lowercased into “banana”
