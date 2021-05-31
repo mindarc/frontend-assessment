@@ -16,7 +16,7 @@
 <!-- tabs on desktop and an accordion on mobile -->
 <div class="mainContainer">
   <div *ngFor="let data of dataDisplay; let i=index">
-    <input id="{{ 'tab'+ i }}" type="radio" name="tabs" checked />
+    <input id="{{ 'tab'+ i }}" type="radio" name="tabs" [checked]="i === 0" />
     <label for="{{ 'tab'+ i }}">{{ data.title }}</label>
     <section id="{{ 'content' + i }}">
       <p>{{ data.content }}</p>
