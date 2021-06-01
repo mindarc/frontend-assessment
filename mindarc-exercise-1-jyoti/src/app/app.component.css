@@ -1,83 +1,90 @@
 header {
-  height: unset !important;
+    height: unset !important;
 }
+
 .banner {
-  background: url('http://via.placeholder.com/1920x650') no-repeat center center;
-  background-size: cover;
+    background: url('http://via.placeholder.com/1920x650') no-repeat center center;
+    background-size: cover;
 }
+
 .view {
-  height: 40vh !important;
+    height: 40vh !important;
 }
 
 h1 {
-  text-align: center;
-  padding-top: 100px;
-  color: #fff;
+    text-align: center;
+    padding-top: 100px;
+    color: #fff;
 }
 
 h6 {
-  line-height: 1.7;
-  text-align: center;
-  color: #fff;
-  font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
 }
+
 .mainContainer {
-  width: auto;
-  margin: auto;
+    width: auto;
+    margin: auto;
 }
+
 .content {
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid grey;
-  width: 420px;
-  height: auto;
-  text-align: center;
-  image-orientation: middle;
-  margin: 35px auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    width: 420px;
+    height: auto;
+    text-align: center;
+    image-orientation: middle;
+    margin: 35px auto;
 }
 
-.content p {
-  padding: 10px;
-}
+    .content p {
+        padding: 10px;
+    }
 
-.content img {
-  border-radius: 10px;
-}
+    .content img {
+        border-radius: 10px;
+    }
 
 .button {
-  border-radius: 40px;
-  font-size: 16px;
-  padding: 10px 0;
-  border: 2px solid #000000;
-  width: 45%;
-  background-color: #fff;
-  margin: auto;
-  text-transform: uppercase;
-  text-align: center;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-.button a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  color: inherit;
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 10px 0;
+    border: 2px solid #000000;
+    width: 45%;
+    background-color: #fff;
+    margin: auto;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-@media (max-width: 600px) {
-  .margins {
-    margin-right: 1rem;
-    margin-left: 1rem;
-  }
+a {
+    text-decoration: none;
+    color: inherit;
 }
-@media (max-width: 740px) {
-  .full-height,
-  .full-height body,
-  .full-height header,
-  .full-height header .view {
-    height: 1020px;
-  }
+
+    .button a,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        color: inherit;
+    }
+
+@media (max-width: 600px) {
+    .margins {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+        height: 1020px;
+    }
 }

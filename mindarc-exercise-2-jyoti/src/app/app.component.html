@@ -1,26 +1,33 @@
 <!--Header-->
 <header class="header">
-  <!--Intro Section-->
-  <div class="view banner">
-    <div class="container flex-center">
-      <h1>
-        Hello Developer!
-      </h1>
-      <h6>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      </h6>
+    <div class="view banner">
+        <div class="container">
+            <h1>
+                Hello Developer!
+            </h1>
+            <h6>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </h6>
+        </div>
     </div>
-  </div>
 </header>
 <!--Header-->
 <!-- tabs on desktop and an accordion on mobile -->
 <div class="mainContainer">
-  <div *ngFor="let data of dataDisplay; let i=index">
-    <input id="{{ 'tab'+ i }}" type="radio" name="tabs" [checked]="i === 0" />
-    <label for="{{ 'tab'+ i }}">{{ data.title }}</label>
-    <section id="{{ 'content' + i }}">
-      <p>{{ data.content }}</p>
-    </section>
-  </div>
+    <input type="radio" id="tabgenesis" name="tabs" />
+    <div *ngFor="let data of dataDisplay; let i=index">
+        <div class="tabsection">
+            <input class="tabs"
+                   id="{{ 'tab'+ i }}"
+                   type="radio"
+                   name="tabs"
+                   [checked]="i === 0"
+                   (click)="toggleTabs($event)" />
+            <label for="{{ 'tab'+ i }}">{{ data.title }}</label>
+            <section class="contentbox" id="{{ 'content' + i }}">
+                <p [innerHTML]="data.content"></p>
+            </section>
+        </div>
+    </div>
 </div>
 <!-- tabs on desktop and an accordion on mobile -->
