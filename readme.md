@@ -1,9 +1,22 @@
-Project is based on Angular and completed both exercises as per the requirements.
+
+Project is based on Angular and Vue.js
+
+I have completed both exercises usgin Angular and Vue.js as per the requirement.
+
 The following two Folders contains the code. In the folder there is a file called package.json which has all the
 info about dependencies to run the project.
 
-  1. mindarc-exercise-1-jyoti
-  2. mindarc-exercise-2-jyoti
+  1. mindarc-exercise-1-jyoti - - Angular
+  2. mindarc-exercise-2-jyoti - Angular
+
+
+Without any prior experience in Vue.js I have attempted to complete the exercise in Vue.js as well.
+
+1. vue-firstdesigntemplate - mindarc-exercise-1-jyoti
+2. vue-firstproject - mindarc-exercise-2-jyoti
+
+In the folder there is a file called package.json which has all the
+info about dependencies to run the project.
 
 
 Explain why the result of ('b' + 'a' + + 'a' + 'a').toLowerCase() is banana
