@@ -1,7 +1,7 @@
 
 Project is based on Angular and Vue.js
 
-I have completed both exercises usgin Angular and Vue.js as per the requirement.
+I have completed both exercises using Angular and Vue.js as per the requirement.
 
 The following two Folders contains the code. In the folder there is a file called package.json which has all the
 info about dependencies to run the project.
