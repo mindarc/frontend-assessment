@@ -70,35 +70,6 @@ p {
     padding: 10px;
 }
 
-img {
-    border-radius: 10px;
-    width: 360px;
-}
-
-.button {
-    border-radius: 40px;
-    font-size: 18px;
-    padding: 10px;
-    border: 2px solid #000000;
-    width: 140px;
-    background-color: #fff;
-    margin: auto auto 10px auto;
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-    .button a,
-    a:hover,
-    a:focus,
-    a:active {
-        text-decoration: none;
-        color: inherit;
-    }
-
 @media screen and (max-width: 650px) {
     label {
         text-align: left;
