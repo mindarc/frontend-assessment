@@ -62,21 +62,23 @@ html {
   height: 40vh !important;
   width:100%;
 }
-.mainContainer {
-  width: auto;
-  margin: auto;
-}
-.content {
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid grey;
-  width: 400px;
-  height: auto;
-  text-align: center;
-  image-orientation: middle;
-  margin: 35px 15px;
-  float:left;
-}
+    .mainContainer {
+        width: auto;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .content {
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid grey;
+        width: 400px;
+        height: auto;
+        text-align: center;
+        image-orientation: middle;
+        margin: 35px 15px;
+    }
 
 .content p {
   padding: 10px;
