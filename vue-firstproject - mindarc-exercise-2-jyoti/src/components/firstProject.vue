@@ -7,15 +7,15 @@
  <!-- tabs on desktop and an accordion on mobile -->
  <div class="mainContainer">
    <input type="radio" id="tabgenesis" name="tabs">
-    <div v-for="item in sections" :key="item.title">
-    <div class="tabsection">
-      <input class="tabs" :id="item.title" type="radio" name="tabs" v-on:click="toggleTabs" checked/>
-      <label :for="item.title">{{ item.title }}</label>
-      <section class="contentbox" id="{{ 'content' + i }}">
-        <p v-html="item.content"></p>
-      </section>
-      </div>
-    </div>
+   <div v-for="(item, index) in sections" :key="index">
+       <div class="tabsection">
+           <input class="tabs" :id="item.title" type="radio" name="tabs" v-on:click="toggleTabs" checked />
+           <label :for="item.title">{{ item.title }}</label>
+           <section class="contentbox" id="{{ 'content' + i }}">
+               <p v-html="item.content"></p>
+           </section>
+       </div>
+   </div>
   </div>
 <!-- tabs on desktop and an accordion on mobile -->
 </template>
