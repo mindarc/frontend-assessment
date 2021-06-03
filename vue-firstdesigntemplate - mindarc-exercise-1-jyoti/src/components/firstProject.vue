@@ -153,6 +153,11 @@
         }
 
     @media (max-width: 650px) {
+
+        .banner {
+            background: url('http://via.placeholder.com/600x600') no-repeat center center;
+            background-size: cover;
+        }
         .row {
             width: 75%;
             margin: auto;
