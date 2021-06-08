@@ -1,0 +1,129 @@
+.exercise-one {
+	// Banner
+	.banner {
+		position: relative;
+
+		.banner-image {
+			width: 100%;
+
+			&-desktop {
+				display: none;
+				@media screen and (min-width: 768px) {
+					display: block;
+				}
+			}
+
+			&-mobile {
+				display: none;
+				@media screen and (max-width: 767px) {
+					display: block;
+				}
+			}
+		}
+
+		.banner-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: rgba(0, 0, 0, 0.3);
+
+			.content {
+				&-text {
+					text-align: center;
+				}
+
+				&-title {
+					font-size: 4.3vw;
+					font-family: HelveticaBold;
+					margin-top: 0;
+					margin-bottom: 11px;
+
+					@media screen and (max-width: 767px) {
+						font-size: 14vw;
+						line-height: 74px;
+					}
+				}
+
+				&-subtitle {
+					font-size: 2vw;
+					letter-spacing: 3px;
+					font-family: HelveticaLight, sans-serif;
+
+					@media screen and (max-width: 767px) {
+						font-size: 6.5vw;
+						letter-spacing: 2px;
+						line-height: 33px;
+					}
+				}
+			}
+		}
+	}
+
+	// Card
+
+	.cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		row-gap: 40px;
+		column-gap: 40px;
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 40px;
+
+		@media screen and (max-width: 767px) {
+			padding: 40px 30px;
+			row-gap: 30px;
+			column-gap: 30px;
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.card {
+		&-item {
+			border: 1px solid gainsboro;
+			border-radius: 5px;
+			padding: 22px;
+			text-align: center;
+			position: relative;
+			padding-bottom: 70px;
+			width: 100%;
+
+			&-image {
+				width: 100%;
+				border: 5px;
+				border-radius: 5px;
+				display: inline-block;
+			}
+
+			&-text {
+				line-height: 28px;
+				margin-bottom: 22px;
+			}
+
+			&-button {
+				border: 3px solid #000;
+				border-radius: 30px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				padding: 10px 15px;
+				text-decoration: none;
+				font-family: Arial Black, sans-serif;
+				// display: inline-block;
+				color: #000;
+				position: absolute;
+				bottom: 22px;
+				left: 50%;
+				transform: translateX(-50%);
+				white-space: nowrap;
+				font-size: 14px;
+			}
+		}
+	}
+}

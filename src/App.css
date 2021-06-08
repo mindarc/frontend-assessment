@@ -1,0 +1,19 @@
+@font-face {
+	font-family: HelveticaRegular;
+	src: url("../src/fonts/Helvetica-Regular.ttf");
+}
+
+@font-face {
+	font-family: HelveticaBold;
+	src: url("../src/fonts/Helvetica-Bold.ttf");
+}
+
+@font-face {
+	font-family: HelveticaLight;
+	src: url("../src/fonts/Helvetica-Light.ttf");
+}
+
+* {
+	font-family: HelveticaRegular, sans-serif;
+	box-sizing: border-box;
+}
