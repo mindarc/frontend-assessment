@@ -4,8 +4,9 @@ Thanks for reviewing my code.
 
 ## Exercise 1 & 2
 
-Run yarn and yarn start to see the exercises locally.
-I put the two exercises on different routes.
+- Run `yarn` and `yarn start` to see the exercises locally.
+- I put the two exercises on different routes.
+- I used React, SASS, CSS modules and Material UI library to complete the test.
 
 ## Bonus
 
