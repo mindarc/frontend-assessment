@@ -1,0 +1,63 @@
+@import "./core/banner";
+@import "./core/card";
+
+.home {
+  &__wrapper {
+    &--absolute {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    > a {
+      margin: 8px;
+    }
+  }
+}
+
+.exercise {
+  &__one {
+    &--body {
+      padding: 32px 16px;
+      .col {
+        padding-bottom: 16px;
+      }
+    }
+  }
+
+  &__two {
+    max-width: 1240px;
+    margin: auto;
+
+    &--tabs {
+      display: block;
+    }
+
+    &--accordion {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .exercise {
+    &__two {
+      &--tabs {
+        display: none;
+      }
+
+      &--accordion {
+        display: block;
+      }
+    }
+  }
+}

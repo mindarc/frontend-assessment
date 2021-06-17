@@ -1,0 +1,30 @@
+.ccard {
+    height: 100%;
+    padding: 16px;
+    
+    &__content {
+        margin: 20px;
+    }
+
+    &__header{
+        padding: 0;
+        background: none;
+    }
+
+    &__footer {
+        text-align: center;
+        border: none;
+        background: #fff;
+    }
+    &__button {
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 30px;
+        font-weight: bold;
+        color: black;
+        padding: 8px 16px;
+    }
+    &__content {
+        text-align: center;
+    }
+}

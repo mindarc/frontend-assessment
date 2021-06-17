@@ -1,40 +1,18 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+## Available Scripts
 
-Exercise 1
----
-Build a responsive page based on the designs.
+In the project directory, you can run:
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+### `npm install`
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+Install all the required dependecies
 
-##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
+### `npm start`
 
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
-
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
-
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+## File Structure
+── views
+│   ├── ExerciseOne.jsx
+│   ├── ExerciseTwo.jsx
+│   ├── HomePage.jsx

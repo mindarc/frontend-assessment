@@ -1,0 +1,31 @@
+.banner {
+  height: 60vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center center;
+  &__title {
+    font-weight: bold;
+    font-size: 60px;
+  }
+  &__wrapper {
+    text-align: center;
+  }
+  &__content {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .banner {
+    &__title {
+      font-size: 40px;
+    }
+
+    &__content {
+      font-size: 20px;
+    }
+  }
+}
