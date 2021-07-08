@@ -1,0 +1,64 @@
+.cardWrap {
+
+    position: relative;
+    box-sizing: border-box;
+    max-width: 250px;
+    padding: 0.6em;
+    border-radius: 10px;
+    border: 1px solid #ebebeb;
+    box-shadow: 1px 1px 2px 2px #f5f5f5;
+    margin: 0.8rem;
+
+
+    &__header{
+        padding: 0;
+        background: none;
+        img {
+        width: 100%;
+        border-radius: 10px;
+        }
+    }
+
+    &__content {
+        height: 138px;
+        margin: 0.8em 0;
+        overflow: auto;
+        p {
+          text-align: center;
+          font-size: 0.6em;
+          line-height: 1.3em;
+          margin: 0;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+        // text-align: center;
+        border: none;
+        background: #fff;
+    }
+    &__button {
+        background-color: white;
+        font-size: 11px;
+        border: 3px solid black;
+        border-radius: 30px;
+        font-weight: bold;
+        color: black;
+        padding: 8px 16px;
+        width: 130px;
+        height: 35px;
+        background-color: white;
+        letter-spacing: 0.2em;
+        cursor: pointer;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .cardWrap {
+        &__content {
+            height: 100%;
+        }
+    }
+}        
