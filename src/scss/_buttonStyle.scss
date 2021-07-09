@@ -1,0 +1,25 @@
+.imgbox {
+	width: 2.5em;
+	height: 2.5em;
+	box-shadow: 0.8em 0.8em 1.3em rgba(0, 0, 0, 0.1), -0.8em -0.8em 1.3em #fff;
+	border-radius: 0.8em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #efeeee;
+	transition: box-shadow, .2s ease-out;
+	position: relative;
+    padding: 0.6em;
+    margin: 1.2rem;
+
+	.imgs {
+		width: 1.6em;
+		transition: width .2s ease-out;
+	}
+	&:hover {
+		box-shadow: 0 0 0 rgba(0, 0, 0, 0.1), 0 0 0 #fff, inset 0.8em 0.8em 1.3em rgba(0, 0, 0, 0.1), inset -0.8em -0.8em 1.3em #fff;
+		.imgs {
+			width: 2em
+		}
+	}
+}

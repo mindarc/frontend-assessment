@@ -1,0 +1,35 @@
+.exercise {
+  &__one {
+    &--body {
+      padding: 20px 16px;
+      margin: 10px 0;
+    }
+  }
+
+  &__two {
+    max-width: 1240px;
+    margin: auto;
+
+    &--tabs {
+      display: block;
+    }
+
+    &--accordion {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .exercise {
+    &__two {
+      &--tabs {
+        display: none;
+      }
+
+      &--accordion {
+        display: block;
+      }
+    }
+  }
+}

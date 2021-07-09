@@ -1,0 +1,49 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: white;
+  background-size: cover;
+
+  img {
+    position: relative;
+    width: 100%;
+
+  }
+  &__text {
+    position: absolute;
+    color: white;
+    h1 {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .banner {
+    font-size: 6.5vw;
+    &__mobile {
+    display: block;
+    }
+    &__desktop {
+    display: none;
+    } 
+  }
+}
+@media screen and (max-width: 1920px) and (min-width: 600px), (min-width: 1920px) {
+  .banner {
+    font-size: 6.5vh;
+    &__mobile {
+    display: none;
+    }
+    &__desktop {
+    display: block;
+    } 
+  }
+}

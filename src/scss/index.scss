@@ -1,0 +1,70 @@
+@import "./_exercise.scss";
+@import "./_banner.scss";
+@import "./_card.scss";
+@import "./_buttonStyle.scss";
+
+
+.home {
+  &__wrapper {
+    &--absolute {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(-30deg, #13547a, #80d0c7, #9795f0, #fbc8d4);
+      filter: hue-rotate(120deg);
+      animation: animate 10s linear infinite;
+     
+    }
+
+    &__header {
+      text-align: center;
+
+      h1 {
+        position: relative;
+        top: 5vh;
+        font-size: 8vh;
+        font-family: 'Bigelow Rules';
+        color:#fff;
+      }
+      p {
+        position: relative;
+        top: 5vh;
+        font-size: 4vh;
+        color:#fff;
+      }
+    }
+
+    &__center {
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+      position: relative;
+      top: 20vh;    
+
+
+      &__button {
+        outline: none;
+        background: #13547a;
+        color: #fff;
+        margin: 0, 2vh;
+        font-size: 3vh;
+        padding: 3vh, 5vh;
+        border-radius: 3vh;
+      }
+      > a {
+        margin: 8px;
+      }
+    }
+  }
+}
+
+@keyframes animate {
+	0% {
+		filter: hue-rotate(0deg)
+	}
+	100% {
+		filter: hue-rotate(360deg)
+	}
+}

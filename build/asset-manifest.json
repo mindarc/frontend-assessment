@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ryanskystack/frontend-assessment/static/css/main.ef926c54.chunk.css",
+    "main.js": "/ryanskystack/frontend-assessment/static/js/main.0fa25b59.chunk.js",
+    "main.js.map": "/ryanskystack/frontend-assessment/static/js/main.0fa25b59.chunk.js.map",
+    "runtime-main.js": "/ryanskystack/frontend-assessment/static/js/runtime-main.62f8cb48.js",
+    "runtime-main.js.map": "/ryanskystack/frontend-assessment/static/js/runtime-main.62f8cb48.js.map",
+    "static/css/2.455652b6.chunk.css": "/ryanskystack/frontend-assessment/static/css/2.455652b6.chunk.css",
+    "static/js/2.d6dc3356.chunk.js": "/ryanskystack/frontend-assessment/static/js/2.d6dc3356.chunk.js",
+    "static/js/2.d6dc3356.chunk.js.map": "/ryanskystack/frontend-assessment/static/js/2.d6dc3356.chunk.js.map",
+    "static/js/3.2a7e1bec.chunk.js": "/ryanskystack/frontend-assessment/static/js/3.2a7e1bec.chunk.js",
+    "static/js/3.2a7e1bec.chunk.js.map": "/ryanskystack/frontend-assessment/static/js/3.2a7e1bec.chunk.js.map",
+    "index.html": "/ryanskystack/frontend-assessment/index.html",
+    "static/css/2.455652b6.chunk.css.map": "/ryanskystack/frontend-assessment/static/css/2.455652b6.chunk.css.map",
+    "static/css/main.ef926c54.chunk.css.map": "/ryanskystack/frontend-assessment/static/css/main.ef926c54.chunk.css.map",
+    "static/js/2.d6dc3356.chunk.js.LICENSE.txt": "/ryanskystack/frontend-assessment/static/js/2.d6dc3356.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.62f8cb48.js",
+    "static/css/2.455652b6.chunk.css",
+    "static/js/2.d6dc3356.chunk.js",
+    "static/css/main.ef926c54.chunk.css",
+    "static/js/main.0fa25b59.chunk.js"
+  ]
+}
