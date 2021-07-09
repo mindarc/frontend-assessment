@@ -64,8 +64,8 @@ const ShowAccordions = (props) => {
     setExpanded(newExpanded ? panel : false);
   };
   const exit = {
-    color: 'white',   
-    textTransform: 'uppercase',    
+    color: 'white',
+    textTransform: 'uppercase',
     textDecoration: 'none',
     transition: 'fontSize .4s ease 0s',
     '&:hover': {
@@ -73,28 +73,42 @@ const ShowAccordions = (props) => {
       fontSize: '1rem',
     },
   };
+  const nodeRef = React.useRef(null);
+
+  const WrappedAccordions = React.forwardRef((props, ref) => {
+    return <Accordions {...props} forwardedref={nodeRef} />;
+  });
+
+  const WrappedAccordionSummary = React.forwardRef((props, ref) => {
+    return <AccordionSummary {...props} forwardedref={nodeRef} />;
+  });
+
+  const WrappedAccordionDetails = React.forwardRef((props, ref) => {
+    return <AccordionDetails {...props} forwardedref={nodeRef} />;
+  });
+
 
   return (
     <div>
       {data.map((item, i) => (
-        <Accordions key={i} square expanded={expanded === i} onChange={handleChange(i)}>
-          <AccordionSummary aria-controls={i} id={i}>
-            <Typography>{item.title}</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              <div dangerouslySetInnerHTML={createMarkup(item.content)} />
-            </Typography>
-          </AccordionDetails>
-        </Accordions>
+        <WrappedAccordions key={i} square expanded={expanded === i} onChange={handleChange(i)}>
+          <WrappedAccordionSummary aria-controls={i} id={i}>
+            <Typography ref={nodeRef}>{item.title}</Typography>
+          </WrappedAccordionSummary>
+          <WrappedAccordionDetails>
+            <div>
+              <div ref={nodeRef} dangerouslySetInnerHTML={createMarkup(item.content)} />
+            </div>
+          </WrappedAccordionDetails>
+        </WrappedAccordions>
       ))}
-      <Accordions key={data.length + 1} square>
-        <AccordionSummary aria-controls={data.length + 1} id={data.length + 1}>
+      <WrappedAccordions key={data.length + 1} square>
+        <WrappedAccordionSummary aria-controls={data.length + 1} id={data.length + 1}>
           <Link to="/">
-            <Typography style={exit}>Exit</Typography>
+            <Typography ref={nodeRef} style={exit}>Exit</Typography>
           </Link>
-        </AccordionSummary>
-      </Accordions>
+        </WrappedAccordionSummary>
+      </WrappedAccordions>
     </div>
   );
 }

@@ -4,8 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
 import { Link } from 'react-router-dom';
 
 const TabPanel = (props) => {
@@ -20,11 +18,10 @@ const TabPanel = (props) => {
       {...other}
     >
       {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
+        <div p={3}>{children}</div>
+  )
+}
+    </div >
   );
 }
 
@@ -61,8 +58,8 @@ const ShowTabs = (props) => {
     setValue(newValue);
   };
   const exit = {
-    color: 'white',   
-    textTransform: 'uppercase',    
+    color: 'white',
+    textTransform: 'uppercase',
     textDecoration: 'none',
     transition: 'fontSize .4s ease 0s',
     '&:hover': {
@@ -82,15 +79,14 @@ const ShowTabs = (props) => {
           {data.map((item, i) => (
             <Tab key={i} label={item.title} {...a11yProps(i)} />
           ))}
-          <Link to="/">
-            <Tab key={data.length + 1} label="Exit" {...a11yProps(data.length + 1)} 
-             style={exit}/>           
-          </Link>
+          <Tab key={data.length + 1} label="Exit" {...a11yProps(data.length + 1)}
+            style={exit} component={Link} to="/" />
         </Tabs>
       </AppBar>
       {data.map((item, i) => (
         <TabPanel key={i} value={value} index={i}>
           <div dangerouslySetInnerHTML={createMarkup(item.content)} />
+
         </TabPanel>
       ))}
 
