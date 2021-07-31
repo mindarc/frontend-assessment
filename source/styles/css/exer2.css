@@ -1,0 +1,98 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #303F9F;
+}
+
+.nav {
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.nav-link {
+    width: fit-content;
+    color: #FBC02D !important;
+    font-weight: bold;
+    background: #3F51B5;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+}
+.nav-tabs.nav-link:hover {
+    color: #FBC02D;
+    text-decoration: none;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border: unset;
+    border-color: unset;
+    border-left: solid 5px #FBC02D;
+    background: #3F51B5;
+    color: #FBC02D;
+
+}
+.nav-link.active {
+    border-color: unset;
+}
+.nav-link:hover {
+    border: none;
+}
+.tab-content {
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+.tab-pane {
+    color: #fff;
+}
+
+.accordion {
+    display: none;
+}
+
+.accordion-item {
+    background: #3F51B5;
+    color: #fff;
+}
+.accordion-button {
+    background: #303F9F;
+    color: #FBC02D;
+}
+.accordion-button:focus {
+    border-color: unset;
+    background: #3F51B5;
+}
+.accordion-button:not(.collapsed) {
+    border-color: unset;
+    background: #3F51B5;
+    color: #FBC02D;
+}
+
+.accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FBC02D'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FBC02D'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+.bonus__question {
+    color: #fff;
+    font-size: 1.5em;
+    width: fit-content;
+}
+.bonus--banana {
+    color: #FBC02D;
+}
+.bonus--yellow {
+    color: #FBC02D;
+}
+ 
+.list-group-item {
+    background: #3F51B5;
+    color: #fff;
+}
+@media screen and (max-width: 575px) {
+    .accordion{
+        display: block;
+    }
+}
