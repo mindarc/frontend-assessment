@@ -1,0 +1,16 @@
+.exerciseTwo {
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+.accordion {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .tabs {
+    display: none;
+  }
+  .accordion {
+    display: block;
+  }
+}

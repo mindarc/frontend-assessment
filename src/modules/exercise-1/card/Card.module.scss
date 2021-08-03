@@ -1,0 +1,27 @@
+.cardWrap {
+  box-sizing: border-box;
+  max-width: 330px;
+  padding: 1.5em;
+  border-radius: 10px;
+  border: 1px solid #ebebeb;
+  box-shadow: 1px 1px 2px 2px #f5f5f5;
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .detailWrap {
+    height: 170px;
+    margin: 0.8em 0;
+    overflow: auto;
+    p {
+      text-align: center;
+      font-size: 1.2em;
+      line-height: 1.3em;
+      margin: 0;
+    }
+  }
+}
+.btnWrap {
+  display: flex;
+  justify-content: center;
+}

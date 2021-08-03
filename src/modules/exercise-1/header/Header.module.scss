@@ -1,0 +1,40 @@
+.headerWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2vw;
+  background-color: rgba(51, 51, 51, 0.5);
+  img {
+    position: relative;
+    z-index: -10;
+    width: 100%;
+  }
+  .textWrap {
+    position: absolute;
+    color: white;
+    h1 {
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile {
+    display: block;
+  }
+  .desktop {
+    display: none;
+  }
+  .headerWrap {
+    font-size: 6.5vw;
+  }
+}
