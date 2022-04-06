@@ -22,6 +22,7 @@ function App() {
     <div>
       <HeroSection />
       {renderWidthCheck()}
+      {/* <CardGrid /> */}
       <Banana />
     </div>
   );
