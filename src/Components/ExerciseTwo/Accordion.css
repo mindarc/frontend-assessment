@@ -1,0 +1,9 @@
+.accordion-container{
+    margin-bottom: 50px;
+    padding-bottom: 100px;
+}
+
+.accordion-button:not(.collapsed){
+    color: black !important;
+    background-color: rgb(245, 240, 240);
+}

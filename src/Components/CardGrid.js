@@ -8,8 +8,8 @@ const CardGrid = () => {
     return (
         <div className="card-section">
             {
-                Data.map((val, data) => {
-                    return <CardPanel title={val.title} content={parse(val.content)}/>
+                Data.map((data) => {
+                    return <CardPanel title={data.title} content={parse(data.content)}/>
                 })
             }
         </div>

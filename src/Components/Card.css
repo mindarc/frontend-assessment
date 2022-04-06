@@ -17,6 +17,7 @@
     justify-content: center;
     align-content: center;
 }
+
 .card--content{
     margin: 0 auto;
     padding: 5%;
@@ -42,7 +43,6 @@
     cursor: pointer;
     letter-spacing: 2px;
 }
-
 
 @media (max-width:1400px) {
     .card-button{
