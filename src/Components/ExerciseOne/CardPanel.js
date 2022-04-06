@@ -9,7 +9,7 @@ const CardPanel = (props) =>{
                     <Card.Img className="card--image" src="./images/contentImages.png"></Card.Img>
                     <Card.Title className="card--title">{props.title}</Card.Title>
                     <Card.Text className="card--text">{props.content}</Card.Text>
-                    <Button className="card-button">READ MORE</Button>
+                    <button className="card-button">READ MORE</button>
                 </Card>
             </div>
     );

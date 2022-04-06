@@ -24,6 +24,7 @@
     border-radius: 10px;
     width: 100% !important;
     border: 1px solid rgb(214, 214, 214);
+    list-style-position: inside;
 }
 
 .card--image{
@@ -42,6 +43,7 @@
     font-weight: 800;
     cursor: pointer;
     letter-spacing: 2px;
+    margin: 0 auto;
 }
 
 @media (max-width:1400px) {

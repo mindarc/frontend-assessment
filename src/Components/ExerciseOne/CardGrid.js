@@ -1,5 +1,5 @@
 import React from "react";
-import Data from "../data.json"
+import Data from "../../data.json"
 import CardPanel from "./CardPanel";
 import parse from "html-react-parser"
 import "./Card.css"

@@ -2,7 +2,7 @@ import './App.css';
 import HeroSection from './Components/HeroSection';
 import Banana from './Components/Banana';
 // Exercise 1 
-import CardGrid from './Components/CardGrid';
+import CardGrid from './Components/ExerciseOne/CardGrid';
 
 // Exercise 2
 import Tab from './Components/ExerciseTwo/Tab';
