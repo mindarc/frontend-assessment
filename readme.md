@@ -1,40 +1,23 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+Hello MindArc assessment team, This is forked respository contains folder name "Exercise" in which you will find "exercise1.html" and "exercise2.html" which you need to rum to evaluate my developer challange exercise.
 
-Exercise 1
----
-Build a responsive page based on the designs.
+EXERCISE - 1
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+You can just run the exercise1.html file to see the output.
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+EXERCISE - 2
 
-##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
+If you need to run the exercise2.html file, you need to follow the below mentioned steps to see the output:
 
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+NODE.JS
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
+1. Install http-server by typing "npm install -g http-server"
+2. change into your working directory, the "exercise2.html" is located
+3. start you http server by issuing "http-server -c-1".
 
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+RUBY 
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+1. Run the server using following command "ruby -run -e httpd . -p 8080".
+
+PHP
+
+1. Run the server using following command "php -S localhost:8000".

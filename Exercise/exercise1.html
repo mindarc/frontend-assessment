@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="index-css.css" />
+		<title>Hello Developer!</title>
+	</head>
+	<body>
+		
+			<div id="app" align="center">
+				
+				<div class="container">
+					<img :src="ComputerBanner" alt="Snow" style="width:100%;">
+					 <div class="centered">
+						<font size="7">{{titleText}}</font>
+						<p class='class-p'>{{quoteText}}</p>
+					 </div>
+					<h3></h3>
+				</div>
+				
+				<div class="row" >
+					<div class="column">
+						<div class="card">
+							<img :src="contentImage" alt="`${firstName}`" />
+							<div class='card-content'>
+								<p>{{contentText1}}</p>
+							</div>
+							<div class='card-button'>
+								<button>{{buttonText}}</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="column">
+						<div class="card">
+							<img :src="contentImage" alt="`${firstName}`" />
+							<div class='card-content'>
+								<p>{{contentText2}}</p>
+							</div>
+							<button>{{buttonText}}</button>
+						</div>
+					</div>
+					
+					<div class="column">
+						<div class="card">
+							<img :src="contentImage" alt="`${firstName}`" />
+							<div class='card-content'>
+								<p>{{contentText3}}</p>
+							</div>
+							<button>{{buttonText}}</button>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		<script src="https://unpkg.com/vue@3"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
