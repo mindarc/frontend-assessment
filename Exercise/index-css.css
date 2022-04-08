@@ -1,0 +1,107 @@
+
+
+body {
+  font-family: Segoe UI;
+  font-weight: normal;
+}
+
+/*Style for header of the page*/
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+/*Below class shows the text in the middle*/
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+font	{
+	font-size:50px;
+	font-weight:bold;
+	color:white;
+}
+
+.class-p	{
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+	letter-spacing: 2px;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 90%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  font	{
+	font-size:20px;
+  }
+  .class-p	{
+	font-size:10px;
+  }
+}
+
+/* Responsive columns */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 95%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  font	{
+	font-size:20px;
+  }
+  .class-p	{
+	font-size:10px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+	border:1px solid #D3D3D3;
+	padding: 10px;
+}
+.card img	{
+	width:90%;
+	height:auto;
+}
+
+.card-content	{
+	width: 100%;
+	height: 25%;
+}
+
+/*Style for button*/
+button	{
+	border: 2px solid black;
+	font-family: Segoe UI;
+	font-size: 14px;
+	color: #24292f;
+	letter-spacing: 5px;
+	padding: 15px;
+	border-radius: 50px;
+}

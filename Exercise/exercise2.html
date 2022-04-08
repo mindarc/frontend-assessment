@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+        <style>
+			.all-tab-img img {
+				padding-bottom: 20px;
+			}
+			.all-tab-img img:nth-last-child(2) {
+				padding-bottom:0;
+			}
+            .tab-wrapper{
+                padding: 50px 0px;
+                position: relative;
+            }
+            .tab-wrapper .navigation-tabs {
+                display:none;
+                border-bottom: none;
+            }
+            .tab-wrapper .navigation-tabs .navigation-item {                
+                background: #427fad;
+                margin-right: 10px;
+                margin-bottom: 0px;
+
+            }
+            .tab-wrapper .navigation-tabs .nav-link{
+                border: none;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                color: #fff;
+            }
+            .tab-wrapper .navigation-tabs .navigation-item.show .nav-link, .navigation-tabs .nav-link.active{
+                background: #54bbca;
+                color: #fff;
+            }
+            @media(min-width:768px) {
+                .tab-wrapper .navigation-tabs {
+                    display: flex;
+                }
+                
+                .tab-wrapper .card {
+                    border: none;
+                }
+
+                .tab-wrapper .card .card-header {
+                    display:none;
+                }  
+
+                .tab-wrapper .card .collapse{
+                    display:block;
+                }
+            }
+
+            @media(max-width:767px){
+                .tab-wrapper .tab-content > .tab-pane {
+                    display: block !important;
+                    opacity: 1;
+                    margin-bottom: 10px;
+                }
+
+                .tab-wrapper .card-header {
+                    background: #427fad;
+                    color: #fff;
+                    border-bottom: 1px solid rgba(0,0,0,.125);                    
+                }
+                .tab-wrapper .card-header h5 a{
+                    background: #427fad;
+                    color: #fff;
+                    border-bottom: none;   
+                    text-decoration: none;  
+                    font-size: 16px;
+                    display: block;              
+                }
+                .tab-wrapper .card-header h5 a i {
+                    float: right;
+                    padding-top: 5px;
+                }
+                .tab-wrapper .card-body {
+                    border: 1px solid #427fad;
+                }
+                .tab-wrapper .card-header h5 a:hover {
+                    color: #fff;
+                }
+
+            }
+        </style>
+</head>
+<body>
+    <section class="tab-wrapper">
+        <div class="container">
+            <ul id="tabs" class="nav navigation-tabs" role="tablist">
+                <li class="navigation-item">
+                    <a id="tab-A" href="#pane-A" class="nav-link active" data-toggle="tab" role="tab"></a>
+                </li>
+                <li class="navigation-item">
+                    <a id="tab-B" href="#pane-B" class="nav-link" data-toggle="tab" role="tab"></a>
+                </li>
+                <li class="navigation-item">
+                    <a id="tab-C" href="#pane-C" class="nav-link" data-toggle="tab" role="tab"></a>
+                </li>
+                <li class="navigation-item">
+                    <a id="tab-D" href="#pane-D" class="nav-link" data-toggle="tab" role="tab"></a>
+                </li>
+            </ul>
+
+
+            <div id="content" class="tab-content" role="tablist">
+                
+				<div id="pane-A" class="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-A">
+                    <div class="card-header" role="tab" id="heading-A">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" href="#collapse-A" aria-expanded="true" aria-controls="collapse-A">
+                            <i class="fa fa-plus"></i>
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapse-A" class="collapse show" data-parent="#content" role="tabpanel" aria-labelledby="heading-A">
+                        <div class="card-body new-card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p id='section-content1'></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pane-B" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-B">
+                    <div class="card-header" role="tab" id="heading-B">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapse-B" aria-expanded="false" aria-controls="collapse-B">
+                            <i class="fa fa-plus"></i></a>
+                        </h5>
+                    </div>
+                    <div id="collapse-B" class="collapse" data-parent="#content" role="tabpanel" aria-labelledby="heading-B">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p id='section-content2'></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pane-C" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-C">
+                    <div class="card-header" role="tab" id="heading-C">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapse-C" aria-expanded="false" aria-controls="collapse-C">
+                            <i class="fa fa-plus"></i></a>
+                        </h5>
+                    </div>
+                    <div id="collapse-C" class="collapse" role="tabpanel" data-parent="#content" aria-labelledby="heading-C">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p id='section-content3'></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pane-D" class="card tab-pane fade" role="tabpanel" aria-labelledby="tab-D">
+                    <div class="card-header" role="tab" id="heading-D">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapse-D" aria-expanded="false" aria-controls="collapse-D">
+                            <i class="fa fa-plus"></i></a>
+                        </h5>
+                    </div>
+                    <div id="collapse-D" class="collapse" role="tabpanel" data-parent="#content" aria-labelledby="heading-D">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p id='section-content4'></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            // Add minus icon for collapse element which is open by default
+            $(".collapse.show").each(function(){
+                $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+            });
+            
+            // Toggle plus minus icon on show hide of collapse element
+            $(".collapse").on('show.bs.collapse', function(){
+                $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+            }).on('hide.bs.collapse', function(){
+                $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+            });
+        });
+		
+		fetch('data.json')
+			.then(function (response)	{
+				return response.json();
+			})
+			.then(function (data)	{
+				appendData(data);
+			})
+			.catch(function (err)	{
+				console.log(err);
+			})
+		
+		function appendData(data)	{
+			const computerWebPageHeadingArray = ["tab-A", "tab-B", "tab-C", "tab-D"];
+			const mobileWebPageHeadingArray = ["heading-A", "heading-B", "heading-C", "heading-D"];
+			const webPageContentArray = ["section-content1", "section-content2", "section-content3", "section-content4"];
+			
+			for(var i=0; i<data.length; i++)	{
+				var computerSectionHeading = document.getElementById(computerWebPageHeadingArray[i]);
+				var mobileSectionHeading = document.getElementById(mobileWebPageHeadingArray[i]);
+				var sectionContent = document.getElementById(webPageContentArray[i]);
+				
+				var computerHeading = document.createElement("div");
+				var mobileHeading = document.createElement("div");
+				var content = document.createElement("p");
+				
+				computerHeading.innerHTML = data[i].title;
+				mobileHeading.innerHTML = data[i].title;
+				content.innerHTML = data[i].content;
+				
+				computerSectionHeading.appendChild(computerHeading);
+				mobileSectionHeading.appendChild(mobileHeading);
+				sectionContent.appendChild(content);
+			}
+		}
+    </script>  
+</body>
+</html>   
+</body>
+</html>
