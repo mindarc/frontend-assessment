@@ -1,0 +1,34 @@
+.hero-section{
+    background-image: url("../Images/desktopBanner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+    width: 100%;
+    height: 50vh;
+}
+
+.hero__content{
+    margin: auto;
+    text-align: center;
+}
+
+.hero__content h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+}
+
+.hero__content p{
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+}
+
+@media (max-width: 600px){
+    .hero-section{
+        background-image: url("../Images/mobileBanner.png");
+    }
+}

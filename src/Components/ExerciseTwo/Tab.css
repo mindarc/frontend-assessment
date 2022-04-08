@@ -1,0 +1,37 @@
+.tab-container{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav-link{
+    color: black !important;
+}
+
+.nav-link:hover{
+    background-color: rgb(245, 240, 240);
+    color: black !important;
+}
+
+.nav-link.active{
+    background-color: rgb(245, 240, 240) !important;
+    color: black !important;
+}
+
+.tab-content p{
+    margin: 0 auto;
+    width: 70%;
+}
+
+.nav{
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.tab--content{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    list-style-position: inside;
+}
