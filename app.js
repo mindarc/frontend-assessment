@@ -1,8 +1,8 @@
-let url = "https://raw.githubusercontent.com/mindarc/frontend-assessment/master/data.json";
+const URL = "https://raw.githubusercontent.com/mindarc/frontend-assessment/master/data.json";
 const jsonData = 4;
 
 //below is the code that reads data.json into html elements
-fetch(url)
+fetch(URL)
 .then(function (response) {
     return response.json();
 })
