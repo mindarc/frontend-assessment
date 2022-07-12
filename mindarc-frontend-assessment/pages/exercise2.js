@@ -79,7 +79,13 @@ const Exercise2 = () => {
                                             <div
                                                 key={index}
                                                 className={`nav-button`}
-                                                onClick={() => setIsCardActive(`${index + 1}`)}
+                                                onClick={() => {
+                                                    if (index + 1 === Number(isCardActive)) {
+                                                        setIsCardActive(null)
+                                                    } else {
+                                                        setIsCardActive(`${index + 1}`)
+                                                    }
+                                                }}
                                             >
                                                 <h5 className="m-0">{content.title}</h5>
                                                 <div className="plus__wrapper is-mobile">
@@ -115,7 +121,9 @@ const Exercise2 = () => {
                                                         ? contents[1].content
                                                         : isCardActive === "3"
                                                             ? contents[2].content
-                                                            : contents[3].content
+                                                            : isCardActive === "4"
+                                                                ? contents[3].content
+                                                                : null
                                                 : null
                                         }
                                     </motion.p>
