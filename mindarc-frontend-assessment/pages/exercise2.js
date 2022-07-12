@@ -13,8 +13,8 @@ const Exercise2 = () => {
         "id": content.id,
         "title": content.title,
         "content": parse(content.content).childNodes[0].childNodes[0]["_rawText"]
-    })))
-    const [isCardActive, setIsCardActive] = useState("1")
+    })));
+    const [isCardActive, setIsCardActive] = useState("1");
     const contentRefs = useRef([]);
     const addToContentRefs = (_el) => {
         if (_el && !contentRefs.current.includes(_el)) {
@@ -60,7 +60,7 @@ const Exercise2 = () => {
                         })
             }
         })
-    }, [isCardActive])
+    }, [isCardActive]);
 
     return (
         <>
