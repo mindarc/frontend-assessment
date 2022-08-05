@@ -1,40 +1,15 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+- Used ReactJs for the assessment 
 
-Exercise 1
----
-Build a responsive page based on the designs.
+Dependencies used:
+React Bootstrap - for Tabs and Accordion
+Sass/Sass loader - for css 
+React Parser - used for reading the html elements on the data string
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+In the project directory, you can run:
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+`npm start`
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in your browser.
 
-##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
-
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
-
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
-
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
-
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+The page will reload when you make changes.
+You may also see any lint errors in the console.

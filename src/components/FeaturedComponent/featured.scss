@@ -1,0 +1,40 @@
+.featured {
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: $border-radius;
+    }
+    .tab-pane {
+        border: 1px solid $border-color;
+        box-shadow: $box-shadow-sm;
+        li {
+            text-align: left;
+        }
+    }
+    .accordion-item {
+        button {
+            font-size: 1rem;
+            border: none;
+            background: none;
+            text-decoration: none;
+        }
+        .accordion-body {
+            background: $gray-100;
+        }
+    }
+    &__read-more-btn {
+        border: 3px solid $black;
+        border-radius: $rounded-pill;
+        color: $black;
+        letter-spacing: 2px;
+        transition: $transition-base;
+        &:hover {
+            text-decoration: none;
+            background-color: $black;
+            color: $white;
+        }
+    }
+    button {
+        margin: 0 5px;
+    }
+}

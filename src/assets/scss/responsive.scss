@@ -1,0 +1,47 @@
+@mixin bp($point) {
+    $mob-sml: "(max-width: 479px)";
+    $mob: "(min-width: 479px)";
+    $tab: "(min-width: 767px)";
+    $desk: "(min-width: 981px)";
+    $m-desk: "(min-width: 1200px)";
+    $d-wide: "(min-width: 1400px)";
+    $wide: "(min-width: 1925px)";
+
+    @if $point == mob-sml {
+      @media #{$mob-sml} { @content; }
+    }
+
+    @if $point == mob {
+      @media #{$mob} { @content; }
+    }
+
+    @if $point == tab {
+      @media #{$tab} { @content; }
+    }
+
+    @if $point == desk {
+      @media #{$desk} { @content; }
+    }
+
+    @if $point == m-desk {
+      @media #{$m-desk} { @content; }
+    }
+
+    @if $point == dwide {
+      @media #{$d-wide} { @content; }
+    }
+
+    @else if $point == wide {
+      @media #{$wide} { @content; }
+    }
+}
+
+@function rem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@function em($size) {
+    $emSize: $size / 16px;
+    @return #{$emSize}em;
+}
