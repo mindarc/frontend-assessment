@@ -1,0 +1,24 @@
+.banner {
+    min-height: 550px;
+    background: url('../../assets/images/desktop.png') no-repeat;
+    background-size: 100% 100%;
+    color: $white;
+    @include bp(mob-sml) {
+        min-height: 300px;
+        background: url('../../assets/images/mobile.png') no-repeat center center;
+        background-size: cover;
+
+    }
+    h2 {
+        font: 4.5rem/1.5 var(--font-family-sans-serif);
+        @include bp(mob-sml) {
+            font: 2.5rem/1.5 var(--font-family-sans-serif);
+        }
+    }
+    p {
+        font: 2rem/1 var(--font-family-sans-serif);
+        @include bp(mob-sml) {
+            font: 1.2rem/1 var(--font-family-sans-serif);
+        }
+    }
+}
