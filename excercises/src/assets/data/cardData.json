@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Section 1",
+    "image": "https://via.placeholder.com/400x300",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget pretium urna, ac fermentum orci. Maecenas feugiat justo et hendrerit sagittis. Duis maximus ante ligula, et volutpat tortor suscipit ut."
+  },
+  {
+    "title": "Section 2",
+    "image": "https://via.placeholder.com/400x300",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget pretium urna, ac fermentum orci."
+  },
+  {
+    "title": "Section 3",
+    "image": "https://via.placeholder.com/400x300",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget pretium urna, ac fermentum orci. Maecenas feugiat justo et hendrerit sagittis."
+  },
+  {
+    "title": "Section 4",
+    "image": "https://via.placeholder.com/400x300",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget pretium urna, ac fermentum orci. Maecenas feugiat justo et hendrerit sagittis."
+  },
+  {
+    "title": "Section 5",
+    "image": "https://via.placeholder.com/400x300",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget pretium urna, ac fermentum orci."},
+  {
+    "title": "Section 6",
+    "image": "https://via.placeholder.com/400x300",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget pretium urna, ac fermentum orci. Maecenas feugiat justo et hendrerit sagittis. Duis maximus ante ligula, et volutpat tortor suscipit ut."
+
+  }
+]
