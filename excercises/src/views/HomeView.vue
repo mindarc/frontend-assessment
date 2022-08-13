@@ -34,7 +34,6 @@ const onClickBtnCard = () => {
 };
 
 onMounted(() => {
-  console.log((1+ +'a'))
   checkIfMobile();
   nextTick(() => {
     window.addEventListener('resize', checkIfMobile)
