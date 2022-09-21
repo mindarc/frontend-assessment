@@ -40,5 +40,6 @@ Thumbs.db
 # Custom #
 ######################
 *.sass-cache*
-node_modules
+exercise-1/node_modules
+exercise-2/node_modules
 /.idea

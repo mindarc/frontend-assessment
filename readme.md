@@ -1,40 +1,38 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+## Exercise 1
+### Setting Up
+```
+ - Using vs code 
+ - Go to exercise 1 folder
+ - Run npm install in your terminal
+ - Run npm run prod in your terminal
+ - Install and run live server extension and access index.html
+```
+### Laravel Mix
+```
+ - Used mix for simplified webpack configuration
+```
+### SASS/SCSS
+```
+ - Used sass pre-processor, to have nested rules, mixins and imports
+```
+### BEM, ITCSS and Bootstrap
+```
+ - Used BEM as a naming convention for css classes for readability of elements and its scope
+ - Used ITCSS as file structure to organize my css files
+ - Used Bootstrap utility classes
+```
 
-Exercise 1
----
-Build a responsive page based on the designs.
-
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
-
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
-
-##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
-
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
-
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
-
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
-
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+## Exercise 2
+### Setting Up
+```
+ - Using vs code 
+ - Go to exercise 2 folder
+ - Run npm install in your terminal
+ - Run npm run serve in your terminal
+```
+## Banana
+ ```
+ - The plus sign before the second 'a' makes the code coerces a string to a number which will return a NaN (not a number),
+ - Normally 'b' + 'a' + 'a' + 'a' will just return 'baaa', but because of the plus sign before the second a it returns a baNaNa,
+ - '.toLowerCase()' transforms the string to lowercase including na NaN.
+ ```
