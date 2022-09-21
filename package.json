@@ -1,0 +1,22 @@
+{
+  "name": "mindarc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "prod": "mix --production",
+    "watch": "mix watch"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.54.9",
+    "sass-loader": "^12.6.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.1"
+  }
+}
