@@ -72,7 +72,7 @@ export default {
 
   mounted(){
     this.checkScreenSize();
-    window.addEventListener('resize', this.checkScreenSize);  
+    window.addEventListener('resize', this.checkScreenSize);
   }
 }
 
