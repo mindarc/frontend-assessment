@@ -1,4 +1,3 @@
-
 ## Exercise 1
 ### Setting Up
 ```
@@ -30,9 +29,10 @@
  - Go to exercise 2 folder
  - Run npm install in your terminal
  - Run npm run serve in your terminal
-
- ## Banana
+```
+## Banana
  ```
  - The plus sign before the second 'a' makes the code coerces a string to a number which will return a NaN (not a number),
  - Normally 'b' + 'a' + 'a' + 'a' will just return 'baaa', but because of the plus sign before the second a it returns a baNaNa,
  - '.toLowerCase()' transforms the string to lowercase including na NaN.
+ ```
