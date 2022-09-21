@@ -1,7 +1,12 @@
+
+## Exercise 1
 ### Setting Up
 ```
- - Run npm install
- - Run npm run prod
+ - Using vs code 
+ - Go to exercise 1 folder
+ - Run npm install in your terminal
+ - Run npm run prod in your terminal
+ - Install and run live server extension and access index.html
 ```
 ### Laravel Mix
 ```
@@ -17,3 +22,11 @@
  - Used ITCSS as file structure to organize my css files
  - Used Bootstrap utility classes
 ```
+
+## Exercise 2
+### Setting Up
+```
+ - Using vs code 
+ - Go to exercise 2 folder
+ - Run npm install in your terminal
+ - Run npm run serve in your terminal
