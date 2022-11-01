@@ -1,6 +1,14 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+# mindarc-assesment
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
 Exercise 1
 ---
@@ -15,9 +23,9 @@ Build a responsive page based on the designs.
 * exercise1-mobile.png
 
 ##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
+* Desktop banner - http://via.placeholder.com/1920x650
+* Mobile banner - http://via.placeholder.com/600x600
+* Content images - http://via.placeholder.com/400x300
 
 Exercise 2
 ---
@@ -36,6 +44,3 @@ Read the `data.json` file and display the data as tabs on desktop and an accordi
 ###### Answer
 - `('b' + 'a' + + 'a' + 'a')` = `baNaNa`
 - `.toLowerCase()` converts `baNaNa` string to `banana`
-
-
-
