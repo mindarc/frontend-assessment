@@ -1,6 +1,23 @@
 # vue-mindarc-frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+This mindarc frontend assessment is powered by vue 3.
+I used default files and components that vue 3 fresh setup.
+
+# App.vue
+
+Edited and used as header banner component
+
+# components/HelloWorld.vue
+
+Used as header data and image banner
+
+# components/TheWelcome.vue
+
+Uses as content display where content images, accordion and other functionality applied
+
+# ('b' + 'a' + + 'a' + 'a').toLowerCase() is banana
+
+The + operator you use for adding two numbers can be used to concatenate two strings.
 
 ## Recommended IDE Setup
 
