@@ -1,0 +1,45 @@
+:root {
+  /* project colour guide */
+  --text-base: #515151;
+  --text-hero: #fff;
+
+  /* base variables */
+  --border-radius-base: 8px;
+  --margin-base: 20px;
+
+  /* base buttons vars  */
+  --btn-base-color: #000;
+  --btn-base-color--hover: #515151;
+  --btn-base-background: #fff;
+  --btn-base-border--color: #000;
+  --btn-base-border--radius: calc(var(--border-radius-base) * 3);
+
+  /* base card vars */
+  --card-width: 328px;
+  --card-height: 500px;
+  --card-margin: 40px;
+  --card-padding: 20px;
+  --card-background-color: #fff;
+  --card-border-color: #ebebeb;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+
+  min-height: 100vh;
+}
