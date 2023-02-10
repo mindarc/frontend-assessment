@@ -1,40 +1,55 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+## xenia-tech-assessment
 
-Exercise 1
----
-Build a responsive page based on the designs.
+### Exercise 1 - Steps
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
++ Init Vue project
++ Clean up the base of project
+  --> Build layout
+>  #### NB.
+> Would be nice to have Figma design or similar online service for the exercise designs! ::) \
+> I don't have PhotoShop installed, so using Chrome extensions for ~ measuring and color-picking
+> 
+> Provided background images are much lighter than design mockup. I would ask a designer now, if we need to put
+  semitransparent overlay over the images. Leaving them as they are for now.
+  
+#### build components
+* PageTitle
+* Card
+* Button
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+>  #### NB.
+> We can split the design into more granular components if we find that useful for the project. Eg. Hero, VText,
+  VLink, etc
 
-##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
+#### css
+* custom font Inter - just to show that it is possible (and because I don't have exact requirement on font atm)
+* use vars. calc
+* flexbox
 
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+### ToDo next: Exercise 2 - Steps, will continue on Sunday, 12.02
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
+--> Read data
 
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+### Nice to add
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+* Tests - Vue-test-utils
+* LESS\SCSS for styles
+* Buttons - dynamic classes for diff styles
+
+### Project Setup
+
+```sh
+npm install
+```
+
+#### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+#### Compile and Minify for Production
+
+```sh
+npm run build
+```
