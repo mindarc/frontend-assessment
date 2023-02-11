@@ -16,10 +16,10 @@
                 <template #card-img>
                     <img src="./assets/img/400x300.png" alt="">
                 </template>
+                <!--  ToDo: check the Card content text for length and cut it if too long -->
                 <template #card-content>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a lobortis eros. Aliquam vitae ante
-                    a ligula lacinia varius eget vitae turpis. Aliquam vitae ante a ligula lacinia varius eget vitae
-                    turpis.
+                    a ligula lacinia varius eget vitae turpis. Aliquam vitae ante a ligula lacinia varius eget.
                 </template>
                 <!-- this link can be created in many different ways - as a link <a href="...">, but looking like a
                 button, or as a button wrapped in a link, or set an on click event, which give us possibility for
