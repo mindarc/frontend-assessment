@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Loader from "@/components/Loader.vue";
+import Loader from "@/components/VLoader.vue";
 
 export default {
     components: {Loader},

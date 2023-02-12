@@ -27,7 +27,7 @@ export default {};
     padding: var(--card-padding);
 
     border: 1px solid var(--card-border-color);
-    border-radius: var(--border-radius-base);
+    border-radius: var(--border-base-radius);
     background: var(--card-background-color);
     box-sizing: border-box;
 

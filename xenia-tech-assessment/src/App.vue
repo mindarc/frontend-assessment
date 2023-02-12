@@ -2,17 +2,17 @@
     <header>
         <div class="hero">
             <div class="hero-text">
-                <PageTitle>
+                <VPageTitle>
                     <template #title>Hello Developer!</template>
                     <template #motto>Lorem ipsum dolor sit amet, consectetur adipiscing elit</template>
-                </PageTitle>
+                </VPageTitle>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="card-section">
-            <Card>
+        <section class="section-cards">
+            <VCard>
                 <template #card-img>
                     <img src="./assets/img/400x300.png" alt="">
                 </template>
@@ -29,40 +29,65 @@
                 <!-- setting loading state depending on http call state aka `loading: http.state.loading`  -->
                 <!-- setting custom method on click  -->
                 <template #card-action>
-                    <Button @click="" v-bind="{disabled: false, loading:false}">Read More</Button>
+                    <!-- ToDo: mock onClick method -->
+                    <VButton @click="" v-bind="{disabled: false, loading:false}">Read More</VButton>
                 </template>
-            </Card>
+            </VCard>
 
-            <Card>
+            <VCard>
                 <template #card-img><img src="./assets/img/400x300.png" alt=""></template>
                 <template #card-content>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit.
                 </template>
                 <template #card-action>
-                    <Button @click="" v-bind="{class: 'action', disabled: false, loading:true}">Read More</Button>
+                    <!-- ToDo: enable mocking loading, but stop it in a sec or two -->
+                    <VButton @click="" v-bind="{class: 'action', disabled: false, loading:false}">Read More</VButton>
                 </template>
-            </Card>
+            </VCard>
 
-            <Card>
+            <VCard>
                 <template #card-img><img src="./assets/img/400x300.png" alt=""></template>
                 <template #card-content>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a lobortis eros. Aliquam vitae ante
                     a ligula lacinia varius eget vitae turpis.
                 </template>
                 <template #card-action>
-                    <Button @click="">Read More</Button>
+                    <VButton @click="">Read More</VButton>
                 </template>
-            </Card>
+            </VCard>
+        </section>
+        <section class="section-tabs">
+            <VTabs :tabs="tabs"></VTabs>
         </section>
     </main>
 </template>
 
-<script setup>
+<script>
 import "@fontsource/inter";
-import PageTitle from "@/components/PageTitle.vue";
-import Card from "@/components/Card.vue";
-import Button from "@/components/Button.vue";
+import VPageTitle from "@/components/VPageTitle.vue";
+import VCard from "@/components/VCard.vue";
+import VButton from "@/components/VButton.vue";
+import VTabs from "@/components/VTabs.vue";
+import data from './assets/data/data.json'
+import {ref} from "vue";
+
+export default {
+    components: {VPageTitle, VCard, VButton, VTabs},
+
+    setup() {
+        const tabsData = ref(data);
+
+        return {
+            tabs: tabsData
+        };
+    },
+
+    created() {
+        console.log('+\'a\' resolves to NaN ("Not a Number") because it coerces a string to a number, while the character a cannot be parsed as a number');
+        console.log(('b' + 'a' + + 'a' + 'a').toLowerCase());
+    }
+};
 </script>
 
 <style scoped>
@@ -82,7 +107,8 @@ import Button from "@/components/Button.vue";
     width: 100%;
 }
 
-.card-section {
+.section-cards,
+.section-tabs {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

@@ -27,14 +27,23 @@
 * flexbox
 
 ### ToDo next: Exercise 2 - Steps, will continue on Sunday, 12.02
+* Read data
+* Show data
+* Mobile - accordion, made it without Bootstrap or other library, was interesting to do so.
+Can be improved, of course, but the basic requirement is fulfilled.
+* Desktop - tabs
 
---> Read data
+* Banana question (I didn't know straight away, but StackOverflow helps)
+console.log(('b' + 'a' + + 'a' + 'a').toLowerCase());
++\a resolves to NaN ("Not a Number") because it coerces a string to a number, while the character a cannot be parsed as a number'
+
 
 ### Nice to add
 
 * Tests - Vue-test-utils
 * LESS\SCSS for styles
 * Buttons - dynamic classes for diff styles
+* Card - check the content text for length and cut it if too long
 
 ### Project Setup
 
@@ -45,6 +54,7 @@ npm install
 #### Compile and Hot-Reload for Development
 
 ```sh
+cd .\xenia-tech-assessment\
 npm run dev
 ```
 
