@@ -11,6 +11,7 @@
     "bootstrap": "^5.2.3",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
+    "@vue/compat": "^3.1.0",
     "vue": "^3.2.47"
   },
   "devDependencies": {
@@ -19,6 +20,7 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "@vue/compiler-sfc": "^3.1.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",

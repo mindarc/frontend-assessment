@@ -1,17 +1,14 @@
 <template>
-  <TopBanner />
-  <ContentBox />
+  <WebViewContent />
 </template>
 
 <script>
-import TopBanner from "./components/TopBanner.vue";
-import ContentBox from "./components/ContentBox.vue";
+import WebViewContent from "./components/WebViewContent.vue";
 
 export default {
   name: "App",
   components: {
-    TopBanner,
-    ContentBox,
+    WebViewContent,
   },
 };
 </script>
