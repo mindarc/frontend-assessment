@@ -1,17 +1,19 @@
 <template>
-  <div class="top-banner__container">
-    <div class="img__container">
-      <img
-        src="https://via.placeholder.com/1920x650"
-        class="img__container--img"
-      />
-      <div class="overlay" />
-    </div>
-    <div class="top-banner-title__container">
-      <h1 class="top-banner-title__container--title">Hello Developer!</h1>
-      <p class="top-banner-title__container--subtitle1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-      </p>
+  <div style="height: 400px">
+    <div class="top-banner__container">
+      <div class="img__container">
+        <img
+          src="https://via.placeholder.com/1920x650"
+          class="img__container--img"
+        />
+        <div class="overlay" />
+      </div>
+      <div class="top-banner-title__container">
+        <h1 class="top-banner-title__container--title">Hello Developer!</h1>
+        <p class="top-banner-title__container--subtitle1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -45,7 +47,7 @@ export default {
       top: 0px;
       width: 100%;
       height: 100%;
-      background-color: #9494948e;
+      background-color: #3b3b3b91;
     }
   }
 
