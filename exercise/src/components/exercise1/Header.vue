@@ -14,6 +14,9 @@
 
 <script lang="ts">
 import {defineComponent, ref} from "vue";
+import pinia from "@/stores/store.js";
+import {useStore} from "@/stores/store";
+const store = useStore(pinia)
 export default defineComponent({
     name: "Header",
     setup() {
@@ -21,7 +24,7 @@ export default defineComponent({
         const image = width.value > '480' ? ref('1920x650.png') : ref('600x600.png')
         return {
             width,
-            image
+            image,
         }
     }
 })

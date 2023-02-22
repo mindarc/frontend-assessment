@@ -1,0 +1,314 @@
+@import './base.css';
+@import "~bootstrap/scss/bootstrap";
+#app {
+    font-weight: normal;
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+//transitions
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+//Home Menu
+.home{
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    &__title{
+        font-weight: bolder;
+        font-size: 6vh;
+        text-align: center;
+        padding: 50px;
+    }
+    &__options{
+        height: 50vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: center;
+        row-gap: 10px;
+        &__card{
+            width: 18rem;
+            height: 20vh;
+            margin:auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+
+            &__span{
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &__bonus-point{
+        text-align: center;
+    }
+}
+
+
+// Exercise1 CSS
+.header {
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+    position:relative;
+    &__img{
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: auto;
+    }
+    &__text--wrap{
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        left: 0;
+        top: calc(40% - 3.9vw);
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 3.9vw;
+        color: var(--vt-c-text-dark-1);
+    }
+
+    &__description {
+        font-size: 1.9vw;
+        color: var(--vt-c-text-dark-1);
+    }
+}
+
+.section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+    gap: 40px;
+    &__card{
+        position: relative;
+        display: flex;
+        flex: 1 25% auto;
+        max-width: 320px;
+        flex-direction: column;
+        align-items: center;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: 0.25rem;
+        padding: 20px;
+        text-align: center;
+    }
+    &__img{
+        max-width: 100%;
+        width: 300px;
+        height: auto;
+        border-radius: 3px;
+    }
+    &__read_more{
+        font-weight: bold;
+        font-size: 13px;
+        padding: 5px 15px 5px 15px;
+        display: inline-block;
+        border-radius: 100px;
+        line-height: 20px;
+        margin-bottom: -1px;
+        border: 3px solid;
+        box-shadow: none;
+        background-color: transparent;
+        margin-top: auto;
+        letter-spacing: .1rem;
+    }
+    &__description{
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .header{
+        &__text--wrap{
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            left: 0;
+            top: calc(30% - 14vw);
+        }
+        &__title{
+            font-size: 13vw;
+        }
+
+        &__description{
+            font-size: 7.5vw;
+        }
+    }
+}
+
+// Exercise 2 CSS
+//navbar for desktop (tab)
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    z-index: 1;
+    backdrop-filter: blur(2px);
+    //border-bottom: 1px solid #BBBBBB;
+    //box-shadow: 5px 5px 5px #888888;
+    &__link{
+        cursor: pointer;
+        padding: 10px 0;
+        margin: 0 10px;
+        font-size: 2vh;
+        opacity: 0.75;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    &__link:hover {
+        opacity: 1;
+    }
+    &__link::before {
+        transition: 300ms;
+        content: "";
+        position: absolute;
+        background-color: #031D44;
+        height: 0;
+        width: 100%;
+        bottom: 0;
+    }
+    &__link:hover::before {
+        height: 5px;
+    }
+    &__link__active::before {
+        height: 5px;
+        width: 100%;
+        bottom: 0;
+        background-color: #138700;
+    }
+    &__link__active:hover::before {
+        background-color: #933e3e;
+    }
+}
+.layout{
+    min-height: 100%;
+    &__header{
+        background-image: url("nature.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+        margin: auto;
+    }
+    &__wrapper{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        padding: 0 25%;
+        top: calc(25% - 1vw);
+        p {
+            font-size: 18px;
+            text-align: center;
+        }
+        li::marker {
+            content: "🤗";
+        }
+        li:hover::marker {
+            content: "😮‍💨";
+        }
+    }
+}
+
+
+
+
+.accordions {
+    background-image: url("nature.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    &__list {
+        margin: 0 0 1em;
+        box-sizing: border-box;
+        &__title{
+            cursor: pointer;
+            padding: 10px 0;
+            margin: 0 10px;
+            font-size: 24px;
+            opacity: 0.75;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        &__title:hover {
+            opacity: 1;
+        }
+        &__title::before {
+            transition: 300ms;
+            content: "";
+            position: absolute;
+            background-color: #031D44;
+            height: 0;
+            width: 100%;
+            bottom: 0;
+        }
+        &__title:hover::before {
+            height: 5px;
+        }
+        &__title__active::before {
+            height: 5px;
+            width: 100%;
+            bottom: 0;
+            background-color: #138700;
+        }
+        &__title__active:hover::before {
+            background-color: #933e3e;
+        }
+
+        &__content {
+            margin: 0;
+            border: 1px solid #ccc;
+            border-top: 0;
+            padding: 1em;
+            p {
+                font-size: 18px;
+                text-align: center;
+            }
+            li::marker {
+                content: "🤗";
+            }
+            li:hover::marker {
+                content: "😮‍💨";
+            }
+        }
+    }
+}
+
