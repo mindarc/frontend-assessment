@@ -10,7 +10,10 @@
           <div class="overlay" />
         </div>
         <div class="top-banner-title__container">
-          <h1 class="top-banner-title__container--title">Hello Developer!</h1>
+          <h1
+            class="top-banner-title__container--title typing-animation"
+            v-text="animatedText"
+          ></h1>
           <p class="top-banner-title__container--subtitle1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
@@ -27,7 +30,10 @@
           <div class="overlay" />
         </div>
         <div class="top-banner-title__container">
-          <h1 class="top-banner-title__container--title">Hello Developer!</h1>
+          <h1
+            class="top-banner-title__container--title typing-animation"
+            v-text="animatedText"
+          ></h1>
           <p class="top-banner-title__container--subtitle1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </p>
@@ -48,7 +54,9 @@
             <div class="box">
               <img class="box__img" :src="item.src" alt="" />
               <div class="box__subtitle">{{ item.subtitle }}</div>
-              <b-button class="box__button">READ MORE</b-button>
+              <div class="box__btn--container">
+                <b-button class="box__btn--button">READ MORE</b-button>
+              </div>
             </div>
           </b-col>
         </b-row>
@@ -63,6 +71,8 @@ export default {
   data() {
     return {
       isMobile: false,
+      text: "HELLO DEVELOPER!",
+      animatedText: "",
       myArray: [
         {
           src: "https://via.placeholder.com/400x300",
@@ -72,157 +82,31 @@ export default {
         {
           src: "https://via.placeholder.com/400x300",
           subtitle:
-            "Lorem ipsum dolor sit amet, consectetur adipscing elit, sed do eiusmod tempor inciddunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis notrud exercitation ullamco laboris nisi ut aliquip ex ea cmmodo consquat.",
+            "Lorem ipsum dolor sit amet, consectetur adipscing elit, sed do eiusmod tempor inciddunt ut labore et dolore magna aliqua.",
         },
         {
           src: "https://via.placeholder.com/400x300",
           subtitle:
-            "Lorem ipsum dolor sit amet, consectetur adipscing elit, sed do eiusmod tempor inciddunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis notrud exercitation ullamco laboris nisi ut aliquip ex ea cmmodo consquat.",
+            "Lorem ipsum dolor sit amet, consectetur adipscing elit, sed do eiusmod tempor inciddunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis notrud exercitation ullamco",
         },
       ],
     };
   },
   mounted() {
     this.isMobile = window.innerWidth < 768;
+    this.animateText();
+  },
+  methods: {
+    animateText() {
+      let i = 0;
+      const interval = setInterval(() => {
+        this.animatedText += this.text.charAt(i);
+        i++;
+        if (i > this.text.length) {
+          clearInterval(interval);
+        }
+      }, 100);
+    },
   },
 };
 </script>
-
-<style lang="scss">
-.top-banner__container {
-  .img__container {
-    height: 50%;
-    width: 100%;
-    border: "solid 0.5px";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &--img {
-      height: 400%;
-      width: 250%;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0px;
-      width: 100%;
-      height: 100%;
-      background-color: #3b3b3b91;
-    }
-  }
-
-  .top-banner-title__container {
-    position: relative;
-    top: 20vh;
-    color: white;
-    &--title {
-      font-size: 3em !important;
-      font-weight: bolder;
-      padding-bottom: 10px;
-      margin-bottom: 0px;
-    }
-
-    &--subtitle1 {
-      font-size: 1.5em !important;
-      margin-top: 0px;
-    }
-  }
-}
-
-.mobile-contiainer__top-banner {
-  height: 400px;
-  width: 100%;
-  &__container {
-    .img__container {
-      height: 50%;
-      width: 100%;
-      border: "solid 0.5px";
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &--img {
-        height: 200%;
-        width: 250%;
-      }
-    }
-    .overlay {
-      position: absolute;
-      top: 0px;
-      width: 100%;
-      height: 100%;
-      background-color: #3b3b3b91;
-    }
-
-    .top-banner-title__container {
-      position: relative;
-      top: 10vh;
-      color: white;
-      &--title {
-        font-size: 3em !important;
-        font-weight: bolder;
-        padding-bottom: 10px;
-        margin-bottom: 0px;
-      }
-
-      &--subtitle1 {
-        font-size: 1.5em !important;
-        margin-top: 0px;
-      }
-    }
-  }
-}
-
-.container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-content: center;
-  margin-bottom: 50px;
-}
-
-.b-col {
-  display: flex;
-  justify-content: center;
-}
-
-.box {
-  text-align: center;
-  margin-left: 20px;
-  // margin-bottom: 20px;
-  align-self: center;
-  max-width: 200px;
-  &__img {
-    border-radius: 5%;
-    width: 100%;
-    height: 200px;
-  }
-
-  &__subtitle {
-    margin-top: 10px;
-    font-size: 11pt;
-    margin-bottom: 10px;
-  }
-
-  &__button {
-    border: black solid 1px;
-    border-width: 3px;
-    border-radius: 30px;
-    font-weight: bold;
-    padding: 10px 15px !important;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .b-col {
-    margin-bottom: 20px;
-  }
-}
-</style>

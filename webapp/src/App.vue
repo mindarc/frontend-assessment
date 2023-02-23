@@ -1,15 +1,19 @@
 <template>
-  <ExerciseTwo />
+  <div id="app">
+    <header>
+      <nav>
+        <router-link to="/">Home</router-link>
+        <router-link to="/exercise-2">Exercise 2</router-link>
+        <router-link to="/contact">Contact</router-link>
+      </nav>
+    </header>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import ExerciseTwo from "./components/ExerciseTwo.vue";
-
 export default {
   name: "App",
-  components: {
-    ExerciseTwo,
-  },
 };
 </script>
 
@@ -20,5 +24,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+nav a {
+  margin-right: 30px;
 }
 </style>
