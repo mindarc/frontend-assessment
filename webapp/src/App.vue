@@ -1,14 +1,14 @@
 <template>
-  <WebViewContent />
+  <ExerciseTwo />
 </template>
 
 <script>
-import WebViewContent from "./components/WebViewContent.vue";
+import ExerciseTwo from "./components/ExerciseTwo.vue";
 
 export default {
   name: "App",
   components: {
-    WebViewContent,
+    ExerciseTwo,
   },
 };
 </script>

@@ -7,7 +7,10 @@
     "paths": {
       "@/*": [
         "src/*"
-      ]
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
     },
     "lib": [
       "esnext",
