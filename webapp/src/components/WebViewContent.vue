@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="height: 400px">
+    <b-container fluid style="height: 400px" v-if="!isMobile">
       <div class="top-banner__container">
         <div class="img__container">
           <img
@@ -16,11 +16,35 @@
           </p>
         </div>
       </div>
+    </b-container>
+    <div class="mobile-contiainer__top-banner" v-else>
+      <div class="mobile-contiainer__top-banner__container">
+        <div class="img__container">
+          <img
+            src="https://via.placeholder.com/600x600"
+            class="img__container--img"
+          />
+          <div class="overlay" />
+        </div>
+        <div class="top-banner-title__container">
+          <h1 class="top-banner-title__container--title">Hello Developer!</h1>
+          <p class="top-banner-title__container--subtitle1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </p>
+        </div>
+      </div>
     </div>
     <div>
       <b-container class="container" fluid>
         <b-row class="b-row">
-          <b-col v-for="(item, index) in myArray" :key="index" md="4">
+          <b-col
+            v-for="(item, index) in myArray"
+            :key="index"
+            class="b-col"
+            xs="12"
+            sm="6"
+            md="4"
+          >
             <div class="box">
               <img class="box__img" :src="item.src" alt="" />
               <div class="box__subtitle">{{ item.subtitle }}</div>
@@ -38,6 +62,7 @@ export default {
   name: "WebViewContent",
   data() {
     return {
+      isMobile: false,
       myArray: [
         {
           src: "https://via.placeholder.com/400x300",
@@ -56,6 +81,9 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    this.isMobile = window.innerWidth < 768;
   },
 };
 </script>
@@ -89,7 +117,7 @@ export default {
 
   .top-banner-title__container {
     position: relative;
-    top: 16vh;
+    top: 20vh;
     color: white;
     &--title {
       font-size: 3em !important;
@@ -104,24 +132,72 @@ export default {
     }
   }
 }
+
+.mobile-contiainer__top-banner {
+  height: 400px;
+  width: 100%;
+  &__container {
+    .img__container {
+      height: 50%;
+      width: 100%;
+      border: "solid 0.5px";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &--img {
+        height: 200%;
+        width: 250%;
+      }
+    }
+    .overlay {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: #3b3b3b91;
+    }
+
+    .top-banner-title__container {
+      position: relative;
+      top: 10vh;
+      color: white;
+      &--title {
+        font-size: 3em !important;
+        font-weight: bolder;
+        padding-bottom: 10px;
+        margin-bottom: 0px;
+      }
+
+      &--subtitle1 {
+        font-size: 1.5em !important;
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
 .container {
   display: flex;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   margin-bottom: 50px;
 }
 
-.b-row {
-  // display: flex;
-  width: 60%;
-  justify-content: space-between;
-  align-items: center;
+.b-col {
+  display: flex;
+  justify-content: center;
 }
+
 .box {
   text-align: center;
   margin-left: 20px;
   // margin-bottom: 20px;
+  align-self: center;
   max-width: 200px;
   &__img {
     border-radius: 5%;
@@ -141,6 +217,12 @@ export default {
     border-radius: 30px;
     font-weight: bold;
     padding: 10px 15px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .b-col {
+    margin-bottom: 20px;
   }
 }
 </style>
