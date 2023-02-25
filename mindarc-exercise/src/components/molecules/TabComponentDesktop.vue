@@ -20,15 +20,6 @@ export default {
             <div v-for="(item, index) in tabData" class="tab-accordion__content" :class="{ 'tab-accordion__content--active': item.isTabActive }" :data-target="index">
                 <div class="tab-accordion__text" v-html="item.content"></div>
             </div>
-            <!-- <div class="tab-accordion__content tab-accordion__content--active" data-tab="tab1">
-                Content 1
-            </div>
-            <div class="tab-accordion__content" data-tab="tab2">
-                Content 2
-            </div>
-            <div class="tab-accordion__content" data-tab="tab3">
-                Content 3
-            </div> -->
         </div>
     </div>
 </template>
