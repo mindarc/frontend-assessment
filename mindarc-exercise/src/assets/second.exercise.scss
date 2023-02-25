@@ -1,0 +1,119 @@
+.content {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tab-accordion {
+    font-size: 1.6rem;
+
+    @media only screen and (max-width: 789px) {
+        display: none;
+    }
+
+    &__tabs {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        position: relative;
+        background-color: rgba(43,78,97,0.32);
+        z-index: -2;
+        border-radius: 12px 12px 0 0;
+        padding: 1rem;
+    }
+
+    &__tab {
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        padding: 1.4rem 2.6rem;
+        flex: 1;
+        text-align: center;
+        color: #2b4e61;
+    }
+
+    &__indicator {
+        position: absolute;
+        background-color: #ffffff;
+        width: calc((100% - (1rem * 2)) / 3);
+        height: calc(100% - (1rem * 2));
+        border-radius: 8px;
+        z-index: -1;
+        box-shadow: 1px 1px 36px 1px rgba(43,78,97,0.32);
+
+        &--tab-2 {
+            left: calc(calc((100% - (1rem * 2)) / 3) * 1 + 1rem);
+        }
+
+        &--tab-3 {
+            left: calc(calc((100% - (1rem * 2)) / 3) * 2 + 1rem);
+        }
+    }
+
+    &__contents {
+        background-color: rgba(43,78,97,0.32);
+        border-radius: 0 0 12px 12px;
+        padding: 1rem;
+    }
+
+    &__content {
+        background-color: #ffffff;
+        padding: 2rem 1.8rem;
+        border-radius: 8px;
+        height: 30vh;
+
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+
+    &--mobile {
+        font-size: 1.4rem;
+        display: none;
+
+        @media only screen and (max-width: 789px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__item {
+            border-radius: 8px;
+            margin-bottom: 2rem;
+
+            overflow: hidden;
+            
+            &--active {
+                box-shadow: 1px 1px 36px 1px rgba(43,78,97,0.32);
+
+                .tab-accordion--mobile__content {
+                    display: block;
+                }
+            }
+        }
+
+
+        &__tab {
+            background-color: #2b4e61;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            padding: 1.4rem 2.6rem;
+            flex: 1;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        &__content {
+            background-color: #ffffff;
+            padding: 2rem 1.8rem;
+            height: 30vh;
+            display: none;
+        }
+    }
+}

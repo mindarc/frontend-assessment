@@ -1,7 +1,3 @@
-<script setup>
-import '../assets/index.scss';
-</script>
-
 <template>
   <main class="container--homepage">
     <header class="hero">
