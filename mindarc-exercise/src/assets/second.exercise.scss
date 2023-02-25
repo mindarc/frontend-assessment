@@ -1,4 +1,6 @@
 $custom-bezier: cubic-bezier(0.075, 0.82, 0.165, 1);
+$color-opaque-violet: rgba(43,78,97,0.32);
+$color-white: #ffffff;
 
 @keyframes contentSlideUp {
     from {
@@ -32,7 +34,7 @@ $custom-bezier: cubic-bezier(0.075, 0.82, 0.165, 1);
         flex-direction: row;
         height: 100%;
         position: relative;
-        background-color: rgba(43,78,97,0.32);
+        background-color: $color-opaque-violet;
         border-radius: 12px 12px 0 0;
         padding: 1rem;
     }
@@ -47,17 +49,29 @@ $custom-bezier: cubic-bezier(0.075, 0.82, 0.165, 1);
         text-align: center;
         color: #2b4e61;
         z-index: 2;
+        border-radius: 8px;
         cursor: pointer;
+        transition: background-color .2s $custom-bezier;
+
+        &:hover {
+            background-color: $color-opaque-violet;
+        }
+
+        &--active {
+            &:hover {
+                background-color: transparent;
+            }
+        }
     }
 
     &__indicator {
         position: absolute;
-        background-color: #ffffff;
+        background-color: $color-white;
         width: calc((100% - (1rem * 2)) / 4);
         height: calc(100% - (1rem * 2));
         border-radius: 8px;
         z-index: 1;
-        box-shadow: 1px 1px 36px 1px rgba(43,78,97,0.32);
+        box-shadow: 1px 1px 36px 1px $color-opaque-violet;
         transition: all .2s $custom-bezier;
 
         &--tab-1 {
@@ -78,13 +92,13 @@ $custom-bezier: cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
     &__contents {
-        background-color: rgba(43,78,97,0.32);
+        background-color: $color-opaque-violet;
         border-radius: 0 0 12px 12px;
         padding: 1rem;
     }
 
     &__content {
-        background-color: #ffffff;
+        background-color: $color-white;
         border-radius: 8px;
         height: 30vh;
 
@@ -121,10 +135,18 @@ $custom-bezier: cubic-bezier(0.075, 0.82, 0.165, 1);
             overflow: hidden;
             
             &--active {
-                box-shadow: 1px 1px 36px 1px rgba(43,78,97,0.32);
+                box-shadow: 1px 1px 36px 1px $color-opaque-violet;
 
                 .tab-accordion--mobile__content {
-                    display: block;
+                    height: 30vh;
+
+                    @media only screen and (max-width: 375px) {
+                        height: 42vh;
+                    }
+                    
+                    @media only screen and (max-width: 280px) {
+                        height: 54vh;
+                    }
                 }
             }
         }
@@ -139,14 +161,22 @@ $custom-bezier: cubic-bezier(0.075, 0.82, 0.165, 1);
             padding: 1.4rem 2.6rem;
             flex: 1;
             text-align: center;
-            color: #ffffff;
+            color: $color-white;
         }
 
         &__content {
-            background-color: #ffffff;
+            background-color: $color-white;
+            height: 0;
+            transition: height .2s $custom-bezier;
+        }
+
+        &__text {
             padding: 2rem 1.8rem;
-            height: 30vh;
-            display: none;
+            line-height: 2rem;
+    
+            ul {
+                margin-left: 4rem;
+            }
         }
     }
 }

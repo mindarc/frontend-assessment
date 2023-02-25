@@ -34,6 +34,6 @@ export default {
 <template>
     <section class="content">
         <TabComponentDesktop :tabData="tabData" :currentActiveTabIndex="currentActiveTabIndex" @changeTabEmmited="changeActiveTabIndex"/>
-        <TabComponentMobile :tabData="tabData"/>
+        <TabComponentMobile :tabData="tabData" @changeTabEmmited="changeActiveTabIndex"/>
     </section>
 </template>
