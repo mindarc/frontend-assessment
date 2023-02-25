@@ -1,6 +1,13 @@
 # John Daniel Camontoy's Filta x MindArc Exercise
 
-This template should help get you started developing with Vue 3 in Vite.
+Thank you for this opportuniy to participate in this coding exercise.
+The two activies can be accessed through routes. You can use the mini-navigation below the page to toggle between them.
+Thank you for taking the time to consider my work.
+
+## Answer to bonus question
+```
+The third letter 'a' and its preceding unary plus operator (+) return a Not a Number output or NaN. Together with the previously concatenated letters, which are then converted into lowercase, they form the word "banana".
+```
 
 ## Recommended IDE Setup
 
@@ -11,6 +18,10 @@ This template should help get you started developing with Vue 3 in Vite.
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
+
+```sh
+cd mindarc-exercise
+```
 
 ```sh
 npm install
