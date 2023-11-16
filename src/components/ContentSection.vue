@@ -1,11 +1,17 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import contentData from '@/assets/data/data.json'
 import contentImage from '@/assets/images/400x300.png'
 import { useMobile } from '@/composables/useMobile'
 
+gsap.registerPlugin(ScrollTrigger);
+const contentSection = ref(null);
+const ctx = ref(null);
 const activeDescription = ref(0);
 const { isMobileView } = useMobile();
+
 const readMore = (index) => {
   if (activeDescription.value === index) {
     activeDescription.value = -1;
@@ -13,18 +19,60 @@ const readMore = (index) => {
   }
   activeDescription.value = index;
 }
-console.log(isMobileView.value)
+onMounted(() => {
+  nextTick(() => {
+    ctx.value = gsap.context((self) => {
+      const contentTL = gsap.timeline({ paused: true });
+      let gradientTL = gsap.timeline({ repeat: -1, repeatDelay: 0.5, yoyo: true });
+      let mm = gsap.matchMedia();
+      gsap.set('.cards', { opacity: 0, yPercent: 8 })
+      
+      gradientTL
+      .add('gradientAnim1')
+      .to(contentSection.value, { duration: 2, backgroundPosition: '90% 50%', ease: 'none' })
+
+      contentTL
+      .to('.cards', { duration: 0.6, opacity: 1, yPercent: 0, stagger: 0.2 })
+      // DESKTOP
+      mm.add("(min-width: 576px)", () => {
+        ScrollTrigger.create({
+          trigger: contentSection.value,
+          animation: contentTL,
+          start: 'top 75%',
+          onEnter: () => contentTL.play()
+        });
+      });
+      // MOBILE
+      mm.add("(max-width: 575.98px)", () => {
+        ScrollTrigger.create({
+          trigger: contentSection.value,
+          animation: contentTL,
+          start: 'top center',
+          onEnter: () => contentTL.play()
+        });
+      });
+
+    }, contentSection.value);
+  })
+})
+onUnmounted(() => {
+  ctx.value.revert();
+});
 </script>
 
 <template>
-  <div id="content-section" class="content-section container-fluid d-flex justify-content-center align-items-center py-5">
+  <div
+    id="content-section"
+    class="content-section container-fluid d-flex justify-content-center align-items-center py-5"
+    ref="contentSection"
+  >
     <div class="container">
       <div class="row h-100 justify-content-center">
         <div
           v-for="(content, index) in contentData"
           :key="`content-${index}`"
           :style="`--hover-bg-color: ${content.bg};`"
-          class="cards col-12 col-md-6 col-lg-4 mb-4"
+          class="cards col-12 col-md-6 col-xl-4 mb-4"
         >
           <div
             :style="{ backgroundColor: content.bg }"
@@ -49,7 +97,9 @@ console.log(isMobileView.value)
 
 <style scoped lang="scss">
 #content-section {
-  background: #1a1a1a;
+  background-image: linear-gradient(60deg, #f1bf42, #ef8596, #f1bf42);
+  background-size: 400%;
+  background-position: 10% 50%;
   .content-cards {
     transition: all 0.8s ease-out;
     color: #fff;
@@ -63,14 +113,11 @@ console.log(isMobileView.value)
       transform-origin: center bottom;
       overflow: hidden;
       min-height: 240px;
-      height: auto;
-      @media (max-width: 1198.98px) {
-        min-height: 320px;
-        height: auto;
-        height: 320px;
+      @media (max-width: 1199.98px) {
+        min-height: 325px;
       }
       @media (max-width: 767.98px) {
-        transition: min-height 0.8s ease-out;
+        transition: all 0.8s;
         min-height: 0;
         height: 0;
       }
@@ -94,9 +141,11 @@ console.log(isMobileView.value)
     }
     .active {
       @media (max-width: 767.98px) {
-        transition: min-height 0.8s ease-out;
+        transition: all 0.5s;
         transform-origin: center top;
         min-height: 320px;
+        // height: auto;
+        max-height: 320px;
       }
     }
   }

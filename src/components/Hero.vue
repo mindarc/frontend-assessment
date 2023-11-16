@@ -1,5 +1,36 @@
+<script setup>
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+const heroSection = ref(null);
+const ctx = ref(null);
+gsap.registerPlugin(ScrollTrigger);
+
+
+onMounted(() => {
+  nextTick(() => {
+    ctx.value = gsap.context((self) => {
+      const heroTL = gsap.timeline({ paused: true, delay: 1 });
+      gsap.set('.hero-content__title', { opacity: 0, yPercent: 15 })
+      gsap.set('.hero-content__sub-text', { opacity: 0, yPercent: 50 })
+      
+      heroTL
+      .add('heroAnim1')
+      .to('.hero-content__title', { yPercent: 0, opacity: 1 }, 'heroAnim1')
+      .to('.hero-content__sub-text', { yPercent: 0, opacity: 1 }, 'heroAnim1+=0.1')
+
+      heroTL.play();
+
+    }, heroSection.value);
+  })
+})
+onUnmounted(() => {
+  ctx.value.revert();
+});
+
+</script>
 <template>
-  <div id="hero-section" class="hero-section container-fluid d-flex justify-content-center align-items-center">
+  <div id="hero-section" class="hero-section container-fluid d-flex justify-content-center align-items-center" ref="heroSection">
     <div class="container-fluid h-100">
       <div class="row h-100 justify-content-center">
         <div class="col-12 d-flex justify-content-center align-items-center">
@@ -28,11 +59,11 @@
   .hero-content {
     &__title {
       font-size: 72px;
-      text-shadow: 2px 2px 8px #f1bf42;
+      text-shadow: 3px 3px 5px #f1bf42;
     }
     &__sub-text {
       font-size: 32px;
-      text-shadow: 2px 2px 8px #8f6895;
+      text-shadow: 3px 3px 5px #8f6895;
     }
   }
 }
