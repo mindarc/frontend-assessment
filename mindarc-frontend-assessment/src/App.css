@@ -2,7 +2,7 @@
   max-width: 1920px;
 }
 
-.body {
+.content-tiles {
   display: flex;
   /* margin: 32px; */
 
@@ -24,7 +24,7 @@
 }
 
 @media (max-width: 600px) {
-  .body {
+  .content-tiles {
     flex-direction: column;
 
     div:first-child {
