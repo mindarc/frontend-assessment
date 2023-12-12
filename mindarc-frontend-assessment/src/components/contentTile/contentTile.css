@@ -1,6 +1,6 @@
 .contentTile__container {
   box-sizing: border-box;
-  padding: 16px;
+  padding: 24px;
 
   box-shadow: 0 0 4px lightgrey;
   border-radius: 6px;
@@ -11,6 +11,17 @@
   align-items: center;
 }
 
+.contentTile__container:hover {
+  transition: 300ms ease-in-out;
+
+  background-color: lightgrey;
+  box-shadow: 0 0 4px black;
+
+  img {
+    border: 1px solid darkgrey;
+  }
+}
+
 .contentTile__image {
   width: 100%;
   border-radius: 6px;
@@ -18,6 +29,7 @@
 
 .contentTile__content {
   text-align: center;
+  margin: 24px 0;
 }
 
 .contentTile__button {
@@ -26,4 +38,11 @@
   padding: 8px;
   border: 2px solid black;
   border-radius: 24px;
+  margin: 0;
+}
+
+.contentTile__button:hover {
+  transition: 300ms ease-in-out;
+  background-color: black;
+  color: white;
 }

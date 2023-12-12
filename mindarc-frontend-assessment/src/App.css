@@ -4,7 +4,6 @@
 
 .content-tiles {
   display: flex;
-  /* margin: 32px; */
 
   div:first-child {
     margin-left: 32px;
@@ -16,7 +15,7 @@
     margin-right: 32px;
   }
 
-  :last-child {
+  div:last-child {
     margin-top: 32px;
     margin-bottom: 32px;
     margin-right: 32px;
@@ -38,9 +37,11 @@
     }
 
     div:last-child {
-      margin-top: 32px;
-      margin-right: 32px;
-      margin-left: 32px;
+      margin: 32px;
     }
   }
+}
+
+.data-reading {
+  margin: 0 32px 32px;
 }

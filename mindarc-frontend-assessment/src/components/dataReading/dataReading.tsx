@@ -31,7 +31,7 @@ const DataReading = ({ isMobile }: DataReadingProps) => {
             <div className="accordion-item" key={i}>
               <h2 className="accordion-header">
                 <button
-                  className="accordion-button"
+                  className={`accordion-button ${i === 0 ? 'show' : 'collapsed'}`}
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target={`#collapse${count}`}
