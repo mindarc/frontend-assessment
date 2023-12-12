@@ -1,0 +1,46 @@
+:root {
+  max-width: 1920px;
+}
+
+.body {
+  display: flex;
+  /* margin: 32px; */
+
+  div:first-child {
+    margin-left: 32px;
+  }
+
+  div:not(:last-child) {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-right: 32px;
+  }
+
+  :last-child {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-right: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .body {
+    flex-direction: column;
+
+    div:first-child {
+      margin-bottom: 0;
+    }
+
+    div:not(:last-child) {
+      margin-bottom: 0px;
+      margin-right: 32px;
+      margin-left: 32px;
+    }
+
+    div:last-child {
+      margin-top: 32px;
+      margin-right: 32px;
+      margin-left: 32px;
+    }
+  }
+}

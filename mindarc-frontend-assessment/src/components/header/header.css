@@ -1,0 +1,31 @@
+.header {
+  position: relative;
+  display: flex;
+}
+
+.header__image {
+  width: 100%;
+  display: block;
+  filter: brightness(0.7);
+}
+@media (max-width: 600px) {
+  .header__image {
+    content: url('https://via.placeholder.com/600x600');
+  }
+}
+
+.header__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  color: white;
+}
+
+.header__title {
+}
+
+.header__subtitle {
+}

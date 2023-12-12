@@ -1,0 +1,29 @@
+.contentTile__container {
+  box-sizing: border-box;
+  padding: 16px;
+
+  box-shadow: 0 0 4px lightgrey;
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentTile__image {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.contentTile__content {
+  text-align: center;
+}
+
+.contentTile__button {
+  background-color: white;
+  font-weight: bold;
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 24px;
+}
