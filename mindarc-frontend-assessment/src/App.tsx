@@ -26,14 +26,14 @@ function App() {
         <Header />
       </header>
 
-      <section className="data-reading">
-        <DataReading isMobile={isMobile} />
-      </section>
-
       <section className="content-tiles">
         {contentTileArray.map((_, i) => (
           <ContentTile key={i} />
         ))}
+      </section>
+
+      <section className="data-reading">
+        <DataReading isMobile={isMobile} />
       </section>
     </>
   );
