@@ -1,18 +1,21 @@
 import './dataReading.css';
 import data from '../../assets/data.json';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import ReactHtmlParser from 'react-html-parser';
 
 type DataReadingProps = {
   isMobile: boolean;
 };
+
 const DataReading = ({ isMobile }: DataReadingProps) => {
+  const tabsRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (isMobile === true) {
       const targetFirstAccordion = document.getElementById('collapse0');
       targetFirstAccordion?.classList.add('show');
     } else {
-      const targetFirstTab = document.getElementById('tab-pane-0');
-      targetFirstTab?.classList.add('active', 'show');
+      new window.bootstrap.Tab(tabsRef?.current?.querySelector('.nav-link')).show();
     }
   }, [isMobile]);
 
@@ -39,7 +42,7 @@ const DataReading = ({ isMobile }: DataReadingProps) => {
               </h2>
 
               <div id={`collapse${count}`} className="accordion-collapse collapse" data-bs-parent="#accordion-example">
-                <div className="accordion-body">{content}</div>
+                <div className="accordion-body">{ReactHtmlParser(content)}</div>
               </div>
             </div>
           );
@@ -48,7 +51,7 @@ const DataReading = ({ isMobile }: DataReadingProps) => {
     );
   } else {
     return (
-      <div className="tabs">
+      <div className="tabs" ref={tabsRef}>
         <ul className="nav nav-tabs" id="myTab" role="tablist">
           {data.map((section, index) => {
             const title = section.title;
@@ -83,7 +86,7 @@ const DataReading = ({ isMobile }: DataReadingProps) => {
                 role="tabpanel"
                 aria-labelledby={`tab-${index}`}
                 tabIndex={index}>
-                {content}
+                {ReactHtmlParser(content)}
               </div>
             );
           })}
