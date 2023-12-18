@@ -1,0 +1,32 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'shadow':
+      map-merge(
+        map-get($utilities, 'shadow'),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'shadow'), 'values'),
+              (
+                null: 0px 0px 6px 0px rgb(0 0 0 / 20%)
+              )
+            )
+        )
+      )
+  )
+);
+
+@import 'bootstrap/scss/utilities/api';
+@import 'bootstrap/scss/bootstrap';
+
+* {
+  font-family: sans-serif;
+}
