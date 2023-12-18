@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 import jsonData from '../../assets/json/data.json';
 import DesktopTab from './DesktopTab.vue';
 import MobileAccordion from './MobileAccordion.vue';
@@ -14,6 +14,10 @@ function handleWindowResize() {
 onMounted(() => {
   handleWindowResize();
   window.addEventListener('resize', handleWindowResize);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleWindowResize);
 });
 </script>
 <template>
