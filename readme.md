@@ -68,3 +68,6 @@ Run the Json Server first before running npm run serve
     ```bash
     npm run serve
     ```
+
+## Answer to Bonus Question
+The expression ('b' + 'a' + + 'a' + 'a').toLowerCase() when evaluated follows a sequence: first, concatenating the strings 'b' and 'a' that results in 'ba'. Then, converting the string 'a' to a number by using the unary plus (+) resulting to a NaN (Not-a-Number). This NaN value is changed into a string when concatenated with 'ba', leading to 'baNaN'. Finally, adding 'a' to 'baNaN' resulting to 'baNaNa'. Calling .toLowerCase() on this string converts all characters to lowercase, showing the value as 'banana'.
