@@ -1,40 +1,70 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+Mark Adolf Ferolino Frontend Assessment
+# Vue.js Bootstrap 5
 
-Exercise 1
----
-Build a responsive page based on the designs.
+## Description
+This project is an assessment for demonstrating proficiency in Vue.js and Bootstrap 5.
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+## Table of Contents
+- [Exercise 1 Installation]
+- [Exercise 2 Installation]
+- [Usage]
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+## Features
+- [List the main features or functionalities implemented in the assessment]
 
-##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
 
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+## Exercise 1 Installation
+1. Clone the repository:
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
+    ```bash
+    git clone https://github.com/kramferolino/frontend-assessment
+    ```
 
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+2. Navigate to the project directory:
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+    ```bash
+    cd /frontend-assessment/exercise-one
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+## Usage
+Run the project using:
+
+    ```bash
+    npm run serve
+    ```
+
+## Exercise 2 Installation
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/kramferolino/frontend-assessment
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd /frontend-assessment/exercise-two
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+## Usage
+Run the Json Server first before running npm run serve
+
+    ```bash
+    json-server --watch data/data.json
+    ```
+
+    ```bash
+    npm run serve
+    ```
