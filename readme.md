@@ -9,10 +9,6 @@ This project is an assessment for demonstrating proficiency in Vue.js and Bootst
 - [Exercise 2 Installation]
 - [Usage]
 
-## Features
-- [List the main features or functionalities implemented in the assessment]
-
-
 ## Exercise 1 Installation
 1. Clone the repository:
 
