@@ -18,3 +18,13 @@
 @import 'bootstrap/scss/card';
 @import 'bootstrap/scss/buttons';
 @import 'bootstrap/scss/images';
+
+// Override Bootstrap Styles
+
+// Base
+
+@import './base/typography';
+
+// Components
+
+@import './components/hero';
