@@ -1,0 +1,11 @@
+.container {
+  @include media-breakpoint-down(sm) {
+    --bs-gutter-x: 3rem;
+  }
+}
+
+// Sections
+
+.section {
+  padding: 2.5rem 0;
+}

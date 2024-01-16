@@ -13,11 +13,9 @@
 @import 'bootstrap/scss/type';
 @import 'bootstrap/scss/containers';
 @import 'bootstrap/scss/grid';
-@import 'bootstrap/scss/close';
 @import 'bootstrap/scss/utilities/api';
 @import 'bootstrap/scss/card';
 @import 'bootstrap/scss/buttons';
-@import 'bootstrap/scss/images';
 
 // Override Bootstrap Styles
 
@@ -27,4 +25,10 @@
 
 // Components
 
+@import './components/buttons';
+@import './components/card';
 @import './components/hero';
+
+// Layout
+
+@import './layout/global';
