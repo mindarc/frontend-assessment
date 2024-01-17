@@ -2,11 +2,28 @@ body {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
+:root {
+  --theme: #0ea5e9;
+  --border-color: #e4e4e7;
+}
+
+@media screen and (min-width: 768px) {
+  .for-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .for-desktop {
+    display: none;
+  }
+}
+
 .content {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding: 40px;
+  padding: 40px 20px;
 }
 
 button,
@@ -37,7 +54,7 @@ button {
 
 .tab-wrapper {
   margin-bottom: 20px;
-  border: 1px solid #e4e4e7;
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   padding: 20px;
 }
@@ -45,10 +62,7 @@ button {
 .tab__menu {
   display: flex;
   gap: 25px;
-  border-bottom: 1px solid #e4e4e7;
-}
-
-.tab__menu li {
+  border-bottom: 1px solid var(--border-color);
 }
 
 .tab__menu-btn {
@@ -59,7 +73,7 @@ button {
 
 .tab__menu-btn:after {
   content: '';
-  border-bottom: 2px solid #0ea5e9;
+  border-bottom: 2px solid var(--theme);
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -91,4 +105,57 @@ button {
 
 .tab__content-inner.active {
   display: block;
+}
+
+/* Accordion */
+
+.accordion__item {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 0;
+  transition: border-color 0.25s ease-in-out;
+}
+
+.accordion__item p {
+  margin: 0;
+}
+
+.accordion__item p + p {
+  margin-top: 15px;
+}
+
+.accordion__item.active {
+  border-color: var(--theme);
+}
+
+.accordion__item.active .accordion__toggle {
+  color: var(--theme);
+  font-weight: bold;
+}
+
+.accordion__item + .accordion__item {
+  margin-top: 20px;
+}
+
+.accordion__toggle {
+  cursor: pointer;
+  display: block;
+  padding: 20px;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.accordion__content {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.25s ease-in-out;
+}
+
+.accordion__content-inner {
+  padding: 0 20px 20px 20px;
+}
+
+.accordion__item.active .accordion__content {
+  height: auto;
 }
