@@ -1,0 +1,60 @@
+// Global
+
+$enable-negative-margins: true;
+
+// Gutter Width
+
+$grid-gutter-width: 2.5rem;
+
+// Spacer
+
+$spacer: 1.25rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 2,
+  5: $spacer * 3
+) !default;
+
+// Typography
+
+$font-family-sans-serif: 'Open Sans', 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans',
+  'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji';
+
+$font-size-base: 1rem;
+
+$h1-font-size: $font-size-base * 4.25;
+$h1-font-size-mobile: $font-size-base * 3;
+
+$headings-font-weight: bold;
+
+// Colors
+$info: #000000;
+
+// Containers
+$container: calc($grid-gutter-width * 2);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 780px,
+  lg: 960px,
+  xl: 1024px,
+  xxl: 1096px
+);
+
+// Card
+
+$card-padding: $spacer;
+$card-spacer-y: 1rem;
+$card-spacer-x: 0;
+$card-border-color: #ebebeb;
+
+// Buttons
+
+$btn-padding-y: 0.64rem !default;
+$btn-padding-x: 1.25rem !default;
+$btn-font-size: 0.75rem;
+$btn-font-weight: bold;
