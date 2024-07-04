@@ -1,0 +1,35 @@
+.card {
+  background: #fff;
+  box-shadow: 0 0 6px 0px rgb(0 0 0 / 20%);
+  height: 100%;
+  padding: 10px;
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  &__btn {
+    border: 3px solid #000;
+    border-radius: 30px;
+    color: #000;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    max-width: 130px;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.banner {
+  align-items: center;
+  background: url('/assets/img/1920x650.png') no-repeat center/cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+  text-align: center;
+
+  &__title {
+    font-size: 60px;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: 30px;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .banner {
+    background-image: url('/assets/img/600x600.png');
+  }
+}
