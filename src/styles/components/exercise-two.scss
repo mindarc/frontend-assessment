@@ -1,0 +1,36 @@
+.tabs {
+  .nav-link {
+    color: #233876;
+  }
+
+  .nav-link.active,
+  .nav-link:hover {
+    background-color: #233876;
+    color: #fff;
+  }
+}
+
+.accordion {
+  display: none;
+
+  &-button {
+    &:not(.collapsed) {
+      background-color: #233876;
+      color: #fff;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tabs {
+    display: none;
+  }
+
+  .accordion {
+    display: block;
+  }
+}
