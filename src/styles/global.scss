@@ -1,0 +1,49 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.banner {
+    color: #fff;
+    h2 {
+        font-size: 64px;
+        font-weight: 700;
+    }
+    p {
+        font-size: 32px;
+    }
+}
+
+.tab-content {
+    &--inner {
+        p {
+            text-align: center;
+            line-height: 1.7;
+        }
+        button {
+           background: transparent;
+           border-radius: 65px;
+           font-weight: 700;
+           letter-spacing: 2px;
+           font-size: 14px;
+           transition: 0.2s all;
+           &:hover {
+            background: aliceblue;
+
+           }
+        }
+    }
+}
+
+//Responsive
+@media (max-width: 1024px) {
+    .banner {
+        h2 {
+            font-size: 48px;
+            text-align: center;
+        }
+        p {
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+}

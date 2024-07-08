@@ -1,40 +1,14 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+# React + TypeScript + Vite
 
-Exercise 1
----
-Build a responsive page based on the designs.
+## To run the app:
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+- Clone the repo `git clone https://github.com/joanah09/frontend-assessment.git`
+- Then on terminal `cd frontend-assessment` then `npm install`
+- After installing the dependencies `npm run dev` to run the app
+- Copy and paste the Local: `http://localhost:5173/' on the browser
+- Answer to `('b' + 'a' + + 'a' + 'a').toLowerCase()` = The letters inside the quotes `'a'` are string, as for the `n` because of the `+ +` which is blank and is not considered as a string and its Not a number = `NaN` then the coode `.toLowerCase()` will then convert the N to n.
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+### Dependencies used
 
-##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
-
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
-
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
-
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
-
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+- React-bootstrap for Accordion and Tabs
+- sass for css
