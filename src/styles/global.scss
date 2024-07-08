@@ -25,6 +25,11 @@ body {
            font-weight: 700;
            letter-spacing: 2px;
            font-size: 14px;
+           transition: 0.2s all;
+           &:hover {
+            background: aliceblue;
+
+           }
         }
     }
 }
