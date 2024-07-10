@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 2rem auto;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabs, .accordion {
+    padding: 1rem;
+}
+
+.tab-titles {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-title {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background: #f9f9f9;
+    margin-right: -1px; /* Prevent double border */
+    border-bottom: none;
+    transition: background 0.3s, border-color 0.3s;
+    flex: 1;
+    text-align: center;
+    outline: none; /* Remove default focus outline */
+}
+
+.tab-title.active {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    color: #333;
+}
+
+.tab-title:hover, .tab-title:focus {
+    background: #e9e9e9;
+}
+
+.tab-title:focus {
+    outline: 2px solid #007BFF; /* Custom focus outline */
+    z-index: 1; /* Ensure focus outline is visible */
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    animation: fadeIn 0.3s;
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.accordion-title {
+    padding: 15px;
+    cursor: pointer;
+    background: #f9f9f9;
+    transition: background 0.3s;
+}
+
+.accordion-title:hover {
+    background: #e9e9e9;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .tabs {
+        display: flex;
+    }
+
+    .accordion {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .tabs {
+        display: none;
+    }
+
+    .accordion {
+        display: block;
+    }
+}

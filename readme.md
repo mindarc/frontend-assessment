@@ -1,40 +1,25 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
-
 Exercise 1
----
-Build a responsive page based on the designs.
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+> Created a responsive web page that displays data in a tabbed layout on desktops and an accordion layout on mobile devices. 
+> The header image will change based on the screen size, ensuring an optimized viewing experience for desktop and mobile view.
+> Keyboard navigation is supported for tabs using Enter or Space key.
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
-
-##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
 
 Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
+- Desktop View (min-width: 768px): Data is shown in tabs.
+- Mobile View (max-width: 767px): Data is shown in an accordion.
+Key Features:
 
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+> Only one tab/accordion section is open at a time.
+> The first tab/accordion section is open by default.
+> Tabs are made focusable by adding tabIndex = 0.
+> Keyboard navigation is supported for tabs using Enter or Space keys.
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+
+
+Banana Explained:
+
+From the concatenation that happened from the expression, 
+
+"'b' + 'a'" is simple string concatenation. It combines the characters 'b' and 'a' to form the string "ba". the second part which is the "+ 'a'" tries to convert the character 'a' to a number. Since 'a' isn't a valid number, JavaScript evaluates this as NaN or "Not a Number". Lastly, "a" is simply the character 'a' added as is. So putting it all together forms the string "baNaNa" then by considering the method "toLowerCase()"converts all characters in the string to lowercase, gets us the final string of "banana".
