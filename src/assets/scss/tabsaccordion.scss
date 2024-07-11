@@ -1,0 +1,15 @@
+.tabs-accordion-container {
+  .tab-content {
+    box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.3215686275);
+    padding: 20px;
+  }
+
+  .nav-tabs {
+    .nav-link {
+      color: #333;
+      &.active {
+        background-color: #cfe2ff;
+      }
+    }
+  }
+}
