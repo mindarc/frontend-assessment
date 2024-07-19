@@ -1,0 +1,55 @@
+//basic css reset
+
+* {
+    margin: 0;
+    padding: 0;
+    //to set all elements to border box element to inherit from body styling
+    box-sizing: inherit;
+    color: inherit;
+}
+
+html, body {
+    //set css box model to border box to accumulate margin and padding to total height and width
+    box-sizing: border-box;
+    // to convert 10px to 1rem
+    font-size: 62.5%;
+}
+
+
+//initialize typography sizing
+h1 {
+    font-size: 6rem;
+    letter-spacing: -2px;
+    margin: 2rem 0;
+}
+
+h2 {
+    font-size: 5rem;
+    letter-spacing: -1.6px;
+}
+
+h3 {
+    font-size: 4rem;
+    letter-spacing: -1px;
+}
+
+h4 {
+    font-size: 3.4rem;
+    letter-spacing: -1px;
+}
+
+h5 {
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+}
+
+h6 {
+    font-size: 2rem;
+    letter-spacing: -1px;
+}
+
+
+p, code {
+    font-size: 2.5rem;
+    line-height: 3.1rem;
+}
