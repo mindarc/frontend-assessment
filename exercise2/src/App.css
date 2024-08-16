@@ -1,0 +1,15 @@
+.app {
+  font-family: Arial, sans-serif;
+}
+
+@media (min-width: 769px) {
+  .accordion {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    display: none;
+  }
+}
