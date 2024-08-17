@@ -1,0 +1,31 @@
+.banner {
+    @apply bg-cover bg-center h-[320px];
+    background-image: url(https://via.placeholder.com/600x600);
+  }
+  
+  h1 {
+    @apply text-5xl tracking-widest font-bold;
+    line-height: 1.8;
+  }
+  
+  h2 {
+    @apply text-[1.5rem] mb-0;
+    letter-spacing: 0.13rem;
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .banner {
+      @apply h-[570px];
+      background-image: url(https://via.placeholder.com/1920x650);
+    }
+  
+    h1 {
+      @apply text-[4rem];
+    }
+  
+    h2 {
+      @apply text-[2.3rem];
+      letter-spacing: 0.17rem;
+    }
+  }

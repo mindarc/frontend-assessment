@@ -1,0 +1,46 @@
+.component-title {
+    @apply w-full absolute top-[30px] left-0 p-0 m-0 text-[1rem] font-bold text-[#888] text-center;
+    z-index: 999;
+  }
+  
+  .tab-nav {
+    @apply relative flex flex-row items-start p-[2px] bg-[#dadadb];
+    border-radius: 9px;
+  }
+  
+  .indicator {
+    content: '';
+    @apply w-[130px] h-[28px] bg-[#ffffff] absolute top-[2px] left-[2px] shadow-lg font-bold;
+    z-index: 9;
+    border: 0.5px solid rgba(0, 0, 0, 0.04);
+    border-radius: 7px;
+    transition: all 0.2s ease-out;
+  }
+  
+  .tab {
+    @apply w-[130px] h-[28px] absolute opacity-0;
+    z-index: 99;
+    outline: none;
+  }
+  .active {
+    @apply font-extrabold;
+  }
+  .tab_label {
+    @apply w-[130px] h-[28px] relative flex items-center justify-center border-0 text-xs opacity-[0.75] cursor-pointer text-black;
+    z-index: 999;
+  }
+  
+  .tab--1:checked ~ .indicator {
+    left: 2px;
+  }
+  
+  .tab--2:checked ~ .indicator {
+    left: calc(130px + 2px);
+  }
+  
+  .tab--3:checked ~ .indicator {
+    left: calc(130px * 2 + 2px);
+  }
+  .tab--4:checked ~ .indicator {
+    left: calc(130px * 3 + 2px);
+  }
