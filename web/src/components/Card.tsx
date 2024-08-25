@@ -18,7 +18,7 @@ export const Card: React.FC<CardProps> = ({ bodyText }) => {
         <p className="text-gray-700 mb-6 flex-grow">{bodyText}</p>
         <div>
           <button className="bg-white border-2 border-gray-900 rounded-full hover:bg-gray-900 transition-colors duration-300 py-2 px-6">
-            <span className="text-gray-700 font-black text-sm tracking-wider hover:text-white">
+            <span className="text-gray-700 font-black text-sm tracking-wider hover:text-white uppercase">
               Read More
             </span>
           </button>
