@@ -4,7 +4,26 @@
 
 // TODO: use closest font to the designs
 
-// Card.tsx
+.navbar {
+  @apply absolute top-0 left-0 right-0 z-10;
+  
+  &__container {
+    @apply container mx-auto px-4 py-4 flex justify-center;
+  }
+
+  &__list {
+    @apply flex space-x-8;
+  }
+
+  &__link {
+    @apply text-white text-lg font-semibold hover:text-gray-300 transition-colors;
+
+    &--active {
+      @apply border-b-2 border-white;
+    }
+  }
+}
+
 .card {
     @apply bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-200;
   
@@ -38,7 +57,6 @@
     }
   }
   
-  // Hero.tsx
   .hero {
     @apply relative h-screen md:h-[650px] text-white overflow-hidden;
   
@@ -67,7 +85,6 @@
     }
   }
 
-  // TabAccordion.tsx
   .tab-accordion {
     &__container {
       @apply md:flex md:justify-between border-b border-gray-200 relative;
@@ -98,7 +115,6 @@
     }
   }
 
-  // AnimatedContent.tsx
 .animated-content {
     @apply py-4 text-gray-600 text-center;
 }
@@ -117,7 +133,6 @@
   }
 }
 
-  // ExerciseTwo.tsx
 .exercise-two {
   @apply min-h-screen bg-white;
 

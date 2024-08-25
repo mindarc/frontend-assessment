@@ -5,15 +5,15 @@ export const NavBar: React.FC = () => {
   const location = useLocation();
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-10">
-      <div className="container mx-auto px-4 py-4">
-        <ul className="flex justify-center space-x-8">
+    <nav className="navbar">
+      <div className="navbar__container">
+        <ul className="navbar__list">
           <li>
             <Link
               to="/exercise-one"
-              className={`text-white text-lg font-semibold hover:text-gray-300 transition-colors ${
+              className={`navbar__link ${
                 location.pathname === "/exercise-one"
-                  ? "border-b-2 border-white"
+                  ? "navbar__link--active"
                   : ""
               }`}
             >
@@ -23,9 +23,9 @@ export const NavBar: React.FC = () => {
           <li>
             <Link
               to="/exercise-two"
-              className={`text-white text-lg font-semibold hover:text-gray-300 transition-colors ${
+              className={`navbar__link ${
                 location.pathname === "/exercise-two"
-                  ? "border-b-2 border-white"
+                  ? "navbar__link--active"
                   : ""
               }`}
             >
