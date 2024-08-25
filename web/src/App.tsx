@@ -6,8 +6,8 @@ import {
   Navigate,
 } from "react-router-dom";
 import { NavBar } from "./components/NavBar";
-import { ExerciseOne } from "./pages/exerciseOne";
-import { ExerciseTwo } from "./pages/exerciseTwo";
+import { LandingPage } from "./pages/landingPage";
+import { DynamicContent } from "./pages/dynamicContent";
 
 export const App: React.FC = () => {
   return (
@@ -16,9 +16,9 @@ export const App: React.FC = () => {
         <NavBar />
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<Navigate to="/exercise-one" replace />} />
-            <Route path="/exercise-one" element={<ExerciseOne />} />
-            <Route path="/exercise-two" element={<ExerciseTwo />} />
+            <Route path="/" element={<Navigate to="/landing-page" replace />} />
+            <Route path="/landing-page" element={<LandingPage />} />
+            <Route path="/dynamic-content" element={<DynamicContent />} />
           </Routes>
         </main>
       </div>

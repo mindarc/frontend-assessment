@@ -16,7 +16,7 @@ function isValidDataArray(arr: any): arr is ISection[] {
   return Array.isArray(arr) && arr.every(isValidSection);
 }
 
-export const ExerciseTwo: React.FC = () => {
+export const DynamicContent: React.FC = () => {
   const [sectionData, setSectionData] = useState<ISection[]>([]);
   /**
    * TODO: set up a skeleton loading state when dealing with more complex data fetching
@@ -45,10 +45,10 @@ export const ExerciseTwo: React.FC = () => {
   }, [error]);
 
   return (
-    <div className="exercise-two">
+    <div className="dynamic-content">
       <Hero />
       {sectionData && (
-        <section className="exercise-two__content">
+        <section className="dynamic-content__data">
           <TabAccordion sections={sectionData} />
         </section>
       )}

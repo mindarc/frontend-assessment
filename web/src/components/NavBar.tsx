@@ -10,26 +10,26 @@ export const NavBar: React.FC = () => {
         <ul className="navbar__list">
           <li>
             <Link
-              to="/exercise-one"
+              to="/landing-page"
               className={`navbar__link ${
-                location.pathname === "/exercise-one"
+                location.pathname === "/landing-page"
                   ? "navbar__link--active"
                   : ""
               }`}
             >
-              Exercise One
+              Landing Page
             </Link>
           </li>
           <li>
             <Link
-              to="/exercise-two"
+              to="/dynamic-content"
               className={`navbar__link ${
-                location.pathname === "/exercise-two"
+                location.pathname === "/dynamic-content"
                   ? "navbar__link--active"
                   : ""
               }`}
             >
-              Exercise Two
+              Dynamic Content
             </Link>
           </li>
         </ul>

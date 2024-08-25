@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { ExerciseTwo } from ".";
+import { DynamicContent } from ".";
 
 vi.mock("../../components/Hero", () => ({
   Hero: () => (
@@ -22,14 +22,14 @@ vi.mock("../../components/TabAccordion", () => ({
   ),
 }));
 
-describe("ExerciseTwo", () => {
+describe("DynamicContent", () => {
   it("should render the hero section with correct text", () => {
-    render(<ExerciseTwo />);
+    render(<DynamicContent />);
     expect(screen.getByText("Hello Developer!")).toBeInTheDocument();
   });
 
   it("should render all section titles", () => {
-    render(<ExerciseTwo />);
+    render(<DynamicContent />);
     const sections = screen.getAllByTestId("mock-section");
     expect(sections).toHaveLength(4);
     expect(sections[0]).toHaveTextContent("Section 1");

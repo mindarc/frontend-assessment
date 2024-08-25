@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { ExerciseOne } from ".";
+import { LandingPage } from ".";
 
 vi.mock("../../components/Hero", () => ({
   Hero: () => (
@@ -17,9 +17,9 @@ vi.mock("../../components/Card", () => ({
   ),
 }));
 
-describe("Exercise1Page", () => {
+describe("LandingPage", () => {
   it("should render the hero section with correct text", () => {
-    render(<ExerciseOne />);
+    render(<LandingPage />);
     expect(screen.getByText("Hello Developer!")).toBeInTheDocument();
     expect(
       screen.getByText(
@@ -29,7 +29,7 @@ describe("Exercise1Page", () => {
   });
 
   it("should render three cards with content", () => {
-    render(<ExerciseOne />);
+    render(<LandingPage />);
     const cards = screen.getAllByTestId("mock-card");
     expect(cards).toHaveLength(3);
     expect(cards[0]).toHaveTextContent("Lorem ipsum dolor sit amet");
@@ -39,7 +39,7 @@ describe("Exercise1Page", () => {
 
   // TODO: Expand upon this test and mimic different screen sizes
   it("should have a responsive layout", () => {
-    const { container } = render(<ExerciseOne />);
+    const { container } = render(<LandingPage />);
     const cardSection = container.querySelector(".grid");
     expect(cardSection).toHaveClass("grid-cols-1");
     expect(cardSection).toHaveClass("md:grid-cols-3");
