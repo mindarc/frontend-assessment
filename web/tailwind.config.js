@@ -6,10 +6,13 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Libre Franklin"', 'sans-serif'],
+      },
       borderWidth: {
         '3.5': '3.5px',
       },
     },
   },
-  plugins: [],
+plugins: [],
 }

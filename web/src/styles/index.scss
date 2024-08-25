@@ -2,7 +2,9 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-// TODO: use closest font to the designs
+body, h1, h2, h3, h4, h5, h6 {
+  @apply font-sans;
+}
 
 .navbar {
   @apply absolute top-0 left-0 right-0 z-10;
@@ -56,16 +58,22 @@
       color: white;
     }
   }
+
+  @mixin hero-image {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
   
   .hero {
     @apply relative h-screen md:h-[650px] text-white overflow-hidden;
   
     &__image-desktop {
-      @apply hidden md:block absolute inset-0 w-full h-full object-cover;
+      @apply hidden md:block;
+      @include hero-image;
     }
   
     &__image-mobile {
-      @apply md:hidden absolute inset-0 w-full h-full object-cover;
+      @apply md:hidden;
+      @include hero-image;
     }
   
     &__overlay {
@@ -81,7 +89,7 @@
     }
   
     &__subtitle {
-      @apply text-xl md:text-2xl font-light tracking-wide;
+      @apply text-xl md:text-4xl font-light tracking-wide;
     }
   }
 
@@ -133,10 +141,10 @@
   }
 }
 
-.exercise-two {
+.dynamic-content {
   @apply min-h-screen bg-white;
 
-  &__content {
+  &__data {
     @apply container mx-auto px-4 py-8 md:py-12;
   }
 }
