@@ -1,13 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import parse from "html-react-parser";
 import { ChevronDown } from "lucide-react";
-
-export interface ISection {
-  id: number;
-  title: string;
-  content: string;
-}
+import React, { useEffect, useState } from "react";
+import { ISection } from "../constants";
+import { AnimatedContent } from "./AnimatedContent";
 
 interface TabAccordionProps {
   sections: ISection[];
@@ -44,23 +38,11 @@ export const TabAccordion: React.FC<TabAccordionProps> = ({ sections }) => {
                   ${activeItem === item.id ? "transform rotate-180" : ""}`}
               />
             </button>
-            <AnimatePresence initial={false}>
-              {activeItem === item.id && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden md:hidden"
-                >
-                  <div className="py-4 text-gray-600 text-center">
-                    <div className="rendered-html-content">
-                      {parse(item.content)}
-                    </div>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <AnimatedContent
+              isActive={activeItem === item.id}
+              section={item}
+              motionClassName="overflow-hidden md:hidden"
+            />
           </div>
         ))}
         {activeItem !== null && (
@@ -77,23 +59,12 @@ export const TabAccordion: React.FC<TabAccordionProps> = ({ sections }) => {
       </div>
       <div className="mt-6 hidden md:block">
         {sections.map((item: ISection) => (
-          <AnimatePresence key={item.id} initial={false}>
-            {activeItem === item.id && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-                className="overflow-hidden"
-              >
-                <div className="py-4 text-gray-600 text-center">
-                  <div className="rendered-html-content">
-                    {parse(item.content)}
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <AnimatedContent
+            isActive={activeItem === item.id}
+            section={item}
+            motionClassName="overflow-hidden"
+            keyProp={item.id}
+          />
         ))}
       </div>
     </div>
