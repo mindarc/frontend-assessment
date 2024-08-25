@@ -1,7 +1,7 @@
 import { ChevronDown } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import { ISection } from "../constants";
-import { AnimatedContent } from "./TabAccordion/AnimatedContent";
+import { ISection } from "../../constants";
+import { AnimatedContent } from "./AnimatedContent";
 
 interface TabAccordionProps {
   sections: ISection[];

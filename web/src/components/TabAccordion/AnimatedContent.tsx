@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import parse from "html-react-parser";
 import React from "react";
-import { ISection } from "../constants";
+import { ISection } from "../../constants";
 
 interface AnimatedContentProps {
   isActive: boolean;
