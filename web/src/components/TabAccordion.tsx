@@ -1,18 +1,21 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import parse from "html-react-parser";
+import { ChevronDown } from "lucide-react";
 
-interface ContentItem {
+export interface ISection {
   id: number;
   title: string;
   content: string;
 }
 
 interface TabAccordionProps {
-  items: ContentItem[];
+  sections: ISection[];
 }
 
-export const TabAccordion: React.FC<TabAccordionProps> = ({ items }) => {
+export const TabAccordion: React.FC<TabAccordionProps> = ({ sections }) => {
   const [activeItem, setActiveItem] = useState<number | null>(
-    items[0]?.id || null
+    sections[0]?.id || null
   );
 
   const toggleItem = (id: number) => {
@@ -20,38 +23,44 @@ export const TabAccordion: React.FC<TabAccordionProps> = ({ items }) => {
   };
 
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden">
-      <div className="md:flex">
-        {items.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => toggleItem(item.id)}
-            className={`w-full md:w-auto text-left px-4 py-2 focus:outline-none transition-colors duration-200
-              ${
-                activeItem === item.id
-                  ? "bg-blue-500 text-white"
-                  : "bg-white text-gray-700 hover:bg-gray-100"
-              }
-              ${activeItem === item.id && "md:border-b-2 md:border-blue-500"}
-              md:flex-grow md:text-center`}
-          >
-            {item.title}
-          </button>
-        ))}
-      </div>
-      <div className="md:mt-4">
-        {items.map((item) => (
+    <div className="w-full">
+      <div className="md:flex md:border-b border-gray-200">
+        {sections.map((item: ISection) => (
           <div
             key={item.id}
-            className={`overflow-hidden transition-all duration-200 ease-in-out
-              ${activeItem === item.id ? "max-h-96" : "max-h-0 md:max-h-96"}`}
+            className="border-b border-gray-200 md:border-b-0 md:flex-grow"
           >
-            <div
-              className={`p-4 bg-white ${
-                activeItem === item.id ? "block" : "hidden md:block"
-              }`}
-              dangerouslySetInnerHTML={{ __html: item.content }}
-            />
+            <button
+              className={`w-full py-6 px-4 text-left text-xl font-semibold transition-colors duration-200 focus:outline-none flex justify-between items-center
+                md:text-center md:flex-grow md:border-b-2 md:border-transparent
+                ${
+                  activeItem === item.id
+                    ? "text-blue-600 md:border-blue-600"
+                    : "text-gray-600 hover:text-gray-800"
+                }`}
+              onClick={() => toggleItem(item.id)}
+            >
+              {item.title}
+              <ChevronDown
+                className={`w-6 h-6 transition-transform duration-300 ease-in-out md:hidden
+                  ${activeItem === item.id ? "transform rotate-180" : ""}`}
+              />
+            </button>
+            <AnimatePresence initial={false}>
+              {activeItem === item.id && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="p-6 text-gray-600 overflow-hidden md:absolute md:left-0 md:right-0 md:mt-2"
+                >
+                  <div className="rendered-html-content">
+                    {parse(item.content)}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>
