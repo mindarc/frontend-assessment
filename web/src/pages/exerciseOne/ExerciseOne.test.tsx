@@ -1,6 +1,21 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { ExerciseOne } from ".";
+
+vi.mock("../../components/Hero", () => ({
+  Hero: () => (
+    <div data-testid="mock-hero">
+      <h1>Hello Developer!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    </div>
+  ),
+}));
+
+vi.mock("../../components/Card", () => ({
+  Card: ({ bodyText }: { bodyText: string }) => (
+    <div data-testid="mock-card">{bodyText}</div>
+  ),
+}));
 
 describe("Exercise1Page", () => {
   it("should render the hero section with correct text", () => {
@@ -13,13 +28,16 @@ describe("Exercise1Page", () => {
     ).toBeInTheDocument();
   });
 
-  it("should render three cards with 'Read More' buttons", () => {
+  it("should render three cards with content", () => {
     render(<ExerciseOne />);
-    const readMoreButtons = screen.getAllByText("Read More");
-    expect(readMoreButtons).toHaveLength(3);
+    const cards = screen.getAllByTestId("mock-card");
+    expect(cards).toHaveLength(3);
+    expect(cards[0]).toHaveTextContent("Lorem ipsum dolor sit amet");
+    expect(cards[1]).toHaveTextContent("Lorem ipsum dolor sit amet");
+    expect(cards[2]).toHaveTextContent("Lorem ipsum dolor sit amet");
   });
 
-  // TODO: simulate different screen sizes
+  // TODO: Expand upon this test and mimic different screen sizes
   it("should have a responsive layout", () => {
     const { container } = render(<ExerciseOne />);
     const cardSection = container.querySelector(".grid");
