@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Hero } from "../../components/Hero";
-import { TabAccordion, ISection } from "../../components/TabAccordion";
+import { TabAccordion } from "../../components/TabAccordion";
 import data from "../../data.json";
+import { ISection } from "../../constants";
 
 function isValidSection(item: any): item is ISection {
   return (
@@ -44,10 +45,10 @@ export const ExerciseTwo: React.FC = () => {
   }, [error]);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="exercise-two">
       <Hero />
       {sectionData && (
-        <section className="container mx-auto px-4 py-8 md:py-12">
+        <section className="exercise-two__content">
           <TabAccordion sections={sectionData} />
         </section>
       )}

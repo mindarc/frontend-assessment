@@ -20,22 +20,22 @@ export const TabAccordion: React.FC<TabAccordionProps> = ({ sections }) => {
 
   return (
     <div className="w-full">
-      <div className="md:flex md:justify-between border-b border-gray-200 relative">
+      <div className="tab-accordion__container">
         {sections.map((item: ISection) => (
           <div key={item.id} className="flex-grow">
             <button
-              className={`py-6 px-4 text-xl font-semibold transition-colors duration-200 focus:outline-none flex items-center justify-center w-full
-                ${
-                  activeItem === item.id
-                    ? "text-blue-600"
-                    : "text-gray-600 hover:text-gray-800"
-                }`}
+              className={`tab-accordion__button ${
+                activeItem === item.id
+                  ? "tab-accordion__button--active"
+                  : "tab-accordion__button--inactive"
+              }`}
               onClick={() => toggleItem(item.id)}
             >
               <span>{item.title}</span>
               <ChevronDown
-                className={`w-6 h-6 transition-transform duration-300 ease-in-out ml-2 md:hidden
-                  ${activeItem === item.id ? "transform rotate-180" : ""}`}
+                className={`tab-accordion__icon ${
+                  activeItem === item.id ? "transform rotate-180" : ""
+                }`}
               />
             </button>
             <AnimatedContent
@@ -46,18 +46,16 @@ export const TabAccordion: React.FC<TabAccordionProps> = ({ sections }) => {
           </div>
         ))}
         {activeItem !== null && (
-          <div className="hidden md:block absolute bottom-0 left-0 w-full">
-            <div
-              className="h-0.5 bg-blue-600 transition-all duration-300"
-              style={{
-                width: `${100 / sections.length}%`,
-                marginLeft: `${((activeItem - 1) * 100) / sections.length}%`,
-              }}
-            ></div>
-          </div>
+          <div
+            className="tab-accordion__underline"
+            style={{
+              width: `${100 / sections.length}%`,
+              marginLeft: `${((activeItem - 1) * 100) / sections.length}%`,
+            }}
+          ></div>
         )}
       </div>
-      <div className="mt-6 hidden md:block">
+      <div className="tab-accordion__desktop-content">
         {sections.map((item: ISection) => (
           <AnimatedContent
             isActive={activeItem === item.id}

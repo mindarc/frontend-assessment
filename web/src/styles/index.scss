@@ -66,3 +66,62 @@
       @apply text-xl md:text-2xl font-light tracking-wide;
     }
   }
+
+  // TabAccordion.tsx
+  .tab-accordion {
+    &__container {
+      @apply md:flex md:justify-between border-b border-gray-200 relative;
+    }
+  
+    &__button {
+      @apply py-6 px-4 text-xl font-semibold transition-colors duration-200 focus:outline-none flex items-center justify-center w-full;
+  
+      &--active {
+        @apply text-blue-600;
+      }
+  
+      &--inactive {
+        @apply text-gray-600 hover:text-gray-800;
+      }
+    }
+  
+    &__icon {
+      @apply w-6 h-6 transition-transform duration-300 ease-in-out ml-2 md:hidden;
+    }
+  
+    &__underline {
+      @apply hidden md:block absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300;
+    }
+  
+    &__desktop-content {
+      @apply mt-6 hidden md:block;
+    }
+  }
+
+  // AnimatedContent.tsx
+.animated-content {
+    @apply py-4 text-gray-600 text-center;
+}
+
+.rendered-html-content {
+  p {
+    @apply mb-4;
+  }
+
+  ul {
+    @apply list-disc pl-8 mb-4;
+  }
+
+  li {
+    @apply mb-2;
+  }
+}
+
+  // ExerciseTwo.tsx
+.exercise-two {
+  @apply min-h-screen bg-white;
+
+  &__content {
+    @apply container mx-auto px-4 py-8 md:py-12;
+  }
+}

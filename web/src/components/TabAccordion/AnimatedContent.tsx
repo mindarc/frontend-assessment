@@ -13,6 +13,7 @@ interface AnimatedContentProps {
 export const AnimatedContent: React.FC<AnimatedContentProps> = ({
   isActive,
   section,
+  motionClassName,
   keyProp,
 }) => (
   <AnimatePresence initial={false}>
@@ -23,9 +24,9 @@ export const AnimatedContent: React.FC<AnimatedContentProps> = ({
         animate={{ opacity: 1, height: "auto" }}
         exit={{ opacity: 0, height: 0 }}
         transition={{ duration: 0.3 }}
-        className="overflow-hidden"
+        className={motionClassName}
       >
-        <div className="py-4 text-gray-600 text-center">
+        <div className="animated-content">
           <div className="rendered-html-content">{parse(section.content)}</div>
         </div>
       </motion.div>
