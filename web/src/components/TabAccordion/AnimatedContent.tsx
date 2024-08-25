@@ -27,6 +27,7 @@ export const AnimatedContent: React.FC<AnimatedContentProps> = ({
         className={motionClassName}
       >
         <div className="animated-content">
+          {/* Bullet points are not centred along with the content and will remain on the left */}
           <div className="rendered-html-content">{parse(section.content)}</div>
         </div>
       </motion.div>
