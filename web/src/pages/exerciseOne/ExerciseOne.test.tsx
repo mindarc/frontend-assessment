@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { ExerciseOne } from "./exerciseOne";
+import { ExerciseOne } from ".";
 
 describe("Exercise1Page", () => {
   it("should render the hero section with correct text", () => {

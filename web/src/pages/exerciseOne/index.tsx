@@ -1,5 +1,5 @@
-import { Card } from "../components/Card";
-import { Hero } from "../components/Hero";
+import { Card } from "../../components/Card";
+import { Hero } from "../../components/Hero";
 
 export const ExerciseOne = () => {
   const cardContent = [
