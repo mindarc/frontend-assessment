@@ -14,7 +14,7 @@ export const Hero: React.FC = () => (
       alt="Hero placeholder"
       className="md:hidden absolute inset-0 w-full h-full object-cover"
     />
-    <div>
+    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="text-center">
         <h1 className="text-5xl md:text-7xl font-bold mb-4">
           Hello Developer!
