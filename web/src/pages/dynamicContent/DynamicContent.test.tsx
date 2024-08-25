@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { DynamicContent } from ".";
+import { ISection } from "../../constants";
 
 vi.mock("../../components/Hero", () => ({
   Hero: () => (
@@ -11,9 +12,9 @@ vi.mock("../../components/Hero", () => ({
 }));
 
 vi.mock("../../components/TabAccordion", () => ({
-  TabAccordion: ({ sections }) => (
+  TabAccordion: ({ sections }: { sections: ISection[] }) => (
     <div data-testid="mock-tab-accordion">
-      {sections.map((section) => (
+      {sections.map((section: ISection) => (
         <div key={section.id} data-testid="mock-section">
           {section.title}
         </div>
