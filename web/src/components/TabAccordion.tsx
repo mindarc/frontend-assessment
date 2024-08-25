@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import parse from "html-react-parser";
 import { ChevronDown } from "lucide-react";
@@ -14,9 +14,11 @@ interface TabAccordionProps {
 }
 
 export const TabAccordion: React.FC<TabAccordionProps> = ({ sections }) => {
-  const [activeItem, setActiveItem] = useState<number | null>(
-    sections[0]?.id || null
-  );
+  const [activeItem, setActiveItem] = useState<number | null>(null);
+
+  useEffect(() => {
+    setActiveItem(sections[0]?.id || null);
+  }, [sections]);
 
   const toggleItem = (id: number) => {
     setActiveItem(activeItem === id ? null : id);
@@ -24,25 +26,21 @@ export const TabAccordion: React.FC<TabAccordionProps> = ({ sections }) => {
 
   return (
     <div className="w-full">
-      <div className="md:flex md:border-b border-gray-200">
+      <div className="md:flex md:justify-between border-b border-gray-200 relative">
         {sections.map((item: ISection) => (
-          <div
-            key={item.id}
-            className="border-b border-gray-200 md:border-b-0 md:flex-grow"
-          >
+          <div key={item.id} className="flex-grow">
             <button
-              className={`w-full py-6 px-4 text-left text-xl font-semibold transition-colors duration-200 focus:outline-none flex justify-between items-center
-                md:text-center md:flex-grow md:border-b-2 md:border-transparent
+              className={`py-6 px-4 text-xl font-semibold transition-colors duration-200 focus:outline-none flex items-center justify-center w-full
                 ${
                   activeItem === item.id
-                    ? "text-blue-600 md:border-blue-600"
+                    ? "text-blue-600"
                     : "text-gray-600 hover:text-gray-800"
                 }`}
               onClick={() => toggleItem(item.id)}
             >
-              {item.title}
+              <span>{item.title}</span>
               <ChevronDown
-                className={`w-6 h-6 transition-transform duration-300 ease-in-out md:hidden
+                className={`w-6 h-6 transition-transform duration-300 ease-in-out ml-2 md:hidden
                   ${activeItem === item.id ? "transform rotate-180" : ""}`}
               />
             </button>
@@ -53,15 +51,49 @@ export const TabAccordion: React.FC<TabAccordionProps> = ({ sections }) => {
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="p-6 text-gray-600 overflow-hidden md:absolute md:left-0 md:right-0 md:mt-2"
+                  className="overflow-hidden md:hidden"
                 >
-                  <div className="rendered-html-content">
-                    {parse(item.content)}
+                  <div className="py-4 text-gray-600 text-center">
+                    <div className="rendered-html-content">
+                      {parse(item.content)}
+                    </div>
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
+        ))}
+        {activeItem !== null && (
+          <div className="hidden md:block absolute bottom-0 left-0 w-full">
+            <div
+              className="h-0.5 bg-blue-600 transition-all duration-300"
+              style={{
+                width: `${100 / sections.length}%`,
+                marginLeft: `${((activeItem - 1) * 100) / sections.length}%`,
+              }}
+            ></div>
+          </div>
+        )}
+      </div>
+      <div className="mt-6 hidden md:block">
+        {sections.map((item: ISection) => (
+          <AnimatePresence key={item.id} initial={false}>
+            {activeItem === item.id && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <div className="py-4 text-gray-600 text-center">
+                  <div className="rendered-html-content">
+                    {parse(item.content)}
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         ))}
       </div>
     </div>
