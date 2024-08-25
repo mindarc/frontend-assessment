@@ -2,24 +2,26 @@ import React from "react";
 
 export const Hero: React.FC = () => (
   // Load separate placeholder images based on screen size
-  <section className="relative h-screen md:h-[650px] text-white overflow-hidden">
+  <section className="hero">
     {/* TODO: DRY */}
-    <img
-      src="https://via.placeholder.com/1920x650"
-      alt="Hero placeholder"
-      className="hidden md:block absolute inset-0 w-full h-full object-cover"
-    />
-    <img
-      src="https://via.placeholder.com/600x600"
-      alt="Hero placeholder"
-      className="md:hidden absolute inset-0 w-full h-full object-cover"
-    />
-    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="text-center">
-        <h1 className="text-5xl md:text-7xl font-bold mb-4">
-          Hello Developer!
-        </h1>
-        <p className="text-xl md:text-2xl font-light tracking-wide">
+    <div className="hero__image-desktop">
+      <img
+        src="https://via.placeholder.com/1920x650"
+        alt="Desktop hero"
+        className="hero__image-desktop"
+      />
+    </div>
+    <div className="hero__image-mobile">
+      <img
+        src="https://via.placeholder.com/600x600"
+        alt="Mobile hero"
+        className="hero__image-mobile"
+      />
+    </div>
+    <div className="hero__overlay">
+      <div className="hero__content">
+        <h1 className="hero__title">Hello Developer!</h1>
+        <p className="hero__subtitle">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </p>
       </div>
