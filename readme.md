@@ -18,8 +18,7 @@ A blueprint for the layout of an e-commerce website.
 
 ### Production
 
-[Landing Page](https://ecommify-blueprint.vercel.app/)
-[Dynamic Content](https://ecommify-blueprint.vercel.app/dynamic-content)
+[ecommify-blueprint.vercel.app](https://ecommify-blueprint.vercel.app/)
 
 ### Local
 
