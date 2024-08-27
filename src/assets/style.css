@@ -1,0 +1,70 @@
+@tailwind base;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  legend {
+    @apply font-poppins
+      mb-2;
+  }
+
+  p,
+  a,
+  blockquote,
+  dl,
+  dd,
+  hr,
+  figure,
+  pre,
+  legend,
+  button,
+  ol,
+  ul {
+    @apply font-poppins;
+  }
+
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-3xl;
+  }
+  h4 {
+    @apply text-2xl;
+  }
+  h5 {
+    @apply text-xl;
+  }
+  h6 {
+    @apply text-lg;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  ol,
+  ul {
+    @apply list-inside;
+  }
+
+  li {
+    @apply list-disc
+    ml-4;
+  }
+
+  code {
+    @apply bg-gray-200 
+    p-1 
+    rounded-lg;
+  }
+}
+@tailwind components;
+@tailwind utilities;
