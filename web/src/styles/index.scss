@@ -11,6 +11,7 @@ body, h1, h2, h3, h4, h5, h6 {
   font-size: clamp(0.35rem, 1.5vw, 0.75rem); 
   width: 60%; 
   text-align: right;
+  font-family: 'Public Sans', sans-serif;
 
   &__card {
     @apply text-stone-400;
@@ -57,7 +58,7 @@ body, h1, h2, h3, h4, h5, h6 {
     }
   
     &__button {
-      @apply bg-white border-3.5 border-black rounded-full transition-colors duration-300 py-1.5 px-4 ;
+      @apply bg-white border-3 border-black rounded-full transition-colors duration-300 py-1.5 px-4 ;
   
       .expand-text {
         @apply text-black font-black uppercase text-sm tracking-[0.2em] hover:text-white;
@@ -99,6 +100,7 @@ body, h1, h2, h3, h4, h5, h6 {
     &__image-text {
       @apply absolute inset-0 flex items-center justify-center text-neutral-450 tracking-tighter;
       font-size: clamp(1.5rem, 3vw, 2.5rem); 
+      font-family: 'Public Sans', sans-serif;
       // Scale height
       transform: scaleY(1.2);
 

@@ -10,6 +10,7 @@ export default {
         sans: ['"Libre Franklin"', 'sans-serif'],
       },
       borderWidth: {
+        '3': '3px',
         '3.5': '3.5px',
       },
       colors: {
