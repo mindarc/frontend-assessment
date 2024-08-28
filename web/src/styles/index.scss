@@ -38,14 +38,14 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 .card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-gray-200;
+    @apply bg-white rounded-md shadow overflow-hidden flex flex-col h-full border border-gray-200;
   
     &__image-container {
-      @apply relative h-0 pb-[75%] mb-6;
+      @apply relative h-0 pb-[75%] mb-5;
     }
   
     &__image {
-      @apply absolute inset-0 w-full h-full object-cover rounded-lg;
+      @apply absolute inset-0 w-full h-full object-cover rounded-md;
     }
   
     &__body {
@@ -53,20 +53,19 @@ body, h1, h2, h3, h4, h5, h6 {
     }
   
     &__text {
-      @apply text-gray-700 mb-6 flex-grow;
+      @apply text-black mb-4 flex-grow;
     }
   
     &__button {
-      @apply bg-white border-3.5 border-gray-900 rounded-full hover:bg-gray-900 transition-colors duration-300 py-2 px-6;
+      @apply bg-white border-3.5 border-black rounded-full transition-colors duration-300 py-1.5 px-4 ;
   
       .expand-text {
-        @apply text-gray-700 font-black uppercase text-sm tracking-[0.2em];
+        @apply text-black font-black uppercase text-sm tracking-[0.2em] hover:text-white;
       }
-    }
-  
-    &__button:hover .expand-text {
-      text-shadow: 1px 1px 0 white;
-      color: white;
+
+      &:hover {
+        @apply bg-black text-white;
+      }
     }
   }
 
