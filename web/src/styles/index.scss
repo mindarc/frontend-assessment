@@ -87,7 +87,7 @@ body, h1, h2, h3, h4, h5, h6 {
     }
   
     &__overlay {
-      @apply absolute inset-0 flex items-center justify-center bg-black bg-opacity-50;
+      @apply absolute inset-0 flex items-center justify-center bg-zinc-600 bg-opacity-50;
     }
   
     &__content {
@@ -95,13 +95,21 @@ body, h1, h2, h3, h4, h5, h6 {
     }
   
     &__title {
-      @apply text-5xl md:text-7xl font-bold mb-4;
+      @apply text-4xl text-white md:text-6xl font-bold mb-4 tracking-wider;
+     
+      @media (max-width: 767px) {
+        line-height: 1.75;
+      }
     }
   
     &__subtitle {
-      @apply text-xl md:text-4xl font-light tracking-wide;
-    }
+      @apply text-xl text-white md:text-4xl font-light tracking-wide;
+
+      @media (max-width: 767px) {
+      margin-top: -1rem;
+      }
   }
+}
 
   .tab-accordion {
     &__container {

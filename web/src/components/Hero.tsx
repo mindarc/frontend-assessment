@@ -5,16 +5,22 @@ export const Hero: React.FC = () => (
   <section className="hero">
     <div>
       <img
-        src="https://via.placeholder.com/1920x650"
+        /**
+         * `/background-colour/text-colour`
+         * Hiding the text to manually set the sizing
+         */
+        src="https://via.placeholder.com/1920x650/D4D4D4/D4D4D4"
         alt="Desktop hero"
         className="hero__image-desktop"
       />
+      <span>1920 x 650</span>
+      <span className="powered-by">Powered by HTML.COM</span>
       <img
-        src="https://via.placeholder.com/600x600"
+        src="https://via.placeholder.com/600x600/D4D4D4/D4D4D4"
         alt="Mobile hero"
         className="hero__image-mobile"
       />
-      <span className="powered-by">Powered by HTML.COM</span>
+      <span>600 x 600</span>
     </div>
     <div className="hero__overlay">
       <div className="hero__content">
