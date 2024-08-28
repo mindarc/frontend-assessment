@@ -14,7 +14,7 @@ export const Hero: React.FC = () => (
         alt="Mobile hero"
         className="hero__image-mobile"
       />
-      <span>Powered by HTML.COM</span>
+      <span className="powered-by">Powered by HTML.COM</span>
     </div>
     <div className="hero__overlay">
       <div className="hero__content">
