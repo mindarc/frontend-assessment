@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="mt-auto py-4 bg-gray-100">
       <div className="container mx-auto flex justify-center">
-        <nav>
+        <nav className="flex flex-col items-center md:flex-row">
           <Link
             to="/landing-page"
             className={`mx-4 text-lg font-semibold hover:text-gray-600 transition-colors ${

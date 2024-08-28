@@ -12,6 +12,7 @@ body, h1, h2, h3, h4, h5, h6 {
   width: 60%; 
   text-align: right;
   font-family: 'Public Sans', sans-serif;
+  z-index: 10;
 
   &__card {
     @apply text-stone-400;
