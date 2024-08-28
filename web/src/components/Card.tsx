@@ -13,7 +13,7 @@ export const Card: React.FC<CardProps> = ({ bodyText, padding = "p-6" }) => (
         alt="Card placeholder"
         className="card__image"
       />
-      <span>Powered by HTML.COM</span>
+      <span className="powered-by">Powered by HTML.COM</span>
     </div>
     <div className="card__body">
       <p className="card__text">{bodyText}</p>

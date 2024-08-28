@@ -6,6 +6,17 @@ body, h1, h2, h3, h4, h5, h6 {
   @apply font-sans;
 }
 
+.powered-by {
+  @apply absolute bottom-1 right-1 text-stone-500 tracking-wide;
+  font-size: clamp(0.35rem, 1.5vw, 0.75rem); 
+  width: 60%; 
+  text-align: right;
+
+  &__card {
+    @apply text-stone-400;
+  }
+}
+
 .navbar {
   @apply absolute top-0 left-0 right-0 z-10;
   
