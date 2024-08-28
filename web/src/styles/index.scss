@@ -74,16 +74,45 @@ body, h1, h2, h3, h4, h5, h6 {
   }
   
   .hero {
-    @apply relative h-screen md:h-[650px] text-white overflow-hidden;
+    @apply relative overflow-hidden;
+    height: 100vw;
+    max-height: 600px; 
+  
+    @screen md {
+      height: 650px;
+    }
+
+    &__image-container {
+      @apply relative w-full h-full;
+    }
   
     &__image-desktop {
-      @apply hidden md:block;
+      @apply hidden md:block h-full;
       @include hero-image;
     }
   
     &__image-mobile {
-      @apply md:hidden;
+      @apply md:hidden h-full;
       @include hero-image;
+    }
+
+    &__image-text {
+      @apply absolute inset-0 flex items-center justify-center text-neutral-450 tracking-tighter;
+      font-size: clamp(1.5rem, 3vw, 2.5rem); 
+      // Scale height
+      transform: scaleY(1.2);
+
+      @media (min-width: 768px) { 
+        font-size: clamp(6rem, 10vw, 8rem);
+      }
+    }
+
+    &__image-text-desktop {
+      @apply hidden md:flex;
+    }
+  
+    &__image-text-mobile {
+      @apply md:hidden;
     }
   
     &__overlay {

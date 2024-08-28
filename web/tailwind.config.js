@@ -12,6 +12,9 @@ export default {
       borderWidth: {
         '3.5': '3.5px',
       },
+      colors: {
+        'neutral-450': 'rgb(139, 139, 139)',
+      }
     },
   },
 plugins: [],
