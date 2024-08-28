@@ -99,7 +99,7 @@ body, h1, h2, h3, h4, h5, h6 {
     }
 
     &__image-text {
-      @apply absolute inset-0 flex items-center justify-center text-neutral-450 tracking-tighter;
+      @apply absolute inset-0 flex items-center justify-center text-neutral-450;
       font-size: clamp(1.5rem, 3vw, 2.5rem); 
       font-family: 'Public Sans', sans-serif;
       // Scale height
