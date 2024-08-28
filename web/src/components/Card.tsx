@@ -13,11 +13,11 @@ export const Card: React.FC<CardProps> = ({ bodyText, padding = "p-6" }) => (
         alt="Card placeholder"
         className="card__image"
       />
+      <span>Powered by HTML.COM</span>
     </div>
     <div className="card__body">
       <p className="card__text">{bodyText}</p>
       <div>
-        {/* TODO: potentially action the button */}
         <button className="card__button">
           <span className="expand-text">Read more</span>
         </button>

@@ -3,20 +3,18 @@ import React from "react";
 export const Hero: React.FC = () => (
   // Load separate placeholder images based on screen size
   <section className="hero">
-    {/* TODO: DRY */}
-    <div className="hero__image-desktop">
+    <div>
       <img
         src="https://via.placeholder.com/1920x650"
         alt="Desktop hero"
         className="hero__image-desktop"
       />
-    </div>
-    <div className="hero__image-mobile">
       <img
         src="https://via.placeholder.com/600x600"
         alt="Mobile hero"
         className="hero__image-mobile"
       />
+      <span>Powered by HTML.COM</span>
     </div>
     <div className="hero__overlay">
       <div className="hero__content">
