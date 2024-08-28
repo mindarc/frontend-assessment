@@ -36,7 +36,7 @@
         ]
       }
     },
-    name: 'CardList',
+    name: 'cardListComponent',
     props: {
       msg: String
     }

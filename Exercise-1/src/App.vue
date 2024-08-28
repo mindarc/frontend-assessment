@@ -8,25 +8,36 @@
     </div>
     <p class="header-text-bottom-right">Powered by HTML.COM</p>
   </div>
-  <CardList />
+  <cardListComponent />
 </template> 
 
 <script>
-import CardList from './components/CardList.vue'
+import cardListComponent from './components/card-list-component.vue'
 
 export default {
   name: 'App',
   components: {
-    CardList
+    cardListComponent
   },
-  computed: {
-    isMobile() {
-      if (screen.width <= 760) {
-          return true
-        } else {
-          return false
-        }
-    } 
+  data(){
+    return{
+      screenWidth: '',
+      isMobile: '',
+    }
+  },
+  methods:{
+    checkScreenSize(){
+      this.screenWidth = window.innerWidth;
+      if(this.screenWidth > 768 ){
+        this.isMobile = false;
+      }else{
+        this.isMobile = true;
+      }
+    }
+  },
+   mounted(){
+    this.checkScreenSize();
+    window.addEventListener('resize', this.checkScreenSize);
   }
 }
 </script>
