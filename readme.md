@@ -1,40 +1,68 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+# Ecommify
 
-Exercise 1
----
-Build a responsive page based on the designs.
+A blueprint for the layout of an e-commerce website.
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+## Technologies
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+| Technology        | Description                                      |
+| ----------------- | ------------------------------------------------ |
+| React             | JavaScript library for building user interfaces  |
+| TypeScript        | Primary language for programming                 |
+| Vite              | Build tool                                       |
+| Vitest/Jest DOM   | Unit testing                                     |
+| Tailwind CSS      | CSS framework for styling                        |
+| Frame motion      | Animation                        |
+| Vercel            | Live web deployment                              |
 
-##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
+## Running the app
 
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
+### Production
 
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
+[ecommify-blueprint.vercel.app](https://ecommify-blueprint.vercel.app/)
 
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+### Local
 
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+**Pre-requisites:**
+
+- Node.js and npm - [download](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- Git - [download](https://git-scm.com/downloads)
+
+To run the application locally, follow these steps:
+
+1. Download the zip file and open the project in VS code or clone the repository via terminal: `git clone https://github.com/basinghse/ecommify.git`
+2. Navigate from the root folder to the web folder: `cd web`
+3. Install dependencies: `npm install`
+4. Run the application: `npm run dev`
+5. Navigate to the URL i.e. `http://localhost:5173/`
+6. (Optional) Run unit tests: `npm run test`
+
+## Questions
+
+**Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.**
+
+- When you add two strings, they combine. The first operation 'b' + 'a' becomes `ba`.
+- The middle operation has two + symbols. The first one is treated as a plus, so the second becomes an unary operator trying to convert the next character to a number
+- 'a' can't be converted to a number, so it becomes NaN (Not a Number)
+- 'ba' + (+a) becomes `baNaN`
+- Adding the final 'a' we get 'baNaNa', which is converted to lowercase to give a final result of `banana`
+
+## References
+
+[BEM and SASS](https://andrew-barnes.medium.com/bem-and-sass-a-perfect-match-5e48d9bc3894)
+[SASS parent selectors](https://sass-lang.com/documentation/style-rules/parent-selector/)
+[Responsive design](https://tailwindcss.com/docs/responsive-design)
+
+## Ideas
+
+- Stylistic choices for alignment of section data to the left or centre,  currently centred.
+- Slight repetition in [Hero](/web/src/components/Hero.tsx), however it is a small component. Consider refactoring if it gets larger.
+- The nav bar could be improved to include a transparent darker background
+- Expandable cards/redirections from users clicking on read more
+- A home page displaying a demo of both pages (exercises) before viewing a single page
+- A footer with social media links/copyright
+- Establish eslint rules
+- More extensive unit testing
+- Skeleton loading: when using more complex data i.e. fetching from an API this would improve user experience while the data is loaded
+- Creation of more common constants, themes for sharing
+- Introducing a logger service such as Winston to receive errors
+- Introduce a snackbar for user feedback - ideally for errors and especially when adding more complex interactions such as form submissions

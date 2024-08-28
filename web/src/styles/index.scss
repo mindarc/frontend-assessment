@@ -1,0 +1,200 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body, h1, h2, h3, h4, h5, h6 {
+  @apply font-sans;
+}
+
+.powered-by {
+  @apply absolute bottom-1 right-1 text-stone-500 tracking-wide;
+  font-size: clamp(0.35rem, 1.5vw, 0.75rem); 
+  width: 60%; 
+  text-align: right;
+  font-family: 'Public Sans', sans-serif;
+  z-index: 10;
+
+  &__card {
+    @apply text-stone-400;
+  }
+}
+
+.navbar {
+  @apply absolute top-0 left-0 right-0 z-10;
+  
+  &__container {
+    @apply container mx-auto px-4 py-4 flex justify-center;
+  }
+
+  &__list {
+    @apply flex space-x-8;
+  }
+
+  &__link {
+    @apply text-white text-lg font-semibold hover:text-gray-300 transition-colors;
+
+    &--active {
+      @apply border-b-2 border-white;
+    }
+  }
+}
+
+.card {
+    @apply bg-white rounded-md shadow overflow-hidden flex flex-col h-full border border-gray-200;
+  
+    &__image-container {
+      @apply relative h-0 pb-[75%] mb-5;
+    }
+  
+    &__image {
+      @apply absolute inset-0 w-full h-full object-cover rounded-md;
+    }
+  
+    &__body {
+      @apply flex flex-col flex-grow text-center;
+    }
+  
+    &__text {
+      @apply text-black mb-4 flex-grow;
+    }
+  
+    &__button {
+      @apply bg-white border-3 border-black rounded-full transition-colors duration-300 py-1.5 px-4 ;
+  
+      .expand-text {
+        @apply text-black font-black uppercase text-sm tracking-[0.2em] hover:text-white;
+      }
+
+      &:hover {
+        @apply bg-black text-white;
+      }
+    }
+  }
+
+  @mixin hero-image {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+  
+  .hero {
+    @apply relative overflow-hidden;
+    height: 100vw;
+    max-height: 600px; 
+  
+    @screen md {
+      height: 650px;
+    }
+
+    &__image-container {
+      @apply relative w-full h-full;
+    }
+  
+    &__image-desktop {
+      @apply hidden md:block h-full;
+      @include hero-image;
+    }
+  
+    &__image-mobile {
+      @apply md:hidden h-full;
+      @include hero-image;
+    }
+
+    &__image-text {
+      @apply absolute inset-0 flex items-center justify-center text-neutral-450;
+      font-size: clamp(1.5rem, 3vw, 2.5rem); 
+      font-family: 'Public Sans', sans-serif;
+      // Scale height
+      transform: scaleY(1.2);
+
+      @media (min-width: 768px) { 
+        font-size: clamp(6rem, 10vw, 8rem);
+      }
+    }
+
+    &__image-text-desktop {
+      @apply hidden md:flex;
+    }
+  
+    &__image-text-mobile {
+      @apply md:hidden;
+    }
+  
+    &__overlay {
+      @apply absolute inset-0 flex items-center justify-center bg-zinc-600 bg-opacity-50;
+    }
+  
+    &__content {
+      @apply text-center;
+    }
+  
+    &__title {
+      @apply text-4xl text-white md:text-6xl font-bold mb-4 tracking-wider;
+     
+      @media (max-width: 767px) {
+        line-height: 1.75;
+      }
+    }
+  
+    &__subtitle {
+      @apply text-xl text-white md:text-4xl font-light tracking-wide;
+
+      @media (max-width: 767px) {
+      margin-top: -1rem;
+      }
+  }
+}
+
+  .tab-accordion {
+    &__container {
+      @apply md:flex md:justify-between border-b border-gray-200 relative;
+    }
+  
+    &__button {
+      @apply py-6 px-4 text-xl font-semibold transition-colors duration-200 focus:outline-none flex items-center justify-center w-full;
+  
+      &--active {
+        @apply text-blue-600;
+      }
+  
+      &--inactive {
+        @apply text-gray-600 hover:text-gray-800;
+      }
+    }
+  
+    &__icon {
+      @apply w-6 h-6 transition-transform duration-300 ease-in-out ml-2 md:hidden;
+    }
+  
+    &__underline {
+      @apply hidden md:block absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300;
+    }
+  
+    &__desktop-content {
+      @apply mt-6 hidden md:block;
+    }
+  }
+
+.animated-content {
+    @apply py-4 text-gray-600 text-center;
+}
+
+.rendered-html-content {
+  p {
+    @apply mb-4;
+  }
+
+  ul {
+    @apply list-disc pl-8 mb-4;
+  }
+
+  li {
+    @apply mb-2;
+  }
+}
+
+.dynamic-content {
+  @apply min-h-screen bg-white;
+
+  &__data {
+    @apply container mx-auto px-4 py-8 md:py-12;
+  }
+}
