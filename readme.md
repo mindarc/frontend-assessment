@@ -1,40 +1,13 @@
-Introduction
+Installation Instructions
 ---
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+To run the application locally, follow these steps:
 
-Exercise 1
----
-Build a responsive page based on the designs.
+1. Download the zip file and open the project in VS code or clone the repository via terminal: git clone https://github.com/icyjms/frontend-assessment.git
+2. Locate the folder from where you execute the command on the first step
+3. Install dependencies: npm install
+4. Run the application: npm run serve
+5. Navigate to the URL i.e. http://localhost:8080/
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
-
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
-
-##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
-
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
-
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
-
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
+Bonus points answer
 * Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
-
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+    - The first “b” and “a” get added up as “ba”. With the second “a” you see a double plus sign, the first one is for addition, the second one is in order to convert a string to a number. For example, var a = +”5” will make the variable a the number 5. Its called a unary operator in javascript. Because the string value doesn’t represent a number, (its the character “a” after all) it will convert the string to a number of value NaN (not a number), which funnily enough is of type number. Last “a” gets properly added. You end up with the string “baNaNa”, which is lowercased into “banana”.
