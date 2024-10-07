@@ -19,14 +19,22 @@ h1 {
   padding: 0 32px;
   gap: 24px;
   margin-bottom: 320px;
+  animation: fadeIn 1.5s ease-in-out both;
 
   &__column--1 {
+    animation: slideIn 1.5s ease-out both;
+
     .component1__image {
       width: 100%;
 
       img {
         width: 100%;
         object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
   }
@@ -36,6 +44,7 @@ h1 {
     flex-direction: column;
     gap: 20px;
     width: 100%;
+    animation: slideIn 2s ease-out both;
 
     .component1__image {
       width: 100%;
@@ -43,6 +52,11 @@ h1 {
       img {
         width: 100%;
         object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
   }
@@ -52,6 +66,7 @@ h1 {
     flex-direction: column;
     gap: 40px;
     width: 100%;
+    animation: slideIn 2.5s ease-out both;
   }
 
   &__text-block--1 {
@@ -108,6 +123,7 @@ h1 {
   flex-direction: column;
   gap: 80px;
   padding: 0 32px;
+  animation: fadeIn 1.8s ease-in-out both;
 
   h2 {
     margin: 0;
@@ -116,11 +132,13 @@ h1 {
     letter-spacing: 1px;
     font-size: 56px;
     text-align: center;
+    animation: fadeIn 1.5s ease-in-out both;
   }
 
   &__articles {
     display: flex;
     gap: 28px;
+    animation: fadeIn 2s ease-in-out both;
   }
 
   &__article {
@@ -128,6 +146,7 @@ h1 {
     flex-direction: column;
     gap: 28px;
     width: 100%;
+    animation: slideIn 1.5s ease-out both;
 
     a {
       text-decoration: none;
@@ -140,6 +159,12 @@ h1 {
       border-bottom: 1px solid #ff0000d3;
       width: fit-content;
       padding: 0 0 8px;
+      animation: fadeIn 1.8s ease-in-out both;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: #ff0000d3;
+      }
     }
   }
 
@@ -180,6 +205,8 @@ h1 {
     }
   }
 }
+
+// media queries
 
 @media (max-width: 1024px) {
   .component1 {
@@ -237,5 +264,29 @@ h1 {
     &__image-wrapper {
       height: 400px;
     }
+  }
+}
+
+// animations
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
