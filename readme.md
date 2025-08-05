@@ -15,9 +15,9 @@ Build a responsive page based on the designs.
 * exercise1-mobile.png
 
 ##### Assets
-* Desktop banner - https://via.placeholder.com/1920x650
-* Mobile banner - https://via.placeholder.com/600x600
-* Content images - https://via.placeholder.com/400x300
+* Desktop banner - [https://via.placeholder.com/1920x650](https://placehold.co/1920x650)
+* Mobile banner - [https://via.placeholder.com/600x600](https://placehold.co/600x600)
+* Content images - [https://via.placeholder.com/400x300](https://placehold.co/400x300)
 
 Exercise 2
 ---
