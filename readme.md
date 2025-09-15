@@ -38,3 +38,14 @@ Read the `data.json` file and display the data as tabs on desktop and an accordi
 Submission
 ---
 We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+
+****Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.***
+Explanation:
+'b' + 'a' + + 'a' + 'a' is evaluated as 'b' + 'a' + (+'a') + 'a'.
+
+(+'a') attempts to convert 'a' to a number using the unary plus operator. Because 'a' is not a number, the result is NaN ("Not a Number"):'b'  +  'a'  +  NaN  + 'a'
+
+Although NaN stands for "Not a Number", it's still a numeric type; when added to strings, it concatenates just as any other number would:'b'  +  'a'  +  NaN  + 'a'  =>  'baNaNa'
+Finally, it's lowercased:
+
+'baNaNa'.toLowerCase()      =>  'banana'
