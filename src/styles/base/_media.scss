@@ -1,0 +1,51 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .header {
+    background: url("https://via.placeholder.com/600x600.png")no-repeat;
+    height: 600px;
+  }
+
+  .card{
+    margin: 20px 0;
+
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .header {
+    background: url("https://via.placeholder.com/600x600.png")no-repeat;
+    height: 600px;
+  }
+
+  .card {
+    margin: 20px 0;
+
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .header {
+    background: url("https://via.placeholder.com/1920x650.png")no-repeat;
+    height: 650px;
+  }
+
+  .card-layout {
+    max-width: 30%;
+    margin-left: 15px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .header {
+    background: url("https://via.placeholder.com/1920x650.png")no-repeat;
+    height: 650px
+  }
+
+  .card-layout {
+    max-width: 30%;
+    margin-left: 15px;
+  }
+}

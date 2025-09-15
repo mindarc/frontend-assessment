@@ -1,0 +1,14 @@
+.card {
+  font-size: 1.1rem;
+
+  .card-img {
+    padding-top: 15px;
+  }
+
+  .btn-read-more {
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 1.25rem !important;
+  }
+}
