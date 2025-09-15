@@ -1,0 +1,35 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.app__header {
+  width: 100%;
+  height: 650px; 
+  background: url('https://via.placeholder.com/1920x650') no-repeat center center; 
+  background-size: cover; 
+  overflow: hidden;
+}
+
+/* Main content styles */
+.app__main-content {
+  padding: 20px;
+}
+
+.app__content-image {
+  width: 400px;
+  height: 300px;
+  display: block;
+  margin-top: 25px;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .app__header {
+    background-image: url('https://via.placeholder.com/600x600');
+    height: 600px; 
+  }
+}
