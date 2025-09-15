@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Exercise 2</title>
+</head>
+<body>
+    <h1>Demo for display data read from json file as Tab/Accordion</h1>
+    <div id="myData" class="tabs"></div>
+    <script>
+        fetch('data.json') //fetch data from json file located in server
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+
+
+
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                //create radio button for each tab/Accordion
+                var input = document.createElement("input");
+                input.type = "radio";
+                input.name = "tabs";
+                var id = "tab"+(i+1).toString();
+                input.setAttribute('id',id);
+                mainContainer.appendChild(input);
+                //create label for each radio button
+                var label = document.createElement("label");
+                label.setAttribute("for",id);
+                label.innerHTML = data[i].title;
+                mainContainer.appendChild(label);
+                //create div with data read from json
+                var div = document.createElement("div");
+                div.setAttribute('class', 'tab');
+                div.innerHTML =  '<h2>'+data[i].title + '</h2> ' + data[i].content;
+                mainContainer.appendChild(div);
+            }
+            document.getElementById("tab1").checked = true;
+        }
+
+    </script>
+</body>
+</html>
