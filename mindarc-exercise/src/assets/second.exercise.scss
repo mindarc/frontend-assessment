@@ -1,0 +1,183 @@
+$custom-bezier: cubic-bezier(0.075, 0.82, 0.165, 1);
+$color-opaque-violet: rgba(43,78,97,0.32);
+$color-white: #ffffff;
+
+@keyframes contentSlideUp {
+    from {
+        transform: translateY(2rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.content {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tab-accordion {
+    font-size: 1.6rem;
+
+    @media only screen and (max-width: 789px) {
+        display: none;
+    }
+
+    &__tabs {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        position: relative;
+        background-color: $color-opaque-violet;
+        border-radius: 12px 12px 0 0;
+        padding: 1rem;
+    }
+
+    &__tab {
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        padding: 1.4rem 2.6rem;
+        flex: 1;
+        text-align: center;
+        color: #2b4e61;
+        z-index: 2;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color .2s $custom-bezier;
+
+        &:hover {
+            background-color: $color-opaque-violet;
+        }
+
+        &--active {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__indicator {
+        position: absolute;
+        background-color: $color-white;
+        width: calc((100% - (1rem * 2)) / 4);
+        height: calc(100% - (1rem * 2));
+        border-radius: 8px;
+        z-index: 1;
+        box-shadow: 1px 1px 36px 1px $color-opaque-violet;
+        transition: all .2s $custom-bezier;
+
+        &--tab-1 {
+            left: calc(calc((100% - (1rem * 2)) / 4) * 0 + 1rem);
+        }
+
+        &--tab-2 {
+            left: calc(calc((100% - (1rem * 2)) / 4) * 1 + 1rem);
+        }
+
+        &--tab-3 {
+            left: calc(calc((100% - (1rem * 2)) / 4) * 2 + 1rem);
+        }
+
+        &--tab-4 {
+            left: calc(calc((100% - (1rem * 2)) / 4) * 3 + 1rem);
+        }
+    }
+
+    &__contents {
+        background-color: $color-opaque-violet;
+        border-radius: 0 0 12px 12px;
+        padding: 1rem;
+    }
+
+    &__content {
+        background-color: $color-white;
+        border-radius: 8px;
+        height: 30vh;
+
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+
+    &__text {
+        animation: contentSlideUp .2s ease-in;
+        padding: 2rem 1.8rem;
+        line-height: 2rem;
+
+        ul {
+            margin-left: 4rem;
+        }
+    }
+
+    &--mobile {
+        font-size: 1.4rem;
+        display: none;
+
+        @media only screen and (max-width: 789px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__item {
+            border-radius: 8px;
+            margin-bottom: 2rem;
+
+            overflow: hidden;
+            
+            &--active {
+                box-shadow: 1px 1px 36px 1px $color-opaque-violet;
+
+                .tab-accordion--mobile__content {
+                    height: 30vh;
+
+                    @media only screen and (max-width: 375px) {
+                        height: 42vh;
+                    }
+                    
+                    @media only screen and (max-width: 280px) {
+                        height: 54vh;
+                    }
+                }
+            }
+        }
+
+
+        &__tab {
+            background-color: #2b4e61;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            padding: 1.4rem 2.6rem;
+            flex: 1;
+            text-align: center;
+            color: $color-white;
+            cursor: pointer;
+        }
+
+        &__content {
+            background-color: $color-white;
+            height: 0;
+            transition: height .2s $custom-bezier;
+        }
+
+        &__text {
+            padding: 2rem 1.8rem;
+            line-height: 2rem;
+    
+            ul {
+                margin-left: 4rem;
+            }
+        }
+    }
+}

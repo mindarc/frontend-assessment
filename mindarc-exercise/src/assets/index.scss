@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+@keyframes animatedBackground {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.container {
+    &--homepage {
+        @import 'first.exercise';
+    }
+
+    &--responsive-tabs {
+        width: 100vw;
+        height: 100vh;
+
+        background: rgb(241,227,243);
+        background: linear-gradient(90deg, rgba(241,227,243,1) 0%, rgba(98,191,237,1) 78%, rgba(53,217,243,1) 100%);
+
+        background-size: 400% 400%;
+	    animation: animatedBackground 15s ease infinite;
+        
+        @import 'second.exercise';
+    }
+}
