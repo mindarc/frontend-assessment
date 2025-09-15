@@ -1,10 +1,14 @@
 Introduction
 ---
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines). 
+Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries, but Vue.js is preferred and jQuery is not recommended. Along with following best practices, bonus points for following our [coding guidelines](https://github.com/mindarc/frontend-assessment/wiki/Coding-guidelines).
+
+Hello MindArc team, thank you for the opportunity and for taking the time to review my application. Please access https://frontend-assessment-rho.vercel.app/ for the assessment and go to "/exercise1" for Exercise1 and "/exercise2" for Exercise2.
 
 Exercise 1
 ---
 Build a responsive page based on the designs.
+
+I built the page with Next.js and used Bootstrap to create the responsive design according to the requirements. 
 
 ##### Requirements
 1. Match the designs exactly.
@@ -23,6 +27,9 @@ Exercise 2
 ---
 Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
 
+I built the page with Next.js and used Bootstrap for the responsive design. I implemented CSS and GSAP animation and custome CSS styling to improve UX.
+I added a new property "id" to "data.json" to easily identify the object.
+
 ##### Requirements
 1. Display data in tabs on desktop.
 2. Display data in an accordion on mobile.
@@ -34,6 +41,11 @@ Read the `data.json` file and display the data as tabs on desktop and an accordi
 * Improve the user experience with meaningful animations/transitions.
 * Design and styling.
 * Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+
+Explanation:
++'a' resolves to NaN ("Not a Number") because (+'a') attempts to convert 'a' to a number using the unary plus operator.
+Adding NaN to "ba" turns NaN into the string "NaN" because of type conversion, gives baNaN. And then there is an "a" behind, giving baNaNa.
+Finally, it's lowercased.
 
 Submission
 ---
