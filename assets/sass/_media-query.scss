@@ -1,0 +1,62 @@
+@media (min-width: 320px) {
+    #bg-img-header{
+        background: url("../images/600x600.png")no-repeat;
+    }
+    .header-content h1{         
+        font-size: 56px;
+  }   
+    .header-content p{               
+        font-size: 27px;      
+        transition: .3s;
+    }  
+}
+@media (min-width: 480px) {
+    #bg-img-header{
+        background: url("../images/600x600.png")no-repeat;
+    }
+    .header-content h1{         
+        font-size: 56px;
+        transition: .3s;
+    }    
+    .header-content p{               
+        font-size: 27px;      
+        transition: .3s;
+    }    
+}
+@media (min-width: 768px) {
+    #bg-img-header{
+        background: url("../images/600x600.png")no-repeat;
+    }
+    .header-content h1{         
+        font-size: 74px;
+        transition: .3s;
+  }   
+    .header-content p{               
+        font-size: 38px;      
+        transition: .3s;
+    }  
+}
+@media (min-width: 992px) {
+    #bg-img-header{
+        background: url("../images/1920x650.png")no-repeat;
+    }
+    .header-content h1{         
+        font-size: 74px;
+  }   
+    .header-content p{               
+        font-size: 38px;      
+        transition: .3s;
+    }  
+}
+@media (min-width: 1200px) {
+    #bg-img-header{
+        background: url("../images/1920x650.png")no-repeat;
+    }
+    .header-content h1{         
+        font-size: 74px;
+  }   
+    .header-content p{               
+        font-size: 38px;      
+        transition: .3s;
+    }  
+}
