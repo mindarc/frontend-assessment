@@ -11,13 +11,10 @@ Build a responsive page based on the designs.
 2. Needs to be responsive.
 
 ##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+https://www.figma.com/design/OGS3UnHSQ22l0rXXsY7wnU/FE-Test?node-id=0-1&p=f&m=dev
 
 ##### Assets
-* Desktop banner - [https://via.placeholder.com/1920x650](https://placehold.co/1920x650)
-* Mobile banner - [https://via.placeholder.com/600x600](https://placehold.co/600x600)
-* Content images - [https://via.placeholder.com/400x300](https://placehold.co/400x300)
+Export from Figma
 
 Exercise 2
 ---
